@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical">
+
+        <ImageButton
+            android:id="@+id/imageButton2"
+            android:layout_width="match_parent"
+            android:layout_height="140dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:background="#fff"
+            android:scaleType="fitCenter"
+            app:srcCompat="@drawable/poster1" />
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="\n바람부는 날은 장미동에 간다 展\n\n전시장소 / 전북도립미술관 본관 2~4 전시실\n전시분야 / 회화, 사진, 설치, 근대유물\n전시기간 / 2019.03.19 ~ 2019.06.02\n"
+            android:textSize="18sp" />
+
+        <View style="@style/Divider"/>
+
+        <ImageButton
+            android:id="@+id/imageButton7"
+            android:layout_width="match_parent"
+            android:layout_height="140dp"
+            android:background="#fff"
+            android:scaleType="fitCenter"
+            app:srcCompat="@drawable/poster2" />
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="\n전북청년 2019 展\n\n전시장소 / 전북도립미술관 본관 5 전시실\n전시분야 / 회화, 설치, 영상 등 \n전시기간 / 2019.03.19 ~ 2019.06.02\n"
+            android:textSize="18sp" />
+
+        <View style="@style/Divider"/>
+
+        <ImageButton
+            android:id="@+id/imageButton8"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:srcCompat="@drawable/poster1"
+            android:background="#fff"/>
+        <View style="@style/Divider"/>
+
+        <ImageButton
+            android:id="@+id/imageButton9"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:srcCompat="@drawable/poster2"
+            android:background="#fff"/>
+
+    </LinearLayout>
+
+
+</ScrollView>
