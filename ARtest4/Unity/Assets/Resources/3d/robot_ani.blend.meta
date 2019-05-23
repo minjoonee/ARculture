@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 3f296883d0b4d784fb82beba3002e3d6
+guid: 0bc2b5ea0d8e7bc40927cbd94050e0ae
 ModelImporter:
   serializedVersion: 23
   fileIDToRecycleName:
@@ -78,31 +78,16 @@ ModelImporter:
     2100004: Body_PlasticParts
     4300000: Cylinder
     7400000: Default Take
-    7400002: Idle
-    7400004: Walk
-    7400006: hello
-    7400008: hi
-    7400010: RUN
-    7400012: THIS
+    7400002: Hello
+    7400004: HI
+    7400006: Idle
+    7400008: Test
+    7400010: this
+    7400012: Walk
     9500000: //RootNode
     13700000: Cylinder
     2186277476908879412: ImportLogs
-  externalObjects:
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Body_Material
-    second: {fileID: 2100000, guid: 771d313cc74110a45a906466a7624c93, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Body_PlasticParts
-    second: {fileID: 2100000, guid: 5f79f762f85ce1d41a7269d7ac250199, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Body_vinyl
-    second: {fileID: 2100000, guid: 5442f452fe86fa14cbb3d5c0f4313fbb, type: 2}
+  externalObjects: {}
   materials:
     importMaterials: 1
     materialName: 0
@@ -117,12 +102,7 @@ ModelImporter:
     rigImportErrors: 
     rigImportWarnings: 
     animationImportErrors: 
-    animationImportWarnings: "\nClip 'Default Take' has import animation warnings
-      that might lower retargeting quality:\nNote: Activate translation DOF on avatar
-      to improve retargeting quality.\n\t'thigh_l' has scale animation that will be
-      discarded.\n\t'calf_l' has scale animation that will be discarded.\n\t'thigh_r'
-      has scale animation that will be discarded.\n\t'calf_r' has scale animation
-      that will be discarded.\n\nClip 'RUN' has import animation warnings that might
+    animationImportWarnings: "\nClip 'Test' has import animation warnings that might
       lower retargeting quality:\nNote: Activate translation DOF on avatar to improve
       retargeting quality.\n\t'thigh_l' has scale animation that will be discarded.\n\t'calf_l'
       has scale animation that will be discarded.\n\t'thigh_r' has scale animation
@@ -400,13 +380,18 @@ ModelImporter:
         length: 0
         modified: 0
     skeleton:
-    - name: robot(Clone)
+    - name: robot_ani(Clone)
       parentName: 
       position: {x: 0, y: 0, z: 0}
       rotation: {x: 0, y: 0, z: 0, w: 1}
       scale: {x: 1, y: 1, z: 1}
+    - name: Cylinder
+      parentName: robot_ani(Clone)
+      position: {x: -0, y: 0, z: -0.58967435}
+      rotation: {x: -0, y: -0.7071065, z: 0, w: 0.7071071}
+      scale: {x: 1, y: 1, z: 1}
     - name: Armature
-      parentName: robot(Clone)
+      parentName: robot_ani(Clone)
       position: {x: -0, y: 0, z: 0}
       rotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071068}
       scale: {x: 1, y: 1, z: 1}
@@ -432,7 +417,7 @@ ModelImporter:
       scale: {x: 1.0000001, y: 1, z: 1}
     - name: Pelvis
       parentName: Armature
-      position: {x: 0, y: 1.0982074, z: 1.9942064}
+      position: {x: -0, y: 1.0982075, z: -0.5735861}
       rotation: {x: 0.7070918, y: 0.7070918, z: 0.004605325, w: -0.0046052323}
       scale: {x: 0.99999994, y: 1, z: 0.99899644}
     - name: Spine
@@ -468,12 +453,12 @@ ModelImporter:
     - name: Upperarm_l
       parentName: collar_l
       position: {x: -0.5603862, y: 0.000000053900294, z: -0.0000000949949}
-      rotation: {x: 0.014922226, y: -0.0288346, z: -0.0009005364, w: 0.9994724}
+      rotation: {x: 0.0123887425, y: -0.56678134, z: -0.020921305, w: 0.8235094}
       scale: {x: 1.0000001, y: 1.0000001, z: 1}
     - name: lowerarm_l
       parentName: Upperarm_l
       position: {x: -0.5734867, y: 0.000000055937562, z: -0.000000029569492}
-      rotation: {x: 0.70173645, y: 0.03050723, z: 0.02139565, w: 0.7114616}
+      rotation: {x: 0.6974621, y: 0.08000475, z: 0.098684974, w: 0.705271}
       scale: {x: 1, y: 1.0000001, z: 1.0000001}
     - name: palm_l
       parentName: lowerarm_l
@@ -485,21 +470,21 @@ ModelImporter:
       position: {x: -0.60907316, y: 0.0016619391, z: 0.12474066}
       rotation: {x: -0.00000076543927, y: 0.11580751, z: -0.0015426996, w: 0.99327046}
       scale: {x: 0.99999994, y: 1, z: 0.99999994}
-    - name: little_l
-      parentName: palm_l
-      position: {x: -0.6158648, y: -0.0014139356, z: -0.10613586}
-      rotation: {x: -0.0000006956999, y: -0.11478869, z: 0.0015291253, w: 0.9933888}
-      scale: {x: 1, y: 1, z: 0.99999994}
-    - name: middle_l
-      parentName: palm_l
-      position: {x: -0.6264672, y: 0.00031518354, z: 0.023650303}
-      rotation: {x: -0.000001109515, y: -0.0007323644, z: 0.000009751069, w: 0.99999976}
-      scale: {x: 0.99999994, y: 1, z: 1}
     - name: thumb_l
       parentName: palm_l
       position: {x: -0.41454777, y: 0.0019010217, z: 0.14268903}
       rotation: {x: 0.0000037724096, y: 0.6889767, z: -0.009182094, w: 0.7247253}
       scale: {x: 1, y: 1, z: 1}
+    - name: middle_l
+      parentName: palm_l
+      position: {x: -0.6264672, y: 0.00031518354, z: 0.023650303}
+      rotation: {x: -0.000001109515, y: -0.0007323644, z: 0.000009751069, w: 0.99999976}
+      scale: {x: 0.99999994, y: 1, z: 1}
+    - name: little_l
+      parentName: palm_l
+      position: {x: -0.6158648, y: -0.0014139356, z: -0.10613586}
+      rotation: {x: -0.0000006956999, y: -0.11478869, z: 0.0015291253, w: 0.9933888}
+      scale: {x: 1, y: 1, z: 0.99999994}
     - name: collar_r
       parentName: Abdomen
       position: {x: -0.69798464, y: 0.00000005269638, z: 0}
@@ -508,12 +493,12 @@ ModelImporter:
     - name: Upperarm_r
       parentName: collar_r
       position: {x: -0.5603862, y: 0.000000034517143, z: -0.00000009406358}
-      rotation: {x: 0.000282675, y: -0.02771322, z: 0.00089137245, w: 0.99961555}
+      rotation: {x: 0.00037193918, y: -0.5850619, z: 0.013063785, w: 0.81088334}
       scale: {x: 1, y: 1, z: 1}
     - name: lowerarm_r
       parentName: Upperarm_r
       position: {x: -0.5734867, y: 0.000000025418558, z: 0.000000037252903}
-      rotation: {x: -0.722619, y: 0.028438011, z: -0.024359247, w: 0.6902317}
+      rotation: {x: -0.7203892, y: 0.057324965, z: -0.0755239, w: 0.68705857}
       scale: {x: 1, y: 1.0000001, z: 1}
     - name: palm_r
       parentName: lowerarm_r
@@ -525,21 +510,21 @@ ModelImporter:
       position: {x: -0.6090732, y: -0.0016617556, z: 0.12474072}
       rotation: {x: 0.000000787155, y: 0.11580754, z: 0.0015426979, w: 0.99327046}
       scale: {x: 1, y: 1, z: 1}
-    - name: little_r
-      parentName: palm_r
-      position: {x: -0.6158649, y: 0.0014139722, z: -0.10613584}
-      rotation: {x: 0.0000006828306, y: -0.114788696, z: -0.001529123, w: 0.9933888}
-      scale: {x: 0.99999994, y: 1, z: 1}
-    - name: middle_r
-      parentName: palm_r
-      position: {x: -0.6264672, y: -0.0003150322, z: 0.023650363}
-      rotation: {x: 0.0000011067145, y: -0.0007323439, z: -0.000009759919, w: 0.99999976}
-      scale: {x: 0.99999994, y: 1, z: 1}
     - name: thumb_r
       parentName: palm_r
       position: {x: -0.41454774, y: -0.0019008899, z: 0.14268908}
       rotation: {x: -0.0000037130421, y: 0.6889767, z: 0.009182129, w: 0.7247253}
       scale: {x: 1.0000001, y: 1, z: 1}
+    - name: middle_r
+      parentName: palm_r
+      position: {x: -0.6264672, y: -0.0003150322, z: 0.023650363}
+      rotation: {x: 0.0000011067145, y: -0.0007323439, z: -0.000009759919, w: 0.99999976}
+      scale: {x: 0.99999994, y: 1, z: 1}
+    - name: little_r
+      parentName: palm_r
+      position: {x: -0.6158649, y: 0.0014139722, z: -0.10613584}
+      rotation: {x: 0.0000006828306, y: -0.114788696, z: -0.001529123, w: 0.9933888}
+      scale: {x: 0.99999994, y: 1, z: 1}
     - name: thigh_l
       parentName: Pelvis
       position: {x: -1.0982248, y: -0.59446156, z: -0.005833466}
@@ -570,11 +555,6 @@ ModelImporter:
       position: {x: -0.9625523, y: 0.000000033527613, z: 0.000000044703484}
       rotation: {x: 0.051266238, y: -0.79302806, z: -0.016979514, w: 0.6067866}
       scale: {x: 1.0000001, y: 0.99999994, z: 0.99999994}
-    - name: Cylinder
-      parentName: robot(Clone)
-      position: {x: -0, y: 0, z: -0.58967435}
-      rotation: {x: -0, y: -0.7071065, z: 0, w: 0.7071071}
-      scale: {x: 1, y: 1, z: 1}
     armTwist: 0.5
     foreArmTwist: 0.5
     upperLegTwist: 0.5
