@@ -166,7 +166,7 @@ public class TtsForm : MonoBehaviour
     // 말하기 완료되면
 	private void OnSpeakComplete(FreeTtsResult result) {
 		Debug.Log("OnFinishSpeaking");
-        touchOn = false;
+        //touchOn = false;
         //parsing result
         switch (result) {
             // 완료

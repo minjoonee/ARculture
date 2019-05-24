@@ -1,12 +1,9 @@
 fileFormatVersion: 2
-guid: 790b2032279216c479d639731e80e5e8
+guid: 9ce8246dbe75c9647bf4900c646c4e27
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences:
-  - robot: {instanceID: 0}
-  - animator: {instanceID: 0}
-  - Chktext: {instanceID: 0}
+  defaultReferences: []
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 

@@ -8,6 +8,12 @@ using System.IO;
 
 public class GameManager : TtsForm, ITrackableEventHandler
 {
+    public GameObject robot;
+    public Animator animator;
+    int char_state = 0;
+    float char_scale = 0.01f;
+    bool Running = false;
+
     public TextMesh Chktext;
     bool chk = true;
     private TrackableBehaviour track;
@@ -25,6 +31,8 @@ public class GameManager : TtsForm, ITrackableEventHandler
     // Start is called before the first frame update
     new void Start()
     {
+        robot.transform.localScale = new Vector3(char_scale, char_scale, char_scale);
+
         Stamp_List.Clear();
         Chktext.text = "Read Stamp";
         ReadStamp();
@@ -37,32 +45,62 @@ public class GameManager : TtsForm, ITrackableEventHandler
     }
     void Update()
     {
+
         if (Application.platform == RuntimePlatform.Android)
         {
             if (Input.GetKey(KeyCode.Escape))
             {
-                // 할꺼 하셈
-                Application.Quit();
+                // 일단 지움
+                // Application.Quit();
             }
         }
         if (Input.touchCount > 0 && SoundTrackCount == true) //인식 완료 + 터치
         {
             touch = Input.GetTouch(0);
+            robot.transform.localScale = new Vector3(char_scale, char_scale, char_scale);
             if (touch.phase == TouchPhase.Began && base.touchOn == false) // 사운드 트랙 처음 실행했을 때
             {
-                //Chktext.text = "터치 이벤트 실행" + touchOn.ToString() + "카운트 : " + base.mycount + "음악 큐~\n"+check;
+                Running = false;
+                char_scale = 0.1f;
+                base.touchOn = true;
+                // 설명 이벤트가 실행되면 꾸벅 인사하고 설명하는 동작
+                Robot_stat(3);
+
+                //Chktext.text = "터치 이벤트 실행" + touchOn.ToString() + "카운트 : " + base.mycount + "음악 큐~\n";
                 base.FieldString = str;
                 base.OnSpeakClick();
-                base.touchOn = true;
+
+
                 Debug.Log("사운드 실행 후 info : " + str);
             }
+
             else if (touch.phase == TouchPhase.Began && base.touchOn == true)
             {
-                //Chktext.text = "터치 이벤트 실행" + touchOn.ToString() + "카운트 : " + base.mycount + "음악 그만\n"+check;
-                base.OnStopClick();
+                Running = false;
+                char_scale = 0.1f;
                 base.touchOn = false;
+                // 설명 이벤트를 끝내면 손을 흔들면서 인사하는 동작 반복
+                Robot_stat(5);
+
+                //Chktext.text = "터치 이벤트 실행" + touchOn.ToString() + "카운트 : " + base.mycount + "음악 그만\n";
+                base.OnStopClick();
+
             }
         }
+        else if (Running == true)
+        {
+            if (char_scale < 0.1f)
+            {
+                Robot_stat(1);
+                char_scale = char_scale + 0.0003f;
+                robot.transform.localScale = new Vector3(char_scale, char_scale, char_scale);
+            }
+            else if (char_scale >= 0.1f) 
+            {
+                Robot_stat(2);
+            }
+        }
+
     }
     public void OnTrackableStateChanged(TrackableBehaviour.Status previousStatus, TrackableBehaviour.Status newStatus)
     {
@@ -73,7 +111,7 @@ public class GameManager : TtsForm, ITrackableEventHandler
         {
             ScriptEnable(true);
             //Chktext.text = this.name;
-
+            Running = true;
 
             filename = this.name;
             filename_idx = filename.IndexOf("-"); // 중복된 이미지파일명에서 -만 추출해가지구 앞에 이름으로 xml파일 검색할 수 있도록 해주는 코드
@@ -96,8 +134,11 @@ public class GameManager : TtsForm, ITrackableEventHandler
         }
         else
         {
+            char_scale = 0.01f;
+            Robot_stat(1);
+
             ScriptEnable(false);
-            Chktext.text = "      아래 카메라에 전시물을 비춰보세요.";
+            Chktext.text = "아래 카메라에 전시물을 비춰보세요.";
         }
 
     }
@@ -158,10 +199,10 @@ public class GameManager : TtsForm, ITrackableEventHandler
                         }
                         AddStamp(_fileName);
                         Chktext.text = "\tName : " + node.SelectSingleNode("name").InnerText + "\n\n\t작가 : " + node.SelectSingleNode("artist").InnerText;
-
+                        
                         //화면을 터치했을때 사운드 플레이 동작 실시하기 위해서 변수 삽입
                         SoundTrackCount = true;
-                        str = node.SelectSingleNode("artist").InnerText;
+                        str = "안녕하세요. " + node.SelectSingleNode("artist").InnerText;
                         //base.FieldString = str;
                         //base.OnSpeakClick();
                         Debug.Log("사운드 실행 후 info : " + node.SelectSingleNode("artist").InnerText);
@@ -211,6 +252,30 @@ public class GameManager : TtsForm, ITrackableEventHandler
             ReadStamp();
         }
     }
+    
 
-
+    void Robot_stat(int state)
+    {
+        switch (state)
+        {
+            case 0:
+                animator.SetInteger("state", state);
+                break;
+            case 1:
+                animator.SetInteger("state", state);
+                break;
+            case 2:
+                animator.SetInteger("state", state);
+                break;
+            case 3:
+                animator.SetInteger("state", state);
+                animator.SetTrigger("expl");
+                animator.SetBool("stop", false);
+                break;
+            case 5:
+                animator.SetInteger("state", state);
+                animator.SetBool("stop", true);
+                break;
+        }
+    }
 }
