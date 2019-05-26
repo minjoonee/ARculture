@@ -6,6 +6,7 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.ImageButton;
 
 /**
@@ -18,6 +19,8 @@ public class TabFragment1 extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View v = inflater.inflate(R.layout.tab_fragment_1, container, false);
 
+
+
         ImageButton imageButton = (ImageButton)v.findViewById(R.id.cameraButton);
         imageButton.setOnClickListener(new View.OnClickListener(){
             public void onClick(View view){
@@ -25,6 +28,7 @@ public class TabFragment1 extends Fragment {
                 startActivity(intent);
             }
         });
+
 
         return v;
     }

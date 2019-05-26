@@ -11,7 +11,7 @@
         android:orientation="vertical">
 
         <ImageButton
-            android:id="@+id/imageButton2"
+            android:id="@+id/StampButton1"
             android:layout_width="match_parent"
             android:layout_height="140dp"
             android:layout_alignParentStart="true"
@@ -30,7 +30,7 @@
         <View style="@style/Divider"/>
 
         <ImageButton
-            android:id="@+id/imageButton7"
+            android:id="@+id/StampButton2"
             android:layout_width="match_parent"
             android:layout_height="140dp"
             android:background="#fff"
@@ -44,21 +44,6 @@
             android:textSize="18sp" />
 
         <View style="@style/Divider"/>
-
-        <ImageButton
-            android:id="@+id/imageButton8"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            app:srcCompat="@drawable/poster1"
-            android:background="#fff"/>
-        <View style="@style/Divider"/>
-
-        <ImageButton
-            android:id="@+id/imageButton9"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            app:srcCompat="@drawable/poster2"
-            android:background="#fff"/>
 
     </LinearLayout>
 

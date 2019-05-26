@@ -18,11 +18,11 @@
             android:scaleType="fitXY"
             app:srcCompat="@drawable/camera1" />
         <View style="@style/Divider"/>
+
         <ImageButton
-            android:id="@+id/stampButton"
+            android:id="@+id/StampButton"
             android:layout_width="match_parent"
             android:layout_height="125dp"
-            android:layout_alignParentStart="true"
             android:layout_below="@+id/cameraButton"
             android:background="#fff"
             android:scaleType="fitCenter"

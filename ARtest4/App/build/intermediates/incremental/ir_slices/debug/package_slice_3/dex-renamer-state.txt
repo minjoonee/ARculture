@@ -1,4 +1,4 @@
-#Mon Apr 29 01:30:40 KST 2019
+#Sun May 26 13:27:18 KST 2019
 base.0=D\:\\unity\\ARtest4\\AndroidStudio_ARTest4\\ARtest4\\build\\intermediates\\transforms\\dexMerger\\debug\\3
 path.0=classes.dex
 renamed.0=classes.dex

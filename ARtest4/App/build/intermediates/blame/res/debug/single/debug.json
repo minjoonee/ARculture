@@ -492,6 +492,10 @@
         "source": "C:\\Users\\난조민준이다\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\79543e48191f7e415561ee70d2339ee6\\res\\drawable-mdpi-v4\\abc_ab_share_pack_mtrl_alpha.9.png"
     },
     {
+        "merged": "D:\\unity\\ARtest4\\AndroidStudio_ARTest4\\ARtest4\\build\\intermediates\\res\\merged\\debug\\drawable_clear.png.flat",
+        "source": "D:\\unity\\ARtest4\\AndroidStudio_ARTest4\\ARtest4\\src\\main\\res\\drawable\\clear.png"
+    },
+    {
         "merged": "D:\\unity\\ARtest4\\AndroidStudio_ARTest4\\ARtest4\\build\\intermediates\\res\\merged\\debug\\drawable_navigation_empty_icon.xml.flat",
         "source": "C:\\Users\\난조민준이다\\.gradle\\caches\\transforms-1\\files-1.1\\design-26.1.0.aar\\037c12fdb367b6a2fb4d662abbe6d2b7\\res\\drawable\\navigation_empty_icon.xml"
     },
@@ -596,12 +600,12 @@
         "source": "C:\\Users\\난조민준이다\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\79543e48191f7e415561ee70d2339ee6\\res\\drawable\\abc_list_selector_holo_light.xml"
     },
     {
-        "merged": "D:\\unity\\ARtest4\\AndroidStudio_ARTest4\\ARtest4\\build\\intermediates\\res\\merged\\debug\\color_abc_tint_default.xml.flat",
-        "source": "C:\\Users\\난조민준이다\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\79543e48191f7e415561ee70d2339ee6\\res\\color\\abc_tint_default.xml"
-    },
-    {
         "merged": "D:\\unity\\ARtest4\\AndroidStudio_ARTest4\\ARtest4\\build\\intermediates\\res\\merged\\debug\\color-v11_abc_background_cache_hint_selector_material_light.xml.flat",
         "source": "C:\\Users\\난조민준이다\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\79543e48191f7e415561ee70d2339ee6\\res\\color-v11\\abc_background_cache_hint_selector_material_light.xml"
+    },
+    {
+        "merged": "D:\\unity\\ARtest4\\AndroidStudio_ARTest4\\ARtest4\\build\\intermediates\\res\\merged\\debug\\color_abc_tint_default.xml.flat",
+        "source": "C:\\Users\\난조민준이다\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\79543e48191f7e415561ee70d2339ee6\\res\\color\\abc_tint_default.xml"
     },
     {
         "merged": "D:\\unity\\ARtest4\\AndroidStudio_ARTest4\\ARtest4\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4_abc_switch_track_mtrl_alpha.9.png.flat",
@@ -682,6 +686,10 @@
     {
         "merged": "D:\\unity\\ARtest4\\AndroidStudio_ARTest4\\ARtest4\\build\\intermediates\\res\\merged\\debug\\layout_abc_dialog_title_material.xml.flat",
         "source": "C:\\Users\\난조민준이다\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\79543e48191f7e415561ee70d2339ee6\\res\\layout\\abc_dialog_title_material.xml"
+    },
+    {
+        "merged": "D:\\unity\\ARtest4\\AndroidStudio_ARTest4\\ARtest4\\build\\intermediates\\res\\merged\\debug\\drawable_no_clear.png.flat",
+        "source": "D:\\unity\\ARtest4\\AndroidStudio_ARTest4\\ARtest4\\src\\main\\res\\drawable\\no_clear.png"
     },
     {
         "merged": "D:\\unity\\ARtest4\\AndroidStudio_ARTest4\\ARtest4\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4_abc_ic_star_half_black_48dp.png.flat",
@@ -908,6 +916,10 @@
         "source": "C:\\Users\\난조민준이다\\.gradle\\caches\\transforms-1\\files-1.1\\design-26.1.0.aar\\037c12fdb367b6a2fb4d662abbe6d2b7\\res\\anim\\design_snackbar_out.xml"
     },
     {
+        "merged": "D:\\unity\\ARtest4\\AndroidStudio_ARTest4\\ARtest4\\build\\intermediates\\res\\merged\\debug\\layout_listview_custom.xml.flat",
+        "source": "D:\\unity\\ARtest4\\AndroidStudio_ARTest4\\ARtest4\\src\\main\\res\\layout\\listview_custom.xml"
+    },
+    {
         "merged": "D:\\unity\\ARtest4\\AndroidStudio_ARTest4\\ARtest4\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4_abc_scrubber_primary_mtrl_alpha.9.png.flat",
         "source": "C:\\Users\\난조민준이다\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\79543e48191f7e415561ee70d2339ee6\\res\\drawable-mdpi-v4\\abc_scrubber_primary_mtrl_alpha.9.png"
     },
@@ -1070,6 +1082,10 @@
     {
         "merged": "D:\\unity\\ARtest4\\AndroidStudio_ARTest4\\ARtest4\\build\\intermediates\\res\\merged\\debug\\drawable-xxxhdpi-v4_abc_ic_menu_selectall_mtrl_alpha.png.flat",
         "source": "C:\\Users\\난조민준이다\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\79543e48191f7e415561ee70d2339ee6\\res\\drawable-xxxhdpi-v4\\abc_ic_menu_selectall_mtrl_alpha.png"
+    },
+    {
+        "merged": "D:\\unity\\ARtest4\\AndroidStudio_ARTest4\\ARtest4\\build\\intermediates\\res\\merged\\debug\\layout_activity_stamp.xml.flat",
+        "source": "D:\\unity\\ARtest4\\AndroidStudio_ARTest4\\ARtest4\\src\\main\\res\\layout\\activity_stamp.xml"
     },
     {
         "merged": "D:\\unity\\ARtest4\\AndroidStudio_ARTest4\\ARtest4\\build\\intermediates\\res\\merged\\debug\\color_abc_btn_colored_text_material.xml.flat",
@@ -1604,12 +1620,12 @@
         "source": "C:\\Users\\난조민준이다\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\79543e48191f7e415561ee70d2339ee6\\res\\drawable\\abc_ic_voice_search_api_material.xml"
     },
     {
-        "merged": "D:\\unity\\ARtest4\\AndroidStudio_ARTest4\\ARtest4\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4_abc_btn_check_to_on_mtrl_015.png.flat",
-        "source": "C:\\Users\\난조민준이다\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\79543e48191f7e415561ee70d2339ee6\\res\\drawable-mdpi-v4\\abc_btn_check_to_on_mtrl_015.png"
-    },
-    {
         "merged": "D:\\unity\\ARtest4\\AndroidStudio_ARTest4\\ARtest4\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4_abc_btn_switch_to_on_mtrl_00012.9.png.flat",
         "source": "C:\\Users\\난조민준이다\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\79543e48191f7e415561ee70d2339ee6\\res\\drawable-mdpi-v4\\abc_btn_switch_to_on_mtrl_00012.9.png"
+    },
+    {
+        "merged": "D:\\unity\\ARtest4\\AndroidStudio_ARTest4\\ARtest4\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4_abc_btn_check_to_on_mtrl_015.png.flat",
+        "source": "C:\\Users\\난조민준이다\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\79543e48191f7e415561ee70d2339ee6\\res\\drawable-mdpi-v4\\abc_btn_check_to_on_mtrl_015.png"
     },
     {
         "merged": "D:\\unity\\ARtest4\\AndroidStudio_ARTest4\\ARtest4\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4_abc_ic_star_half_black_36dp.png.flat",

@@ -772,6 +772,7 @@ drawable avd_show_password
 drawable camera
 drawable camera1
 drawable camera2
+drawable clear
 drawable design_bottom_navigation_item_background
 drawable design_fab_background
 drawable design_ic_visibility
@@ -779,6 +780,7 @@ drawable design_ic_visibility_off
 drawable design_password_eye
 drawable design_snackbar_background
 drawable navigation_empty_icon
+drawable no_clear
 drawable notification_action_background
 drawable notification_bg
 drawable notification_bg_low
@@ -802,6 +804,11 @@ id FUNCTION
 id META
 id SHIFT
 id SYM
+id StampButton
+id StampButton1
+id StampButton2
+id StampListView
+id StampText
 id action0
 id action_bar
 id action_bar_activity_content
@@ -882,14 +889,11 @@ id icon
 id icon_group
 id ifRoom
 id image
-id imageButton2
-id imageButton7
-id imageButton8
-id imageButton9
 id info
 id invisible
 id italic
 id item_touch_helper_previous_elevation
+id iv_img
 id largeLabel
 id left
 id line1
@@ -958,7 +962,6 @@ id spread_inside
 id src_atop
 id src_in
 id src_over
-id stampButton
 id standard
 id start
 id status_bar_latest_event_content
@@ -966,6 +969,7 @@ id submenuarrow
 id submit_area
 id tabLayout
 id tabMode
+id test
 id text
 id text2
 id textSpacerNoButtons
@@ -988,6 +992,8 @@ id transition_layout_save
 id transition_position
 id transition_scene_layoutid_cache
 id transition_transform
+id tv_contents
+id tv_name
 id uniform
 id up
 id useLogo
@@ -1034,6 +1040,7 @@ layout abc_search_dropdown_item_icons_2line
 layout abc_search_view
 layout abc_select_dialog_material
 layout activity_main
+layout activity_stamp
 layout design_bottom_navigation_item
 layout design_bottom_sheet_dialog
 layout design_layout_snackbar
@@ -1048,6 +1055,7 @@ layout design_navigation_item_subheader
 layout design_navigation_menu
 layout design_navigation_menu_item
 layout design_text_input_password_icon
+layout listview_custom
 layout notification_action
 layout notification_action_tombstone
 layout notification_media_action
@@ -1076,6 +1084,7 @@ mipmap app_icon
 mipmap app_icon_round
 mipmap ic_launcher_background
 mipmap ic_launcher_foreground
+string Stamp_TextView
 string abc_action_bar_home_description
 string abc_action_bar_home_description_format
 string abc_action_bar_home_subtitle_description_format
