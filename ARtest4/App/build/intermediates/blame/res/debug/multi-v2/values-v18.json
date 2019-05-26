@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "D:\\unity\\ARtest4\\AndroidStudio_ARTest4\\ARtest4\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-v18\\values-v18.xml",
+            "outputFile": "C:\\Users\\MR.SONG\\Documents\\GitHub\\ARculture\\ARtest4\\App\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-v18\\values-v18.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\난조민준이다\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\79543e48191f7e415561ee70d2339ee6\\res\\values-v18\\values-v18.xml",
+                    "source": "C:\\Users\\MR.SONG\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\1cf12e6346c9a275f6294f7a018f6e3a\\res\\values-v18\\values-v18.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",
