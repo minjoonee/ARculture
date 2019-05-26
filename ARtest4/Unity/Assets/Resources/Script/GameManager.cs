@@ -5,7 +5,7 @@ using UnityEngine.UI;
 using Vuforia;
 using System.Xml;
 using System.IO;
-
+using LitJson;
 public class GameManager : TtsForm, ITrackableEventHandler
 {
     public GameObject robot;
@@ -26,15 +26,18 @@ public class GameManager : TtsForm, ITrackableEventHandler
     int list_count;
     private bool SoundTrackCount = false; // 인식했을 때 사용하는 변수
     List<string> Stamp_List = new List<string>(); // 현재 스탬프에 저장되어 있는 데이터들(중복입력 방지 변수)
+    
 
     Touch touch;
     // Start is called before the first frame update
+    
+    
+
     new void Start()
     {
         robot.transform.localScale = new Vector3(char_scale, char_scale, char_scale);
 
         Stamp_List.Clear();
-        Chktext.text = "Read Stamp";
         ReadStamp();
         base.Start();
         track = GetComponent<TrackableBehaviour>();
@@ -130,7 +133,8 @@ public class GameManager : TtsForm, ITrackableEventHandler
             //녹음파일 component 불러와서 실행하는 부분
             //var sound = GameObject.Find(this.name).GetComponent<JB_AudioPlayer>();
             //sound.SoundPlay();
-            LoadXML(filename);
+            Chktext.text = "\t인식은 되냐?"+filename;
+            Loadjson(filename);
         }
         else
         {
@@ -142,11 +146,39 @@ public class GameManager : TtsForm, ITrackableEventHandler
         }
 
     }
+
+    void Loadjson(string _fileName)
+    {
+        JsonTest json = GameObject.Find("JsonData").GetComponent<JsonTest>(); // object에서 이미 jsondata로드한 item변수 가져옴
+        Chktext.text = "인식은 됬다. 됬는데? for문이 안도는건가?" + json.item.Length + "개\n" + json.item[0].name;
+        for (int i = 0; i < json.item.Length; i++)
+        {
+            if (_fileName.Equals(json.item[i].num))  //파일 이름이랑 num 태그 안에 있던 이름이랑 비교해고 같을 경우,
+            {
+                AddStamp(_fileName); //일단 스탬프 파일입출력으로 추가시켜주고,
+                Chktext.text = "\tName : " + json.item[i].name + "\n\n\t작가 : " + json.item[i].artist; // Text박스 수정
+                Debug.Log("작품이름 : " + json.item[i].name + " 작가 : " + json.item[i].artist + "\n");
+                //화면을 터치했을때 사운드 플레이 동작 실시하기 위해서 변수 삽입
+                SoundTrackCount = true; // 음악 큐
+                str = "안녕하세요. " + json.item[i].info; // TTS 실행할 문자열
+                                                       //base.FieldString = str;
+                                                       //base.OnSpeakClick();
+                break;
+            }
+            else
+            {
+                Debug.Log("Json 인식실패 " + json.item[0].artist);
+                Chktext.text = "\t인식실패"; // Text박스 수정
+            }
+        }
+    }
+
     void ScriptEnable(bool _enabled)
     {
         chk = _enabled;
     }
 
+   
     void LoadXML(string _fileName)
     {
         TextAsset txtAsset = (TextAsset)Resources.Load("XML/" + _fileName); // 인식한 파일명과 같은걸로 찾아준다. 문제는 파일명과 xml파일명이 달라서 일일히 하나씩 수정
@@ -213,6 +245,7 @@ public class GameManager : TtsForm, ITrackableEventHandler
 
         }
     }
+    
     void ReadStamp()
     {
         Stamp_List.Clear();
