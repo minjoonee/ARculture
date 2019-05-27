@@ -20,6 +20,10 @@ public class GameManager : TtsForm, ITrackableEventHandler
     string filename;
     string jpg_filename;
     string str;
+    string Lang_hello; // 안녕하세요
+    string Lang_firstDisplay; // "카메라로 전시물을 비춰보세요."
+    string Lang_name; //작품 제목
+    string Lang_author; //작가
     int jpg_filename_idx;
     int filename_idx = -1;
     int count;
@@ -45,6 +49,8 @@ public class GameManager : TtsForm, ITrackableEventHandler
         {
             track.RegisterTrackableEventHandler(this);
         }
+        LangString();
+        Chktext.text = Lang_firstDisplay;
     }
     void Update()
     {
@@ -133,7 +139,6 @@ public class GameManager : TtsForm, ITrackableEventHandler
             //녹음파일 component 불러와서 실행하는 부분
             //var sound = GameObject.Find(this.name).GetComponent<JB_AudioPlayer>();
             //sound.SoundPlay();
-            Chktext.text = "\t인식은 되냐?"+filename;
             Loadjson(filename);
         }
         else
@@ -142,7 +147,7 @@ public class GameManager : TtsForm, ITrackableEventHandler
             Robot_stat(1);
 
             ScriptEnable(false);
-            Chktext.text = "아래 카메라에 전시물을 비춰보세요.";
+            Chktext.text = Lang_firstDisplay;
         }
 
     }
@@ -150,17 +155,15 @@ public class GameManager : TtsForm, ITrackableEventHandler
     void Loadjson(string _fileName)
     {
         JsonTest json = GameObject.Find("JsonData").GetComponent<JsonTest>(); // object에서 이미 jsondata로드한 item변수 가져옴
-        Chktext.text = "인식은 됬다. 됬는데? for문이 안도는건가?" + json.item.Length + "개\n" + json.item[0].name;
         for (int i = 0; i < json.item.Length; i++)
         {
             if (_fileName.Equals(json.item[i].num))  //파일 이름이랑 num 태그 안에 있던 이름이랑 비교해고 같을 경우,
             {
                 AddStamp(_fileName); //일단 스탬프 파일입출력으로 추가시켜주고,
-                Chktext.text = "\tName : " + json.item[i].name + "\n\n\t작가 : " + json.item[i].artist; // Text박스 수정
-                Debug.Log("작품이름 : " + json.item[i].name + " 작가 : " + json.item[i].artist + "\n");
+                Chktext.text = "\t" +Lang_name + json.item[i].name + "\n\n\t" + Lang_author + json.item[i].artist; // Text박스 수정
                 //화면을 터치했을때 사운드 플레이 동작 실시하기 위해서 변수 삽입
                 SoundTrackCount = true; // 음악 큐
-                str = "안녕하세요. " + json.item[i].info; // TTS 실행할 문자열
+                str = Lang_hello + json.item[i].info; // TTS 실행할 문자열
                                                        //base.FieldString = str;
                                                        //base.OnSpeakClick();
                 break;
@@ -168,7 +171,6 @@ public class GameManager : TtsForm, ITrackableEventHandler
             else
             {
                 Debug.Log("Json 인식실패 " + json.item[0].artist);
-                Chktext.text = "\t인식실패"; // Text박스 수정
             }
         }
     }
@@ -178,73 +180,6 @@ public class GameManager : TtsForm, ITrackableEventHandler
         chk = _enabled;
     }
 
-   
-    void LoadXML(string _fileName)
-    {
-        TextAsset txtAsset = (TextAsset)Resources.Load("XML/" + _fileName); // 인식한 파일명과 같은걸로 찾아준다. 문제는 파일명과 xml파일명이 달라서 일일히 하나씩 수정
-        XmlDocument xmlDoc = new XmlDocument();
-        //XmlDeclaration xmlDeclaration = xmlDoc.CreateXmlDeclaration("1.0", "UTF-8", null);
-        //xmlDoc.AppendChild(xmlDeclaration);
-        xmlDoc.LoadXml(txtAsset.text);
-        Debug.Log("XML로드 완료!!");
-
-
-
-        XmlNodeList all_nodes = xmlDoc.SelectNodes("jb");
-        XmlNodeList img_all_nodes = xmlDoc.SelectNodes("jb/img");
-        foreach (XmlNode node in all_nodes)
-        {
-            foreach (XmlNode img_node in img_all_nodes)
-            {
-                IEnumerator ienum = img_node.GetEnumerator();
-                while (ienum.MoveNext())
-                {
-                    Debug.Log("지금 이 파일 이름 : " + this.name);
-                    Debug.Log("비교하려는 노드 이름 : " + img_node.SelectNodes("img")[count].InnerText);
-
-                    jpg_filename = img_node.SelectNodes("img")[count].InnerText;
-                    jpg_filename_idx = jpg_filename.IndexOf("."); // xml 파일에 .jpg 가 포함되어있는데 그거 제거시켜주려고;;
-
-
-                    if (jpg_filename_idx > 0) // 인덱스가 0보다 크면 .jpg가 파일명 사이에 있다는 것!
-                    {
-                        jpg_filename = jpg_filename.Substring(0, jpg_filename_idx);
-                        Debug.Log("- 인덱스 번호 : " + jpg_filename_idx);
-                        jpg_filename_idx = 0;
-                        Debug.Log("파일명 : " + jpg_filename);
-                    }
-                    else
-                        Debug.Log("xxxxxxxxxx . 문자 발견되지않음");
-
-                    //if (_fileName.Equals(img_node.SelectNodes("img")[count].InnerText)) // 파일 이름이랑 img태그 안에 있는 이름이랑 비교해봄
-                    if (this.name.Equals(jpg_filename)) // 파일 이름이랑 img태그 안에 있는 이름이랑 비교해봄
-                    {
-                        //Chktext.text = "\tName : " + node.SelectSingleNode("name").InnerText + "\n" + node.SelectSingleNode("info").InnerText;
-                        str = node.SelectSingleNode("info").InnerText;
-                        //str = str.Replace("<br>", "\n");
-                        str = str.Replace("<br>", "");
-                        for (int i = 0; i < str.Length; i += 27)
-                        {
-                            str = str.Insert(i, "\n\t");
-                            Debug.Log("개행이 삽입되는 곳의 위치 : " + i);
-                            i += 2;
-                        }
-                        AddStamp(_fileName);
-                        Chktext.text = "\tName : " + node.SelectSingleNode("name").InnerText + "\n\n\t작가 : " + node.SelectSingleNode("artist").InnerText;
-                        
-                        //화면을 터치했을때 사운드 플레이 동작 실시하기 위해서 변수 삽입
-                        SoundTrackCount = true;
-                        str = "안녕하세요. " + node.SelectSingleNode("artist").InnerText;
-                        //base.FieldString = str;
-                        //base.OnSpeakClick();
-                        Debug.Log("사운드 실행 후 info : " + node.SelectSingleNode("artist").InnerText);
-                    }
-                    count++;
-                }
-            }
-
-        }
-    }
     
     void ReadStamp()
     {
@@ -309,6 +244,39 @@ public class GameManager : TtsForm, ITrackableEventHandler
                 animator.SetInteger("state", state);
                 animator.SetBool("stop", true);
                 break;
+        }
+    }
+
+    void LangString()
+    {
+        string str = Application.systemLanguage.ToString();
+        if (str.Equals("Korean"))
+        {
+            Lang_hello = "안녕하세요. ";
+            Lang_firstDisplay = "카메라로 전시물을 비춰보세요.";
+            Lang_name = "작품 : ";
+            Lang_author = "작가 : ";
+        }
+        else if (str.Equals("Chinese"))
+        {
+            Lang_hello = "你好。";
+            Lang_firstDisplay = "用相机照亮展品。";
+            Lang_name = "标题 : ";
+            Lang_author = "作者 : ";
+        }
+        else if (str.Equals("English"))
+        {
+            Lang_hello = "Hello. ";
+            Lang_firstDisplay = "Use your camera to illuminate exhibits.";
+            Lang_name = "Title : ";
+            Lang_author = "Author : ";
+        }
+        else if (str.Equals("Japanese"))
+        {
+            Lang_hello = "こんにちは ";
+            Lang_firstDisplay = "カメラを使って展示物を照らしましょう。";
+            Lang_name = "タイトル : ";
+            Lang_author = "著者 : ";
         }
     }
 }

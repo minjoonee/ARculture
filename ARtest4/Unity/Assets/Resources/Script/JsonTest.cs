@@ -4,7 +4,7 @@ using UnityEngine;
 using System.IO;
 using LitJson;
 
-public class JsonTest : MonoBehaviour
+public class JsonTest : TtsForm
 {
     // Start is called before the first frame update
 
@@ -23,14 +23,41 @@ public class JsonTest : MonoBehaviour
             this.info = info;
         }
     }
+
     void LoadJson(string _fileName)
     {
+        Debug.Log("This system is in " + Application.systemLanguage);
         string LoadName = "";
         string Jsonstring = "";
         if (_fileName.StartsWith("jb"))
         {
-            TextAsset txtAsset = (TextAsset)Resources.Load("jb-expl"); // 인식한 파일명과 같은걸로 찾아준다. 문제는 파일명과 xml파일명이 달라서 일일히 하나씩 수정
-
+            TextAsset txtAsset;
+            string str = Application.systemLanguage.ToString();
+            if (str.Equals("Korean"))
+            {
+                languageField = "ko-KR";
+                txtAsset = (TextAsset)Resources.Load("jb-expl"); // 인식한 파일명과 같은걸로 찾아준다.
+            }
+            else if (str.Equals("Chinese"))
+            {
+                languageField = "zh-cn";
+                txtAsset = (TextAsset)Resources.Load("jb-chn");
+            }
+            else if (str.Equals("English"))
+            {
+                languageField = "en-US";
+                txtAsset = (TextAsset)Resources.Load("jb-eng");
+            }
+            else if (str.Equals("Japanese"))
+            {
+                languageField = "ja-JP";
+                txtAsset = (TextAsset)Resources.Load("jb-jpn");
+            }
+            else
+            {
+                languageField = "ko-KR";
+                txtAsset = (TextAsset)Resources.Load("jb-eng"); // 어떤 것도 속하지 않을 때는 영어로.
+            }
             //xmlDoc.LoadXml(txtAsset.text);
             //Jsonstring = File.ReadAllText(Application.dataPath + "/Resources/jb-expl.json");
             Debug.Log("경로 지정 : "+txtAsset.text);
@@ -63,4 +90,5 @@ public class JsonTest : MonoBehaviour
     {
     }
     
+
 }
