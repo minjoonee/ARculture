@@ -48,7 +48,6 @@
         android:debuggable="true"
         android:icon="@drawable/camera"
         android:label="@string/app_name"
-        android:testOnly="true"
         android:theme="@style/UnityThemeSelector" >
         <activity
             android:name="com.AR.test.MainActivity"

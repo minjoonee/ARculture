@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "D:\\proj\\App\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-v16\\values-v16.xml",
+            "outputFile": "D:\\unity\\github\\ARculture\\ARtest4\\App\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-v16\\values-v16.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\MR.SONG\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\1cf12e6346c9a275f6294f7a018f6e3a\\res\\values-v16\\values-v16.xml",
+                    "source": "C:\\Users\\난조민준이다\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\79543e48191f7e415561ee70d2339ee6\\res\\values-v16\\values-v16.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",
@@ -23,7 +23,7 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\MR.SONG\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-26.1.0.aar\\ed6a3aa7e28ffa3ad93b1165ad8b411a\\res\\values-v16\\values-v16.xml",
+                    "source": "C:\\Users\\난조민준이다\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-26.1.0.aar\\8890fc0f957d0fb40f6eefd12f49a1e0\\res\\values-v16\\values-v16.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",

@@ -212,9 +212,9 @@ public class StampActivity extends AppCompatActivity {
 
         String jb_Author[] = new String[]{
                 i_author0, i_author0,i_author0,i_author0,i_author0,i_author0,i_author0,i_author2,i_author2,i_author2
-                ,i_author3,i_author1,i_author1,i_author1,i_author1,i_author4,i_author4,i_author0,i_author0,i_author0
+                ,i_author3,i_author1,i_author1,i_author1,i_author1,i_author1,i_author1,i_author0,i_author0,i_author0
                 ,i_author0,i_author0,i_author0,i_author0,i_author2,i_author2,i_author2,i_author2,i_author2,i_author1
-                ,i_author1,i_author1,i_author4,i_author4,i_author4,i_author5,i_author5
+                ,i_author4,i_author4, i_author4,i_author4,i_author4,i_author5,i_author5
         };
 
         return jb_Author;
