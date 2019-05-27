@@ -4,10 +4,15 @@
     <color name="colorPrimaryDark">#303F9F</color>
     <color name="colorAccent">#FF4081</color>
 
-    <color name="background1">#fff</color>
+    <color name="background_1">#e6f4fa</color>
+    <color name="background_2">#cce8f4</color>
+    <color name="background_3">#b2ddef</color>
+    <color name="background_4">#96d2ea</color>
+    <color name="background_5">#76c7e4</color>
+    <color name="background_6">#50bcdf</color>
+    <color name="background_7">#78dfff</color>
+    <color name="background_8">#6bd3f7</color>
 
-    <color name="bottom_left">#222222</color>
-    <color name="bottom_center">#333333</color>
-    <color name="bottom_right">#555555</color>
-    <color name="bottom_center2">#444444</color>
+    <color name="colorWlk_page1">#FFF59365</color>
+
 </resources>

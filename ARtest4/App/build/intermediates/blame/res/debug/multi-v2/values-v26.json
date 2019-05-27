@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "C:\\Users\\MR.SONG\\Documents\\GitHub\\ARculture\\ARtest4\\App\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-v26\\values-v26.xml",
+            "outputFile": "D:\\proj\\App\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-v26\\values-v26.xml",
             "map": [
                 {
                     "source": "C:\\Users\\MR.SONG\\.gradle\\caches\\transforms-1\\files-1.1\\design-26.1.0.aar\\f5617683686fe56c34e4f24def848a2e\\res\\values-v26\\values-v26.xml",

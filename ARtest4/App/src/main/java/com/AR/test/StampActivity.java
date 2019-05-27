@@ -56,14 +56,11 @@ public class StampActivity extends AppCompatActivity {
     STAMP[] jb_stamp_jbnu = new STAMP[3]; // 전북청년 35~40 5개
     */
     STAMP[] jb_stamp = new STAMP[37];// 1~10, 12~30, 32~37, 39~40 총 37개 11, 31, 38 제외
-    public String jb_Author[] = new String[]{"김영경", "김영경","김영경","김영경","김영경","김영경","김영경","군산근대역사박물관","군산근대역사박물관","군산근대역사박물관"
-                                        ,"신석호","구샛별","구샛별","구샛별","구샛별","박두리","박두리","김영경","김영경"
-                                        ,"김영경","김영경","김영경","김영경","김영경","군산근대역사박물관","군산근대역사박물관","군산근대역사박물관","군산근대역사박물관","군산근대역사박물관"
-                                        ,"구샛별","구샛별","구샛별","박두리","박두리","박두리","김영봉","김영봉"};
-    public String jb_Work[] = new String[]{"송창동 타일#1", "송창동 타일#2","송창동 타일 #3","안녕, 신흥동 타일","안녕, 신흥동_꽃무늬 장판","안녕, 신흥동_무너진 집의 구조물","안녕, 신흥동_타일 #05","거류민단 시절의 도로", "시가지 전경","시가지 전경"
-                                        ,"군산 오식도","구석","부서진 벽","붉은 집","세개의 방","'한줄한줄' '쿵' '데구르르' 1","먼지연못","안녕, 신흥동","오래된 망각_서래로43-1"
-                                        ,"오래된 망각_처녀점술원","오래된 망각_까치만화","퇴적된 도시_경암동 #3","퇴적된 도시_경암동 #1","퇴적된 도시_경암동 #2","개항 이전의 군산","창고 밖 미곡","수탈미곡 선적광경","창고 안 미곡","군산항"
-                                        ,"붉은 타일","네모난 방, 세모난 방","둥근 벽","선데이","과도한 친절","4컷 드로잉","잿빛 드로잉","잿빛 드로잉"};
+
+
+    public String jb_Author[];
+    public String jb_Work[];
+
     ArrayList<String> Stamp_List = new ArrayList<String>();
     private ListView stampListView;
     private ScrollView scrollView;
@@ -78,6 +75,9 @@ public class StampActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_stamp);
+
+        jb_Author = getAuthor();
+        jb_Work = getWork();
 
         String museumName="";
         String line = null;
@@ -102,16 +102,16 @@ public class StampActivity extends AppCompatActivity {
         switch (key){ // 키로 받은 미술관 값에 미술관 갯수 부여
             case 0:
                 Num = 37;
-                museumName = "장미동 미술관";
+                museumName = getString(R.string.g1_name);
                 keyword = "jb";
                 break;
             case 1:
                 Num = 37;
-                museumName = "전북청년 미술관";
+                museumName = getString(R.string.g2_name);
                 keyword = "jb";
                 break;
             default:
-                museumName = "알수없음";
+                museumName = "DEFAULT";
                 Num = -1;
         }
 
@@ -119,9 +119,9 @@ public class StampActivity extends AppCompatActivity {
         StampFile(); // 트래킹해서 저장된 리스트 입력+스탬프 카운트
 
         TextView stampView = (TextView)findViewById(R.id.StampText);
-        stampView.setText(museumName + " 인식 완료 개수 : 총 개수\n");
+        stampView.setText(museumName + getString(R.string.detect_num));
         int temp= finish - start;
-        stampView.append(count+" : "+ temp+"\n");
+        stampView.append(count+" / "+ temp+"\n");
         /*
         for (int i=start; i<finish; i++){
             if(jb_stamp[i].StampCheck == 1){
@@ -201,5 +201,36 @@ public class StampActivity extends AppCompatActivity {
 
         /* 리스트뷰에 어댑터 등록 */
         stampListView.setAdapter(mMyAdapter);
+    }
+    public String[] getAuthor(){
+        String i_author0 = getString(R.string.kimyoungkyung);
+        String i_author1 = getString(R.string.kusatbyul);
+        String i_author2 = getString(R.string.kunsan);
+        String i_author3 = getString(R.string.sinsukho);
+        String i_author4 = getString(R.string.parkduri);
+        String i_author5 = getString(R.string.kimyoungbong);
+
+        String jb_Author[] = new String[]{
+                i_author0, i_author0,i_author0,i_author0,i_author0,i_author0,i_author0,i_author2,i_author2,i_author2
+                ,i_author3,i_author1,i_author1,i_author1,i_author1,i_author4,i_author4,i_author0,i_author0,i_author0
+                ,i_author0,i_author0,i_author0,i_author0,i_author2,i_author2,i_author2,i_author2,i_author2,i_author1
+                ,i_author1,i_author1,i_author4,i_author4,i_author4,i_author5,i_author5
+        };
+
+        return jb_Author;
+    }
+
+    public String[] getWork(){
+
+
+        String jb_Work[] = new String[]{
+                getString(R.string.jb1),getString(R.string.jb2),getString(R.string.jb3),getString(R.string.jb4),getString(R.string.jb5),getString(R.string.jb6), getString(R.string.jb7),getString(R.string.jb8),
+                getString(R.string.jb9),getString(R.string.jb10),getString(R.string.jb12),getString(R.string.jb13),getString(R.string.jb14),getString(R.string.jb15),getString(R.string.jb16),getString(R.string.jb17),
+                getString(R.string.jb18),getString(R.string.jb19),getString(R.string.jb20),getString(R.string.jb21),getString(R.string.jb22),getString(R.string.jb23),getString(R.string.jb24),getString(R.string.jb25),
+                getString(R.string.jb26),getString(R.string.jb27),getString(R.string.jb28),getString(R.string.jb29),getString(R.string.jb30),getString(R.string.jb32),getString(R.string.jb33),getString(R.string.jb33),
+                getString(R.string.jb34),getString(R.string.jb35),getString(R.string.jb36),getString(R.string.jb37),getString(R.string.jb39),getString(R.string.jb40)
+        };
+
+        return jb_Work;
     }
 }

@@ -1,4 +1,7 @@
-#Sun May 26 16:17:06 KST 2019
-base.0=C\:\\Users\\MR.SONG\\Documents\\GitHub\\ARculture\\ARtest4\\App\\build\\intermediates\\transforms\\dexMerger\\debug\\0
+#Tue May 28 01:02:26 KST 2019
+base.0=D\:\\proj\\App\\build\\intermediates\\transforms\\dexMerger\\debug\\0
+path.1=classes.dex
+renamed.1=classes2.dex
 path.0=classes.dex
 renamed.0=classes.dex
+base.1=D\:\\proj\\App\\build\\intermediates\\transforms\\dexMerger\\debug\\1

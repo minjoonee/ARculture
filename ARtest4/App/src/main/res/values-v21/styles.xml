@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-<style name="BaseUnityTheme" parent="android:Theme.Material.Light.NoActionBar.Fullscreen">
-</style>
+    <style name="BaseUnityTheme" parent="android:Theme.Material.Light.NoActionBar.Fullscreen">
+    </style>
+    <style name="App.Theme" parent="Theme.AppCompat.Light.NoActionBar" >
+    </style>
 </resources>
