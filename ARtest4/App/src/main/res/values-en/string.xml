@@ -28,8 +28,8 @@
     <!-- 작가 목록 -->
     <string name="kimyoungkyung">Kim Young-kyung</string>
     <string name="sinsukho">Shin Seok-ho</string>
-    <string name="kusatbyul">Koo Saet-byul</string>
-    <string name="parkduri">Park Du-ri</string>
+    <string name="kusatbyul">Gyo SaetByeol</string>
+    <string name="parkduri">Park Doo-Ri</string>
     <string name="kunsan">Gunsan Modern History Museum</string>
     <string name="kimyoungbong">Kim Young-bong</string>
 
@@ -37,7 +37,7 @@
     <string name="jb1">Songchang-dong tile # 1</string>
     <string name="jb2">Songchang-dong tile # 2</string>
     <string name="jb3">Songchang-dong tile # 3</string>
-    <string name="jb4">Hello, Shinhung Dong tile # 1 </string>
+    <string name="jb4">Hello, Shinhung Dong tile # 1</string>
     <string name="jb5"> Hello, Sinheungdong_floral pattern</string>
     <string name="jb6"> Hello, Sinhung-dong_Structure of the collapsed house</string>
     <string name="jb7">Hello, Shinhung Dong tile # 5</string>
@@ -47,7 +47,7 @@
     <string name="jb12">Kunsan Oshikdo</string>
     <string name="jb13">Corner</string>
     <string name="jb14">Broken wall</string>
-    <string name="jb15">Red House</string>
+    <string name="jb15">A red house</string>
     <string name="jb16">Three rooms</string>
     <string name="jb17">Square Room, Three Square Room</string>
     <string name="jb18">round wall</string>
@@ -55,21 +55,21 @@
     <string name="jb20">Old oblivion_Seorae 43-1</string>
     <string name="jb21">Old oblivion_Miss fortune teller</string>
     <string name="jb22">Old oblivion_Magpie cartoon</string>
-    <string name="jb23"> Deposited City_ Kyouam-dong # 3</string>
-    <string name="jb24"> Deposited City_ Kyouam-dong # 1</string>
-    <string name="jb25"> Deposited City_ Kyouam-dong # 2</string>
-    <string name="jb26">Gunsan before opening port</string>
+    <string name="jb23"> Sedimentary City_Gyeongam-dong # 3</string>
+    <string name="jb24"> Sedimentary City_Gyeongam-dong # 1</string>
+    <string name="jb25"> Sedimentary City_Gyeongam-dong # 2</string>
+    <string name="jb26">Gunsan before the opening of the 1890s</string>
     <string name="jb27">Rice out the warehouse</string>
-    <string name="jb28">stolen rice shipment sightng</string>
+    <string name="jb28">Stolen rice shipment sightng</string>
     <string name="jb29">Rice in the warehouse</string>
     <string name="jb30">Gunsan port</string>
-    <string name="jb32">red tiles</string>
-    <string name="jb33">In one line, thump, rrrroll</string>
+    <string name="jb32">red tile</string>
+    <string name="jb33">One line, one bump, one leg.</string>
     <string name="jb34">Dust pond</string>
-    <string name="jb35">Sunday </string>
+    <string name="jb35">Sunday</string>
     <string name="jb36">Excessive kindness</string>
-    <string name="jb37">4 cut drawings </string>
-    <string name="jb39">Grayish Drawing </string>
-    <string name="jb40">Grayish Drawing  2</string>
+    <string name="jb37">four-cut drawing</string>
+    <string name="jb39">Ashen Drawing </string>
+    <string name="jb40">Ashen Drawing  #2</string>
 
 </resources>

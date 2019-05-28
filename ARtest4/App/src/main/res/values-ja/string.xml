@@ -25,11 +25,11 @@
 
 
     <!-- 작가 목록 -->
-    <string name="kimyoungkyung">きん永ひさし敬たかし</string>
+    <string name="kimyoungkyung">キム・ヨンギョン</string>
     <string name="sinsukho">シン·ソクホ</string>
-    <string name="kusatbyul">きゅうシェットビュール</string>
+    <string name="kusatbyul">餃子ビョル</string>
     <string name="parkduri">パークデュリ</string>
-    <string name="kunsan">群山近代歴史館</string>
+    <string name="kunsan">昆山近代歴史館所長</string>
     <string name="kimyoungbong">キム・ヨンポン</string>
 
     <!-- 그림 목록-->
@@ -40,14 +40,14 @@
     <string name="jb5">こんにちは、新興洞_花柄カーペット</string>
     <string name="jb6">こんにちは、新興洞_崩れた家の構造物</string>
     <string name="jb7">こんにちは、新興洞 タイル＃5 </string>
-    <string name="jb8">植民地時代の道 </string>
-    <string name="jb9">市街地の景色</string>
-    <string name="jb10">市街地の景色 2</string>
-    <string name="jb12">群山タイプエラー</string>
+    <string name="jb8">植民地時代の通り</string>
+    <string name="jb9">街のパノラマビュー</string>
+    <string name="jb10">街のパノラマビュー 2</string>
+    <string name="jb12">群山おす</string>
     <string name="jb13">コーナー</string>
     <string name="jb14">壊れた壁</string>
     <string name="jb15">赤い家</string>
-    <string name="jb16">3つの部屋</string>
+    <string name="jb16">3部屋</string>
     <string name="jb17">四角い部屋、三角部屋</string>
     <string name="jb18">丸い壁</string>
     <string name="jb19">こんにちは、新興洞</string>
@@ -57,18 +57,18 @@
     <string name="jb23">堆積された都市_ ギョンアムドン＃3</string>
     <string name="jb24">堆積された都市_ ギョンアムドン＃1</string>
     <string name="jb25">堆積された都市_ ギョンアムドン＃2</string>
-    <string name="jb26">開港前 群山港</string>
-    <string name="jb27">倉庫外米穀</string>
-    <string name="jb28">収奪米穀出荷光景</string>
-    <string name="jb29">倉庫の米穀</string>
+    <string name="jb26">1890年代の開幕前の群山</string>
+    <string name="jb27">品切れご飯</string>
+    <string name="jb28">餅米出荷サイト</string>
+    <string name="jb29">餅米出荷サイト</string>
     <string name="jb30">群山港</string>
     <string name="jb32">赤いタイル</string>
-    <string name="jb33">1行1行、ブーム、デグールルー</string>
+    <string name="jb33">1一行、一バンプ、一本足。</string>
     <string name="jb34">ほこりの池</string>
-    <string name="jb35">Sunday</string>
+    <string name="jb35">日曜日</string>
     <string name="jb36">過度の優しさ</string>
-    <string name="jb37"> 4 面図</string>
+    <string name="jb37">四カット図</string>
     <string name="jb39">灰色がかった図</string>
-    <string name="jb40">灰色がかった図2 </string>
+    <string name="jb40">灰色がかった図 #2</string>
 
 </resources>

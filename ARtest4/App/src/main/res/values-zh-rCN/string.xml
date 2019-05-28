@@ -9,66 +9,66 @@
     <string name="chinese">中文</string>
     <string name="github">https://github.com/minjoonee/ARculture</string>
 
-    <string name="gallery1">\n바람부는 날은 장미동에 간다 展\n\n전시장소 / 전북도립미술관 본관 2~4 전시실\n전시분야 / 회화, 사진, 설치, 근대유물\n전시기간 / 2019.03.19 ~ 2019.06.02\n</string>
-    <string name="gallery2">\n전북청년 2019 展\n\n전시장소 / 전북도립미술관 본관 5 전시실\n전시분야 / 회화, 설치, 영상 등 \n전시기간 / 2019.03.19 ~ 2019.06.02\n</string>
+    <string name="gallery1">\n刮风的日子去了山谷 展\n\n展览场所 / 全北美术馆主楼2~4展厅\n展览区 / 绘画，摄影，装置，现代文物\n展期 / 2019.03.19 ~ 2019.06.02\n</string>
+    <string name="gallery2">\n全北青年 2019 展\n\n展览场所 / 全北省立美术馆5主展厅\n전시분야 / 绘画，装置，视频等 \n展期 / 2019.03.19 ~ 2019.06.02\n</string>
 
-    <string name="startAR">AR 카메라</string>
-    <string name="gotoGallery">전시회 목록</string>
-    <string name="language">언어 설정</string>
-    <string name="howtouse">이용 방법</string>
+    <string name="startAR">AR 相机</string>
+    <string name="gotoGallery">展览清单</string>
+    <string name="language">语言设置</string>
+    <string name="howtouse">怎么用</string>
 
-    <string name="detect_num">\n 인식 완료 개수 / 총 개수\n</string>
+    <string name="detect_num">\n 认可完成 / 总数\n</string>
 
     <!-- 전시회 목록-->
-    <string name="g1_name">바람부는 날은 장미동에 간다</string>
-    <string name="g2_name">전북청년 2019</string>
+    <string name="g1_name">刮风的日子去了山谷 展</string>
+    <string name="g2_name">全北青年 2019 展</string>
 
 
     <!-- 작가 목록 -->
-    <string name="kimyoungkyung">김영경</string>
-    <string name="sinsukho">신석호</string>
-    <string name="kusatbyul">구샛별</string>
-    <string name="parkduri">박두리</string>
-    <string name="kunsan">군산근대역사박물관</string>
-    <string name="kimyoungbong">김영봉</string>
+    <string name="kimyoungkyung">Kim Young Kyung</string>
+    <string name="sinsukho">Shin Seok-ho</string>
+    <string name="kusatbyul">Gyo SaetByeol</string>
+    <string name="parkduri">Park Doo-Ri</string>
+    <string name="kunsan">昆山现代史博物馆馆长</string>
+    <string name="kimyoungbong">Kim Young-bong</string>
 
     <!-- 그림 목록-->
-    <string name="jb1">송창동 타일 #1</string>
-    <string name="jb2">송창동 타일 #2</string>
-    <string name="jb3">송창동 타일 #3</string>
-    <string name="jb4">안녕, 신흥동 타일 #1</string>
-    <string name="jb5">안녕, 신흥동_꽃무늬 장판</string>
-    <string name="jb6">안녕, 신흥동_무너진 집의 구조물</string>
-    <string name="jb7">안녕, 신흥동 타일 #5</string>
-    <string name="jb8">거류민단 시절의 도로</string>
-    <string name="jb9">시가지 전경</string>
-    <string name="jb10">시가지 전경2</string>
-    <string name="jb12">군산 오식도</string>
-    <string name="jb13">구석</string>
-    <string name="jb14">부서진 벽</string>
-    <string name="jb15">붉은 집</string>
-    <string name="jb16">세개의 방</string>
-    <string name="jb17">한줄한줄, 쿵 데구르르</string>
-    <string name="jb18">먼지 연못</string>
-    <string name="jb19">안녕 신흥동</string>
-    <string name="jb20">오래된 망각_서래로 43-1</string>
-    <string name="jb21">오래된 망각_처녀점술원</string>
-    <string name="jb22">오래된 망각_까치만화</string>
-    <string name="jb23">퇴적된 도시_경암동 #3</string>
-    <string name="jb24">퇴적된 도시_경암동 #1</string>
-    <string name="jb25">퇴적된 도시_경암동 #2</string>
-    <string name="jb26">개항 이전의 군산</string>
-    <string name="jb27">창고 밖 미곡</string>
-    <string name="jb28">수탈미곡 선적광경</string>
-    <string name="jb29">창고 안 미곡</string>
-    <string name="jb30">군산항</string>
-    <string name="jb32">붉은 타일</string>
-    <string name="jb33">네모난 방, 세모난 방</string>
-    <string name="jb34">둥근 벽</string>
-    <string name="jb35">선데이</string>
-    <string name="jb36">과도한 친절</string>
-    <string name="jb37">4컷 드로잉</string>
-    <string name="jb39">잿빛 드로잉</string>
-    <string name="jb40">잿빛 드로잉 2</string>
+    <string name="jb1">松昌洞瓷砖 #1</string>
+    <string name="jb2">松昌洞瓷砖 #2</string>
+    <string name="jb3">松昌洞瓷砖 #3</string>
+    <string name="jb4">你好, 松昌洞瓷砖 #1</string>
+    <string name="jb5">你好，Shinhwangdong花卉图案</string>
+    <string name="jb6">你好, Shinheung-dong 大楼倒塌了</string>
+    <string name="jb7">你好, 松昌洞瓷砖 #5</string>
+    <string name="jb8">殖民地时代的一条街道</string>
+    <string name="jb9">享有城市全景</string>
+    <string name="jb10">享有城市全景 2</string>
+    <string name="jb12">昆山奥希克多</string>
+    <string name="jb13">角</string>
+    <string name="jb14">破墙。</string>
+    <string name="jb15">一幢红房子</string>
+    <string name="jb16">三个房间</string>
+    <string name="jb17">一个方形的房间，一个三角的房间</string>
+    <string name="jb18">圆墙</string>
+    <string name="jb19">你好, SHINHEUNG洞。</string>
+    <string name="jb20">旧的遗忘到Seoraero 43-1</string>
+    <string name="jb21">老忘却的处女算命先生</string>
+    <string name="jb22">老遗忘鹊卡通</string>
+    <string name="jb23">沉积城市_Gyeongam-dong #3</string>
+    <string name="jb24">沉积城市_Gyeongam-dong #1</string>
+    <string name="jb25">沉积城市_Gyeongam-dong #2</string>
+    <string name="jb26">群山在19世纪90年代开放之前</string>
+    <string name="jb27">缺货的大米</string>
+    <string name="jb28">赖斯不被剥削</string>
+    <string name="jb29">无米仓</string>
+    <string name="jb30">昆山港</string>
+    <string name="jb32">红瓦</string>
+    <string name="jb33">一条线，一条凹凸，一条腿。</string>
+    <string name="jb34">一个尘池</string>
+    <string name="jb35">星期日</string>
+    <string name="jb36">过度善良</string>
+    <string name="jb37">四画图</string>
+    <string name="jb39">灰烬画</string>
+    <string name="jb40">灰烬画 #2</string>
 
 </resources>
