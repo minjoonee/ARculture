@@ -770,6 +770,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   MainText: {fileID: 646306062}
   PosterText: {fileID: 380851739}
+  LangNum: 0
 --- !u!1 &1052482186
 GameObject:
   m_ObjectHideFlags: 0

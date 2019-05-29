@@ -16,7 +16,6 @@ public class UnityPlayerActivity extends Activity
 {
     protected UnityPlayer mUnityPlayer; // don't change the name of this variable; referenced from native code
 
-
     // Setup activity layout
     @Override protected void onCreate(Bundle savedInstanceState)
     {
@@ -27,10 +26,15 @@ public class UnityPlayerActivity extends Activity
         setContentView(mUnityPlayer);
         mUnityPlayer.requestFocus();
     }
-    @Override public void onBackPressed(){
-        mUnityPlayer.destroy();
-        super.onDestroy();
+    public void goBack() {
         finish();
+        Runnable action = new Runnable() {
+            @Override
+            public void run() {
+                onBackPressed();
+            }
+        };
+        runOnUiThread(action);
     }
 
     @Override protected void onNewIntent(Intent intent)

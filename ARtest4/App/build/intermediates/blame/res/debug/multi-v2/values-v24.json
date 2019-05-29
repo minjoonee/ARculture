@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "D:\\unity\\github\\ARculture\\ARtest4\\App\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-v24\\values-v24.xml",
+            "outputFile": "D:\\unity\\unityExport\\AR\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-v24\\values-v24.xml",
             "map": [
                 {
                     "source": "C:\\Users\\난조민준이다\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.1.0.aar\\79543e48191f7e415561ee70d2339ee6\\res\\values-v24\\values-v24.xml",

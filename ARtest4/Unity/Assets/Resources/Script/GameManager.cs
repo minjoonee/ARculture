@@ -28,6 +28,9 @@ public class GameManager : TtsForm, ITrackableEventHandler
     int filename_idx = -1;
     int count;
     int list_count;
+
+    public int LangNum; // 1: 한국어 2: 중국어 3: 영어 4: 일본어
+
     private bool SoundTrackCount = false; // 인식했을 때 사용하는 변수
     List<string> Stamp_List = new List<string>(); // 현재 스탬프에 저장되어 있는 데이터들(중복입력 방지 변수)
     
@@ -39,6 +42,9 @@ public class GameManager : TtsForm, ITrackableEventHandler
 
     new void Start()
     {
+        ReadLang(); // 언어 변경
+        LangString();
+
         robot.transform.localScale = new Vector3(char_scale, char_scale, char_scale);
 
         Stamp_List.Clear();
@@ -49,7 +55,6 @@ public class GameManager : TtsForm, ITrackableEventHandler
         {
             track.RegisterTrackableEventHandler(this);
         }
-        LangString();
         Chktext.text = Lang_firstDisplay;
     }
     void Update()
@@ -186,7 +191,6 @@ public class GameManager : TtsForm, ITrackableEventHandler
         }
         sr.Close();
         Readfs.Close();
-
     }
     void AddStamp(string StampName)
     {
@@ -243,33 +247,81 @@ public class GameManager : TtsForm, ITrackableEventHandler
     void LangString()
     {
         string str = Application.systemLanguage.ToString();
-        if (str.Equals("Korean"))
+        if (LangNum < 0)
         {
-            Lang_hello = "안녕하세요. ";
-            Lang_firstDisplay = "카메라로 전시물을 비춰보세요.";
-            Lang_name = "작품 : ";
-            Lang_author = "작가 : ";
+            if (str.Equals("Korean"))
+            {
+                Lang_hello = "안녕하세요. ";
+                Lang_firstDisplay = "카메라로 전시물을 비춰보세요.";
+                Lang_name = "작품 : ";
+                Lang_author = "작가 : ";
+            }
+            else if (str.Equals("Chinese"))
+            {
+                Lang_hello = "你好。";
+                Lang_firstDisplay = "用相机照亮展品。";
+                Lang_name = "标题 : ";
+                Lang_author = "作者 : ";
+            }
+            else if (str.Equals("English"))
+            {
+                Lang_hello = "Hello. ";
+                Lang_firstDisplay = "Use your camera to illuminate exhibits.";
+                Lang_name = "Title : ";
+                Lang_author = "Author : ";
+            }
+            else if (str.Equals("Japanese"))
+            {
+                Lang_hello = "こんにちは ";
+                Lang_firstDisplay = "カメラを使って展示物を照らしましょう。";
+                Lang_name = "タイトル : ";
+                Lang_author = "著者 : ";
+            }
         }
-        else if (str.Equals("Chinese"))
+        else
         {
-            Lang_hello = "你好。";
-            Lang_firstDisplay = "用相机照亮展品。";
-            Lang_name = "标题 : ";
-            Lang_author = "作者 : ";
+            switch (LangNum)
+            {
+                case 1:
+                    Lang_hello = "안녕하세요. ";
+                    Lang_firstDisplay = "카메라로 전시물을 비춰보세요.";
+                    Lang_name = "작품 : ";
+                    Lang_author = "작가 : ";
+                    break;
+                case 2:
+                    Lang_hello = "你好。";
+                    Lang_firstDisplay = "用相机照亮展品。";
+                    Lang_name = "标题 : ";
+                    Lang_author = "作者 : ";
+                    break;
+                case 3:
+                    Lang_hello = "Hello. ";
+                    Lang_firstDisplay = "Use your camera to illuminate exhibits.";
+                    Lang_name = "Title : ";
+                    Lang_author = "Author : ";
+                    break;
+                case 4:
+                    Lang_hello = "こんにちは ";
+                    Lang_firstDisplay = "カメラを使って展示物を照らしましょう。";
+                    Lang_name = "タイトル : ";
+                    Lang_author = "著者 : ";
+                    break;
+            }
         }
-        else if (str.Equals("English"))
+    }
+
+
+    void ReadLang()
+    {
+        LangNum = -1;
+        string line = "";// 한줄씩 입력받을 변수
+        FileStream ReadL = new FileStream(Application.persistentDataPath + "/ARculture" + "/Language.txt", FileMode.OpenOrCreate, FileAccess.Read);
+        StreamReader sL = new StreamReader(ReadL);
+        while ((line = sL.ReadLine()) != null)
         {
-            Lang_hello = "Hello. ";
-            Lang_firstDisplay = "Use your camera to illuminate exhibits.";
-            Lang_name = "Title : ";
-            Lang_author = "Author : ";
+            LangNum = int.Parse(line);
         }
-        else if (str.Equals("Japanese"))
-        {
-            Lang_hello = "こんにちは ";
-            Lang_firstDisplay = "カメラを使って展示物を照らしましょう。";
-            Lang_name = "タイトル : ";
-            Lang_author = "著者 : ";
-        }
+        sL.Close();
+        ReadL.Close();
     }
 }
