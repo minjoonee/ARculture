@@ -8,6 +8,7 @@ using LitJson;
 
 public class PosterManager : MonoBehaviour, ITrackableEventHandler
 {
+    private IEnumerator coroutine;
     public GameObject robot;
     public Animator animator;
 
@@ -15,15 +16,14 @@ public class PosterManager : MonoBehaviour, ITrackableEventHandler
     private TrackableBehaviour track;
     string firstDisplay; // "카메라로 포스터를 비춰보세요."
     int count;
-    public float y;
-    int stat;
+    public bool jump;
 
     Touch touch;
     // Start is called before the first frame update
     
     new void Start()
     {
-        y = 0;
+        coroutine = CheckAnimator();
         track = GetComponent<TrackableBehaviour>();
         if (track)
         {
@@ -42,26 +42,34 @@ public class PosterManager : MonoBehaviour, ITrackableEventHandler
 
             if (touch.phase == TouchPhase.Began) 
             {
-                
-                if(count == 0)
-                {
-                    count = 1;
-                    stat = Robot_stat(1);
-                }
+                 Robot_stat(1);
             }
         }
         
-        if(animator.GetCurrentAnimatorStateInfo(0).IsName("Base Layer.poster") && animator.GetCurrentAnimatorStateInfo(0).normalizedTime >= 0.99f)
+        if (animator.GetCurrentAnimatorStateInfo(0).IsName("Base Layer.poster") && animator.GetCurrentAnimatorStateInfo(0).normalizedTime >= 0.99f)
         {
-            stat = Robot_stat(2);
-        }
-        if (stat == 2)
-        {
-            y = y + 0.01f;
-            robot.transform.Rotate(0, y, 0);
+            Robot_stat(2);
         }
         
+        
     }
+
+    IEnumerator CheckAnimator()
+    {
+        while(!animator.GetCurrentAnimatorStateInfo(0).IsName("Base Layer.poster2"))
+        {
+            yield return null;
+        }
+        while(animator.GetCurrentAnimatorStateInfo(0).IsName("Base Layer.poster2"))
+        {
+            //애니메이션 재생 중 실행되는 부분
+            robot.transform.Rotate(0, 1, 0);
+            Debug.Log("빙글빙글!");
+            yield return null;
+        }
+        yield return null;
+    }
+
     public void OnTrackableStateChanged(TrackableBehaviour.Status previousStatus, TrackableBehaviour.Status newStatus)
     {
         //throw new System.NotImplementedException();
@@ -73,11 +81,9 @@ public class PosterManager : MonoBehaviour, ITrackableEventHandler
         }
         else
         {
-            y = 0;
-            count = 0; // 같은 태그 중복검색을 위한 초기화
-            stat = Robot_stat(0);
+            Robot_stat(0);
             robot.transform.localPosition = new Vector3(0.277f, -0.057f, 0);
-            transform.rotation = Quaternion.Euler(0,0,0);
+            robot.transform.localRotation = Quaternion.Euler(0,270,0);
             ScriptEnable(false);
         }
 
@@ -88,23 +94,22 @@ public class PosterManager : MonoBehaviour, ITrackableEventHandler
         chk = _enabled;
     } 
     
-    int Robot_stat(int state)
+    void Robot_stat(int state)
     {
         switch (state)
         {
             case 0:
                 animator.SetInteger("state", state);
+                StopCoroutine(coroutine);
                 break;
             case 1:
                 animator.SetInteger("state", state);
-                stat = state;
+                StartCoroutine(coroutine);
                 break ;
             case 2:
                 animator.SetInteger("state", state);
-                stat = state;
                 break;
         }
-        return state;
     }
     /*
     void LangString()

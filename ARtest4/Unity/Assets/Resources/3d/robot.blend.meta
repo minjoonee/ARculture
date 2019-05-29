@@ -122,30 +122,32 @@ ModelImporter:
     rigImportErrors: 
     rigImportWarnings: 
     animationImportErrors: 
-    animationImportWarnings: "\nClip 'breath' has import animation warnings that might
-      lower retargeting quality:\nNote: Activate translation DOF on avatar to improve
-      retargeting quality.\n\t'Chest' is inbetween humanoid transforms and has rotation
-      animation that will be discarded.\n\nClip 'poster' has import animation warnings
+    animationImportWarnings: "\nClip 'Default Take' has import animation warnings
       that might lower retargeting quality:\nNote: Activate translation DOF on avatar
-      to improve retargeting quality.\n\t'thigh_l' has scale animation that will be
-      discarded.\n\t'calf_l' has scale animation that will be discarded.\n\t'thigh_r'
-      has scale animation that will be discarded.\n\t'calf_r' has scale animation
-      that will be discarded.\n\nClip 'poster2' has import animation warnings that
-      might lower retargeting quality:\nNote: Activate translation DOF on avatar to
-      improve retargeting quality.\n\t'Chest' is inbetween humanoid transforms and
-      has rotation animation that will be discarded.\n\t'thigh_l' has scale animation
+      to improve retargeting quality.\n\t'Chest' is inbetween humanoid transforms
+      and has rotation animation that will be discarded.\n\t'thigh_l' has scale animation
       that will be discarded.\n\t'calf_l' has scale animation that will be discarded.\n\t'thigh_r'
       has scale animation that will be discarded.\n\t'calf_r' has scale animation
-      that will be discarded.\n\nClip 'RUN' has import animation warnings that might
+      that will be discarded.\n\nClip 'poster' has import animation warnings that
+      might lower retargeting quality:\nNote: Activate translation DOF on avatar to
+      improve retargeting quality.\n\t'thigh_l' has scale animation that will be discarded.\n\t'calf_l'
+      has scale animation that will be discarded.\n\t'thigh_r' has scale animation
+      that will be discarded.\n\t'calf_r' has scale animation that will be discarded.\n\nClip
+      'poster2' has import animation warnings that might lower retargeting quality:\nNote:
+      Activate translation DOF on avatar to improve retargeting quality.\n\t'Chest'
+      is inbetween humanoid transforms and has rotation animation that will be discarded.\n\t'thigh_l'
+      has scale animation that will be discarded.\n\t'calf_l' has scale animation
+      that will be discarded.\n\t'thigh_r' has scale animation that will be discarded.\n\t'calf_r'
+      has scale animation that will be discarded.\n\nClip 'RUN' has import animation
+      warnings that might lower retargeting quality:\nNote: Activate translation DOF
+      on avatar to improve retargeting quality.\n\t'thigh_l' has scale animation that
+      will be discarded.\n\t'calf_l' has scale animation that will be discarded.\n\t'thigh_r'
+      has scale animation that will be discarded.\n\t'calf_r' has scale animation
+      that will be discarded.\n\nClip 'Walk' has import animation warnings that might
       lower retargeting quality:\nNote: Activate translation DOF on avatar to improve
       retargeting quality.\n\t'thigh_l' has scale animation that will be discarded.\n\t'calf_l'
       has scale animation that will be discarded.\n\t'thigh_r' has scale animation
-      that will be discarded.\n\t'calf_r' has scale animation that will be discarded.\n\nClip
-      'Walk' has import animation warnings that might lower retargeting quality:\nNote:
-      Activate translation DOF on avatar to improve retargeting quality.\n\t'thigh_l'
-      has scale animation that will be discarded.\n\t'calf_l' has scale animation
-      that will be discarded.\n\t'thigh_r' has scale animation that will be discarded.\n\t'calf_r'
-      has scale animation that will be discarded.\n"
+      that will be discarded.\n\t'calf_r' has scale animation that will be discarded.\n"
     animationRetargetingWarnings: 
     animationDoRetargetingWarnings: 0
     importAnimatedCustomProperties: 0
@@ -395,9 +397,9 @@ ModelImporter:
       hasAdditiveReferencePose: 0
       loopTime: 1
       loopBlend: 0
-      loopBlendOrientation: 0
-      loopBlendPositionY: 0
-      loopBlendPositionXZ: 0
+      loopBlendOrientation: 1
+      loopBlendPositionY: 1
+      loopBlendPositionXZ: 1
       keepOriginalOrientation: 0
       keepOriginalPositionY: 1
       keepOriginalPositionXZ: 0
