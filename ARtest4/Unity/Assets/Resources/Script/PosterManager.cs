@@ -53,7 +53,7 @@ public class PosterManager : MonoBehaviour, ITrackableEventHandler
         
         if(animator.GetCurrentAnimatorStateInfo(0).nameHash  == Animator.StringToHash("Base Layer.poster2"))
         {
-            y = y + 0.0001f;
+            y = y + 0.001f;
         }
 
         robot.transform.Rotate(0, y, 0);
