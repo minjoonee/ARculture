@@ -16,6 +16,7 @@ public class PosterManager : MonoBehaviour, ITrackableEventHandler
     string firstDisplay; // "카메라로 포스터를 비춰보세요."
     int count;
     public float y;
+    int stat;
 
     Touch touch;
     // Start is called before the first frame update
@@ -23,7 +24,6 @@ public class PosterManager : MonoBehaviour, ITrackableEventHandler
     new void Start()
     {
         y = 0;
-
         track = GetComponent<TrackableBehaviour>();
         if (track)
         {
@@ -46,17 +46,20 @@ public class PosterManager : MonoBehaviour, ITrackableEventHandler
                 if(count == 0)
                 {
                     count = 1;
-                    Robot_stat(1);
+                    stat = Robot_stat(1);
                 }
             }
         }
         
-        if(animator.GetCurrentAnimatorStateInfo(0).nameHash  == Animator.StringToHash("Base Layer.poster2"))
+        if(animator.GetCurrentAnimatorStateInfo(0).IsName("Base Layer.poster") && animator.GetCurrentAnimatorStateInfo(0).normalizedTime >= 0.99f)
         {
-            y = y + 0.001f;
+            stat = Robot_stat(2);
         }
-
-        robot.transform.Rotate(0, y, 0);
+        if (stat == 2)
+        {
+            y = y + 0.01f;
+            robot.transform.Rotate(0, y, 0);
+        }
         
     }
     public void OnTrackableStateChanged(TrackableBehaviour.Status previousStatus, TrackableBehaviour.Status newStatus)
@@ -72,7 +75,7 @@ public class PosterManager : MonoBehaviour, ITrackableEventHandler
         {
             y = 0;
             count = 0; // 같은 태그 중복검색을 위한 초기화
-            Robot_stat(0);
+            stat = Robot_stat(0);
             robot.transform.localPosition = new Vector3(0.277f, -0.057f, 0);
             transform.rotation = Quaternion.Euler(0,0,0);
             ScriptEnable(false);
@@ -85,7 +88,7 @@ public class PosterManager : MonoBehaviour, ITrackableEventHandler
         chk = _enabled;
     } 
     
-    void Robot_stat(int state)
+    int Robot_stat(int state)
     {
         switch (state)
         {
@@ -94,11 +97,14 @@ public class PosterManager : MonoBehaviour, ITrackableEventHandler
                 break;
             case 1:
                 animator.SetInteger("state", state);
-                break;
+                stat = state;
+                break ;
             case 2:
                 animator.SetInteger("state", state);
+                stat = state;
                 break;
         }
+        return state;
     }
     /*
     void LangString()

@@ -137,7 +137,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400054, guid: 3f296883d0b4d784fb82beba3002e3d6, type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 400054, guid: 3f296883d0b4d784fb82beba3002e3d6, type: 3}
       propertyPath: m_LocalRotation.y
@@ -907,6 +907,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   robot: {fileID: 1285807939}
   animator: {fileID: 1285807938}
+  y: 0
 --- !u!4 &1040282811
 Transform:
   m_ObjectHideFlags: 0
@@ -1110,6 +1111,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   robot: {fileID: 787135018}
   animator: {fileID: 787135020}
+  y: 0
 --- !u!23 &1342724354
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -1343,6 +1345,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   robot: {fileID: 1285807939}
   animator: {fileID: 1285807938}
+  y: 0
 --- !u!23 &1664987318
 MeshRenderer:
   m_ObjectHideFlags: 0
