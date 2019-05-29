@@ -1,7 +1,7 @@
-#Tue May 28 01:02:26 KST 2019
-base.0=D\:\\proj\\App\\build\\intermediates\\transforms\\dexMerger\\debug\\0
+#Wed May 29 22:32:10 KST 2019
+base.0=D\:\\unity\\github\\ARculture\\ARtest4\\App\\build\\intermediates\\transforms\\dexMerger\\debug\\1
 path.1=classes.dex
 renamed.1=classes2.dex
 path.0=classes.dex
 renamed.0=classes.dex
-base.1=D\:\\proj\\App\\build\\intermediates\\transforms\\dexMerger\\debug\\1
+base.1=D\:\\unity\\github\\ARculture\\ARtest4\\App\\build\\intermediates\\transforms\\dexMerger\\debug\\0

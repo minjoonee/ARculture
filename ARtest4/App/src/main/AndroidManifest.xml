@@ -63,15 +63,7 @@
                 android:value="true" />
         </activity>
 
-        <meta-data
-            android:name="unity.build-id"
-            android:value="acb9eff3-ed43-4fcc-9d53-fbd5ac79948a" />
-        <meta-data
-            android:name="unity.splash-mode"
-            android:value="0" />
-        <meta-data
-            android:name="unity.splash-enable"
-            android:value="True" />
+
 
         <activity
             android:name=".StampActivity"
@@ -95,6 +87,16 @@
             android:name=".SettingsActivity"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme" />
+
+        <meta-data
+            android:name="unity.build-id"
+            android:value="acb9eff3-ed43-4fcc-9d53-fbd5ac79948a" />
+        <meta-data
+            android:name="unity.splash-mode"
+            android:value="0" />
+        <meta-data
+            android:name="unity.splash-enable"
+            android:value="True" />
     </application>
 
 </manifest>

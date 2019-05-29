@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">AR 美术馆</string>
 
@@ -10,7 +10,7 @@
     <string name="github">https://github.com/minjoonee/ARculture</string>
 
     <string name="gallery1">\n刮风的日子去了山谷 展\n\n展览场所 / 全北美术馆主楼2~4展厅\n展览区 / 绘画，摄影，装置，现代文物\n展期 / 2019.03.19 ~ 2019.06.02\n</string>
-    <string name="gallery2">\n全北青年 2019 展\n\n展览场所 / 全北省立美术馆5主展厅\n전시분야 / 绘画，装置，视频等 \n展期 / 2019.03.19 ~ 2019.06.02\n</string>
+    <string name="gallery2">\n全北青年 2019 展\n\n展览场所 / 全北省立美术馆5主展厅\n展览区 / 绘画，装置，视频等 \n展期 / 2019.03.19 ~ 2019.06.02\n</string>
 
     <string name="startAR">AR 相机</string>
     <string name="gotoGallery">展览清单</string>
