@@ -101,7 +101,7 @@ public class GameManager : TtsForm, ITrackableEventHandler
             if (char_scale < 0.1f)
             {
                 Robot_stat(1);
-                char_scale = char_scale + 0.0003f;
+                char_scale = char_scale + 0.0006f;
                 robot.transform.localScale = new Vector3(char_scale, char_scale, char_scale);
             }
             else if (char_scale >= 0.1f) 

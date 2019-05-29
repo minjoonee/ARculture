@@ -77,14 +77,18 @@ ModelImporter:
     2100002: Body_vinyl
     2100004: Body_PlasticParts
     4300000: Cylinder
-    7400000: breath
-    7400002: Idle
-    7400004: Walk
+    7400000: Default Take
+    7400002: breath
+    7400004: expl
     7400006: hello
     7400008: hi
-    7400010: RUN
-    7400012: THIS
-    7400014: expl
+    7400010: Idle
+    7400012: poster
+    7400014: poster0
+    7400016: poster2
+    7400018: RUN
+    7400020: Walk
+    7400022: default
     9500000: //RootNode
     13700000: Cylinder
     2186277476908879412: ImportLogs
@@ -118,7 +122,21 @@ ModelImporter:
     rigImportErrors: 
     rigImportWarnings: 
     animationImportErrors: 
-    animationImportWarnings: "\nClip 'RUN' has import animation warnings that might
+    animationImportWarnings: "\nClip 'breath' has import animation warnings that might
+      lower retargeting quality:\nNote: Activate translation DOF on avatar to improve
+      retargeting quality.\n\t'Chest' is inbetween humanoid transforms and has rotation
+      animation that will be discarded.\n\nClip 'poster' has import animation warnings
+      that might lower retargeting quality:\nNote: Activate translation DOF on avatar
+      to improve retargeting quality.\n\t'thigh_l' has scale animation that will be
+      discarded.\n\t'calf_l' has scale animation that will be discarded.\n\t'thigh_r'
+      has scale animation that will be discarded.\n\t'calf_r' has scale animation
+      that will be discarded.\n\nClip 'poster2' has import animation warnings that
+      might lower retargeting quality:\nNote: Activate translation DOF on avatar to
+      improve retargeting quality.\n\t'Chest' is inbetween humanoid transforms and
+      has rotation animation that will be discarded.\n\t'thigh_l' has scale animation
+      that will be discarded.\n\t'calf_l' has scale animation that will be discarded.\n\t'thigh_r'
+      has scale animation that will be discarded.\n\t'calf_r' has scale animation
+      that will be discarded.\n\nClip 'RUN' has import animation warnings that might
       lower retargeting quality:\nNote: Activate translation DOF on avatar to improve
       retargeting quality.\n\t'thigh_l' has scale animation that will be discarded.\n\t'calf_l'
       has scale animation that will be discarded.\n\t'thigh_r' has scale animation
@@ -130,7 +148,7 @@ ModelImporter:
       has scale animation that will be discarded.\n"
     animationRetargetingWarnings: 
     animationDoRetargetingWarnings: 0
-    importAnimatedCustomProperties: 1
+    importAnimatedCustomProperties: 0
     importConstraints: 0
     animationCompression: 3
     animationRotationError: 0.5
@@ -140,6 +158,34 @@ ModelImporter:
     extraExposedTransformPaths: []
     extraUserProperties: []
     clipAnimations:
+    - serializedVersion: 16
+      name: Default Take
+      takeName: Default Take
+      firstFrame: 0
+      lastFrame: 30
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
     - serializedVersion: 16
       name: breath
       takeName: breath
@@ -152,6 +198,62 @@ ModelImporter:
       loop: 0
       hasAdditiveReferencePose: 0
       loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: default
+      takeName: default
+      firstFrame: 0
+      lastFrame: 1
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: expl
+      takeName: expl
+      firstFrame: 0
+      lastFrame: 1
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
       loopBlend: 0
       loopBlendOrientation: 0
       loopBlendPositionY: 0
@@ -253,6 +355,90 @@ ModelImporter:
       maskSource: {instanceID: 0}
       additiveReferencePoseFrame: 0
     - serializedVersion: 16
+      name: poster
+      takeName: poster
+      firstFrame: 0
+      lastFrame: 140
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: poster0
+      takeName: poster0
+      firstFrame: 0
+      lastFrame: 30
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: poster2
+      takeName: poster2
+      firstFrame: 0
+      lastFrame: 60
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
       name: RUN
       takeName: RUN
       firstFrame: 0
@@ -281,10 +467,10 @@ ModelImporter:
       maskSource: {instanceID: 0}
       additiveReferencePoseFrame: 0
     - serializedVersion: 16
-      name: expl
-      takeName: expl
+      name: Walk
+      takeName: Walk
       firstFrame: 0
-      lastFrame: 1
+      lastFrame: 31
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
@@ -292,34 +478,6 @@ ModelImporter:
       loop: 0
       hasAdditiveReferencePose: 0
       loopTime: 0
-      loopBlend: 0
-      loopBlendOrientation: 0
-      loopBlendPositionY: 0
-      loopBlendPositionXZ: 0
-      keepOriginalOrientation: 0
-      keepOriginalPositionY: 1
-      keepOriginalPositionXZ: 0
-      heightFromFeet: 0
-      mirror: 0
-      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
-      curves: []
-      events: []
-      transformMask: []
-      maskType: 3
-      maskSource: {instanceID: 0}
-      additiveReferencePoseFrame: 0
-    - serializedVersion: 16
-      name: Walk
-      takeName: Walk
-      firstFrame: 0
-      lastFrame: 34
-      wrapMode: 0
-      orientationOffsetY: 0
-      level: 0
-      cycleOffset: 0
-      loop: 0
-      hasAdditiveReferencePose: 0
-      loopTime: 1
       loopBlend: 0
       loopBlendOrientation: 0
       loopBlendPositionY: 0
@@ -624,34 +782,34 @@ ModelImporter:
       scale: {x: 1.0000001, y: 1, z: 1}
     - name: Pelvis
       parentName: Armature
-      position: {x: 0, y: 1.0982074, z: 1.9942064}
+      position: {x: 0, y: 1.1665196, z: 1.9563698}
       rotation: {x: 0.7070918, y: 0.7070918, z: 0.004605325, w: -0.0046052323}
       scale: {x: 0.99999994, y: 1, z: 0.99899644}
     - name: Spine
       parentName: Pelvis
-      position: {x: -1.0983007, y: 0.000000082919385, z: 0}
+      position: {x: -1.0983008, y: 0.000000082919414, z: -0.000000041443855}
       rotation: {x: -0.0000000073062676, y: -0.71169704, z: -0.000000047039435, w: 0.7024865}
       scale: {x: 1, y: 1, z: 1}
     - name: Abdomen
       parentName: Spine
-      position: {x: -0.4341227, y: 0.00000003277535, z: 0}
+      position: {x: -0.4341228, y: 0.000000032775354, z: -5.47095e-10}
       rotation: {x: -0.000000008760227, y: -0.11603266, z: -7.949745e-15, w: 0.9932454}
       scale: {x: 1, y: 1, z: 1}
     - name: Chest
       parentName: Abdomen
       position: {x: -0.69798464, y: 0.00000005269638, z: 0}
-      rotation: {x: 0.000000002063509, y: 0.027332, z: 7.3264824e-16, w: 0.99962646}
-      scale: {x: 0.9999999, y: 1, z: 1}
+      rotation: {x: -0.0000000126216895, y: -0.16683221, z: 4.3503515e-13, w: 0.98598534}
+      scale: {x: 1, y: 1, z: 1}
     - name: Neck
       parentName: Chest
-      position: {x: -0.35571334, y: 0.000000026855608, z: 0.000000022351742}
-      rotation: {x: 0.00000013557418, y: 0.27984834, z: -0.00000003336052, w: 0.96004426}
-      scale: {x: 0.99999994, y: 1, z: 1}
+      position: {x: -0.35571337, y: 0.000000026855613, z: 0.000000014901161}
+      rotation: {x: 0.0000001289278, y: 0.14583433, z: -0.000000017387878, w: 0.989309}
+      scale: {x: 1, y: 1, z: 1}
     - name: Head
       parentName: Neck
-      position: {x: -0.42383513, y: 0.00000003199866, z: 0.000000011175871}
-      rotation: {x: -0.0000001315625, y: -0.19344959, z: 0.000000023060993, w: 0.9811102}
-      scale: {x: 0.99999994, y: 1, z: 0.99999994}
+      position: {x: -0.42383516, y: 0.000000031998674, z: 0.000000059604645}
+      rotation: {x: -0.00000013156252, y: -0.19344956, z: 0.000000023060982, w: 0.9811102}
+      scale: {x: 1, y: 1, z: 0.99999994}
     - name: collar_l
       parentName: Abdomen
       position: {x: -0.69798464, y: 0.00000005269638, z: 0}
@@ -659,38 +817,38 @@ ModelImporter:
       scale: {x: 1.0000001, y: 1, z: 1}
     - name: Upperarm_l
       parentName: collar_l
-      position: {x: -0.5603862, y: 0.000000053900294, z: -0.0000000949949}
-      rotation: {x: 0.014922226, y: -0.0288346, z: -0.0009005364, w: 0.9994724}
-      scale: {x: 1.0000001, y: 1.0000001, z: 1}
+      position: {x: -0.5603862, y: 0.000000051571988, z: -0.000000007450581}
+      rotation: {x: 0.958741, y: -0.016971633, z: -0.005198059, w: -0.2837263}
+      scale: {x: 1.0000001, y: 1.0000002, z: 1.0000001}
     - name: lowerarm_l
       parentName: Upperarm_l
-      position: {x: -0.5734867, y: 0.000000055937562, z: -0.000000029569492}
-      rotation: {x: 0.70173645, y: 0.03050723, z: 0.02139565, w: 0.7114616}
-      scale: {x: 1, y: 1.0000001, z: 1.0000001}
+      position: {x: -0.57348657, y: -0.000000037252903, z: -0.000000014901161}
+      rotation: {x: 0.7295269, y: 0.0026701076, z: -0.004503264, w: 0.68393207}
+      scale: {x: 0.99999994, y: 0.99999994, z: 1}
     - name: palm_l
       parentName: lowerarm_l
-      position: {x: -0.4986751, y: -0.00000010745134, z: -0.000000007450581}
-      rotation: {x: 0.0010317493, y: 0.002185123, z: -0.000026829617, w: 0.9999971}
-      scale: {x: 1, y: 0.9999999, z: 1}
+      position: {x: -0.49867514, y: 0, z: -0.00000007962808}
+      rotation: {x: 0.0010317627, y: 0.0021851377, z: -0.000026860162, w: 0.9999971}
+      scale: {x: 1.0000001, y: 1, z: 1}
     - name: index_l
       parentName: palm_l
-      position: {x: -0.60907316, y: 0.0016619391, z: 0.12474066}
-      rotation: {x: -0.00000076543927, y: 0.11580751, z: -0.0015426996, w: 0.99327046}
-      scale: {x: 0.99999994, y: 1, z: 0.99999994}
+      position: {x: -0.6090732, y: 0.0016619861, z: 0.1247406}
+      rotation: {x: -0.0000007766557, y: 0.11580751, z: -0.0015426958, w: 0.99327046}
+      scale: {x: 1, y: 1, z: 1}
     - name: little_l
       parentName: palm_l
-      position: {x: -0.6158648, y: -0.0014139356, z: -0.10613586}
-      rotation: {x: -0.0000006956999, y: -0.11478869, z: 0.0015291253, w: 0.9933888}
-      scale: {x: 1, y: 1, z: 0.99999994}
+      position: {x: -0.6158649, y: -0.0014137626, z: -0.10613597}
+      rotation: {x: -0.000000707977, y: -0.11478868, z: 0.0015291045, w: 0.9933888}
+      scale: {x: 1, y: 1, z: 1}
     - name: middle_l
       parentName: palm_l
-      position: {x: -0.6264672, y: 0.00031518354, z: 0.023650303}
-      rotation: {x: -0.000001109515, y: -0.0007323644, z: 0.000009751069, w: 0.99999976}
+      position: {x: -0.6264673, y: 0.00031530857, z: 0.0236503}
+      rotation: {x: -0.000001128839, y: -0.0007323621, z: 0.000009751987, w: 0.99999976}
       scale: {x: 0.99999994, y: 1, z: 1}
     - name: thumb_l
       parentName: palm_l
-      position: {x: -0.41454777, y: 0.0019010217, z: 0.14268903}
-      rotation: {x: 0.0000037724096, y: 0.6889767, z: -0.009182094, w: 0.7247253}
+      position: {x: -0.41454768, y: 0.0019010603, z: 0.14268897}
+      rotation: {x: 0.0000040871805, y: 0.6889767, z: -0.009182426, w: 0.7247253}
       scale: {x: 1, y: 1, z: 1}
     - name: collar_r
       parentName: Abdomen
@@ -699,69 +857,69 @@ ModelImporter:
       scale: {x: 1.0000001, y: 1, z: 1}
     - name: Upperarm_r
       parentName: collar_r
-      position: {x: -0.5603862, y: 0.000000034517143, z: -0.00000009406358}
-      rotation: {x: 0.000282675, y: -0.02771322, z: 0.00089137245, w: 0.99961555}
+      position: {x: -0.5603862, y: 0.00000003358582, z: 9.31323e-10}
+      rotation: {x: 0.00028268987, y: -0.027713306, z: 0.0008913127, w: 0.9996155}
       scale: {x: 1, y: 1, z: 1}
     - name: lowerarm_r
       parentName: Upperarm_r
-      position: {x: -0.5734867, y: 0.000000025418558, z: 0.000000037252903}
-      rotation: {x: -0.722619, y: 0.028438011, z: -0.024359247, w: 0.6902317}
+      position: {x: -0.5734866, y: 0.00000002142042, z: 0.000000049360096}
+      rotation: {x: -0.72261894, y: 0.028437998, z: -0.024359101, w: 0.6902317}
       scale: {x: 1, y: 1.0000001, z: 1}
     - name: palm_r
       parentName: lowerarm_r
-      position: {x: -0.49867508, y: 0.000000012805685, z: 0.000000007450581}
+      position: {x: -0.49867514, y: -0.00000004656613, z: 0.000000022351742}
       rotation: {x: -0.0010317512, y: 0.002185122, z: 0.00002684732, w: 0.9999971}
       scale: {x: 0.99999994, y: 0.9999999, z: 0.9999999}
     - name: index_r
       parentName: palm_r
-      position: {x: -0.6090732, y: -0.0016617556, z: 0.12474072}
+      position: {x: -0.6090732, y: -0.0016617691, z: 0.12474072}
       rotation: {x: 0.000000787155, y: 0.11580754, z: 0.0015426979, w: 0.99327046}
       scale: {x: 1, y: 1, z: 1}
     - name: little_r
       parentName: palm_r
-      position: {x: -0.6158649, y: 0.0014139722, z: -0.10613584}
+      position: {x: -0.61586475, y: 0.0014139586, z: -0.10613584}
       rotation: {x: 0.0000006828306, y: -0.114788696, z: -0.001529123, w: 0.9933888}
       scale: {x: 0.99999994, y: 1, z: 1}
     - name: middle_r
       parentName: palm_r
-      position: {x: -0.6264672, y: -0.0003150322, z: 0.023650363}
+      position: {x: -0.62646717, y: -0.00031504582, z: 0.023650363}
       rotation: {x: 0.0000011067145, y: -0.0007323439, z: -0.000009759919, w: 0.99999976}
       scale: {x: 0.99999994, y: 1, z: 1}
     - name: thumb_r
       parentName: palm_r
-      position: {x: -0.41454774, y: -0.0019008899, z: 0.14268908}
+      position: {x: -0.41454774, y: -0.0019009032, z: 0.14268908}
       rotation: {x: -0.0000037130421, y: 0.6889767, z: 0.009182129, w: 0.7247253}
       scale: {x: 1.0000001, y: 1, z: 1}
     - name: thigh_l
       parentName: Pelvis
-      position: {x: -1.0982248, y: -0.59446156, z: -0.005833466}
-      rotation: {x: 0.029193578, y: 0.6596566, z: 0.028047942, w: 0.750476}
-      scale: {x: 0.9999197, y: 1, z: 1.0000298}
+      position: {x: -1.0982248, y: -0.59446156, z: -0.0058336253}
+      rotation: {x: 0.029972311, y: 0.61676526, z: 0.022979407, w: 0.7862406}
+      scale: {x: 1.0002201, y: 0.9999996, z: 0.999951}
     - name: calf_l
       parentName: thigh_l
-      position: {x: -0.8806074, y: 0.00000015395926, z: 0.000000013737008}
-      rotation: {x: -0.030919489, y: 0.2517576, z: 0.0013031698, w: 0.9672954}
-      scale: {x: 1.0002402, y: 1.0000001, z: 0.99971}
+      position: {x: -0.8806076, y: 0.000000037252903, z: 0.00000010803342}
+      rotation: {x: -0.039830063, y: 0.32840317, z: -0.001774007, w: 0.9436958}
+      scale: {x: 1.000226, y: 1.0000159, z: 0.9996045}
     - name: leg_l
       parentName: calf_l
-      position: {x: -0.9625525, y: 0.00000007264316, z: -0.000000037252903}
-      rotation: {x: 0.0031809942, y: -0.7913804, z: -0.053841945, w: 0.60894006}
-      scale: {x: 1, y: 1, z: 1}
+      position: {x: -0.96255213, y: 0.00000004656613, z: -0.00000008940697}
+      rotation: {x: 0.01038829, y: 0.7973705, z: 0.03589126, w: -0.6023323}
+      scale: {x: 0.9999999, y: 0.9999998, z: 0.9999999}
     - name: thigh_r
       parentName: Pelvis
-      position: {x: -1.0982246, y: 0.58879584, z: -0.0058333096}
-      rotation: {x: -0.025361104, y: 0.6622305, z: -0.025059568, w: 0.7484515}
-      scale: {x: 0.9999128, y: 1.0000005, z: 1.0000325}
+      position: {x: -1.0982246, y: 0.58879584, z: -0.0058335876}
+      rotation: {x: -0.025566604, y: 0.61634654, z: -0.020396737, w: 0.7867956}
+      scale: {x: 1.000221, y: 1.0000012, z: 0.9999444}
     - name: calf_r
       parentName: thigh_r
-      position: {x: -0.88060766, y: 0.00000007491326, z: -0.000000008847564}
-      rotation: {x: -0.07336607, y: 0.24891612, z: 0.016388359, w: 0.96560323}
-      scale: {x: 1.0002301, y: 0.9999856, z: 0.99973017}
+      position: {x: -0.88060755, y: 0.00000006984919, z: -0.00000008381903}
+      rotation: {x: -0.067392685, y: 0.32755384, z: 0.028401023, w: 0.9419979}
+      scale: {x: 1.0002172, y: 0.999928, z: 0.999703}
     - name: leg_r
       parentName: calf_r
-      position: {x: -0.9625523, y: 0.000000033527613, z: 0.000000044703484}
-      rotation: {x: 0.051266238, y: -0.79302806, z: -0.016979514, w: 0.6067866}
-      scale: {x: 1.0000001, y: 0.99999994, z: 0.99999994}
+      position: {x: -0.9625524, y: 0.000000022351742, z: -0.00000025331974}
+      rotation: {x: -0.06245052, y: 0.7984372, z: 0.03984267, w: -0.59750366}
+      scale: {x: 1, y: 0.99999994, z: 0.99999994}
     - name: Cylinder
       parentName: robot(Clone)
       position: {x: -0, y: 0, z: -0.58967435}
