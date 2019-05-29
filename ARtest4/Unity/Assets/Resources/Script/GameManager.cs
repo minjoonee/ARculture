@@ -159,6 +159,7 @@ public class GameManager : TtsForm, ITrackableEventHandler
         {
             if (_fileName.Equals(json.item[i].num))  //파일 이름이랑 num 태그 안에 있던 이름이랑 비교해고 같을 경우,
             {
+                Debug.Log(_fileName + "체크 " + json.item[i].num+ Lang_name + json.item[i].name+ json.item[i].artist);
                 AddStamp(_fileName); //일단 스탬프 파일입출력으로 추가시켜주고,
                 Chktext.text = "\t" +Lang_name + json.item[i].name + "\n\n\t" + Lang_author + json.item[i].artist; // Text박스 수정
                 //화면을 터치했을때 사운드 플레이 동작 실시하기 위해서 변수 삽입
@@ -170,7 +171,7 @@ public class GameManager : TtsForm, ITrackableEventHandler
             }
             else
             {
-                Debug.Log("Json 인식실패 " + json.item[0].artist);
+                Debug.Log(_fileName +"Json 인식실패 ");
             }
         }
     }
