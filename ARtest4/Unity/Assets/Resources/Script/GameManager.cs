@@ -54,15 +54,7 @@ public class GameManager : TtsForm, ITrackableEventHandler
     }
     void Update()
     {
-
-        if (Application.platform == RuntimePlatform.Android)
-        {
-            if (Input.GetKey(KeyCode.Escape))
-            {
-                // 일단 지움
-                // Application.Quit();
-            }
-        }
+        
         if (Input.touchCount > 0 && SoundTrackCount == true) //인식 완료 + 터치
         {
             touch = Input.GetTouch(0);
