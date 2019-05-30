@@ -97,13 +97,14 @@
 
         <meta-data
             android:name="unity.build-id"
-            android:value="8aa585c8-ee90-4f53-ba42-fcd8b219f22a" />
+            android:value="9e57a886-a361-4d91-9758-eab82bbb0419" />
         <meta-data
             android:name="unity.splash-mode"
             android:value="0" />
         <meta-data
             android:name="unity.splash-enable"
             android:value="True" />
+
         <!-- Allow the application to make use of ARCore, if available -->
         <meta-data
             android:name="com.google.ar.core"

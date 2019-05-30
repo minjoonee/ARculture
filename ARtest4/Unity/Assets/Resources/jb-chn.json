@@ -1,12 +1,12 @@
 ﻿{
 	"jb": [{
-			"num": "千韩元",
+			"num": "1000won",
 			"artist": "Toegye的Lee Hwang",
 			"name": "一千韩元",
 			"info": " 这是1000韩元的照片。\n\t"
 		},
 		{
-			"num": "万韩元",
+			"num": "10000won",
 			"artist": "世宗大王",
 			"name": "一万韩元",
 			"info": " 这是10,000韩元的照片。\n\t"
@@ -79,39 +79,39 @@
 		},
 		{
 			"num": "jb13",
-			"artist": "Gyo SaetByeol",
+			"artist": "Koo SaetByeol",
 			"name": "角",
 			"info": "这项工作被称为旧星的角落。 Wolmyeong-dong，日本人民起义，日本占领丰富，Sinheung-dong，大多生活在平原。 Gusat Byul的作家主要在Shinheung-dong Jeolgol-gil附近画作。\n\t"
 		},
 		{
 			"num": "jb14",
-			"artist": "Gyo SaetByeol",
+			"artist": "Koo SaetByeol",
 			"name": "破墙。",
 			"info": "这项工作被Koo Sae-byeol称为“破墙”。 他们埋葬的日本占领是没有许可证的小屋，山上的小屋和茅草屋落在干地上并居住。 由于朝鲜人主要是港口城市的伏都教工人，他们无法逃离Nae港，导致周边地区形成daldongnae。\n\t"
 		},
 		{
 			"num": "jb15",
-			"artist": "Gyo SaetByeol",
+			"artist": "Koo SaetByeol",
 			"name": "一幢红房子",
 			"info": "这是一位前明星作家的作品“红屋”。 在这位艺术家的作品中出现的墙壁和瓷砖被视为线索，这些线索遵循在思想和图像的边界上进行平面绘画的可能性。\n\t"
 		},
 		{
 			"num": "jb16",
-			"artist": "Gyo SaetByeol",
+			"artist": "Koo SaetByeol",
 			"name": "三个房间",
 			"info": "这部作品被老明星的作者称为“三房”。 Gusat Star的作者通过人们离开后出现的一堆疤痕和寂寞，注意到了生活的亲密形象。\n\t"
 		},
 		{
 			"num": "jb17",
-			"artist": "Gyo SaetByeol",
+			"artist": "Koo SaetByeol",
 			"name": "一个方形的房间，一个三角的房间",
-			"info": "这是Gyo SaetByeol的方形房间，一个三角房间。 经常出现在Gyo SaetByeol画作中的壁纸和瓷砖是人们感受和共享的过去的北极星。\n\t"
+			"info": "这是Koo SaetByeol的方形房间，一个三角房间。 经常出现在Koo SaetByeol画作中的壁纸和瓷砖是人们感受和共享的过去的北极星。\n\t"
 		},
 		{
 			"num": "jb18",
-			"artist": "Gyo SaetByeol",
+			"artist": "Koo SaetByeol",
 			"name": "圆墙",
-			"info": "这是由Gyo SaetByeol，一个圆墙。 作家Gyo SaetByeol通过人们离开后出现的一堆疤痕和孤独来指出生活中的城市场景。\n\t"
+			"info": "这是由Koo SaetByeol，一个圆墙。 作家Koo SaetByeol通过人们离开后出现的一堆疤痕和孤独来指出生活中的城市场景。\n\t"
 		},
 		{
 			"num": "jb19",
@@ -187,9 +187,9 @@
 		},
 		{
 			"num": "jb32",
-			"artist": "Gyo SaetByeol",
+			"artist": "Koo SaetByeol",
 			"name": "红瓦",
-			"info": "这是由Gyo SaetByeol撰写的名为Red Tile的作品。 当Gyo SaetByeol是群山的居民时，他主要画了附近的Sinheung-dong Jeolgol-gil。 \n\t"
+			"info": "这是由Koo SaetByeol撰写的名为Red Tile的作品。 当Koo SaetByeol是群山的居民时，他主要画了附近的Sinheung-dong Jeolgol-gil。 \n\t"
 		},
 		{
 			"num": "jb33",

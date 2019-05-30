@@ -1,5 +1,5 @@
 #Internal package file, do not edit.
-#Thu May 30 04:53:17 KST 2019
+#Thu May 30 22:10:00 KST 2019
 20.base=D\:\\unity\\unityExport\\AR\\build\\intermediates\\merged_assets\\debug\\mergeDebugAssets\\out
 143.base=D\:\\unity\\unityExport\\AR\\build\\intermediates\\merged_assets\\debug\\mergeDebugAssets\\out
 237.path=bin/Data/sharedassets1.assets.split28

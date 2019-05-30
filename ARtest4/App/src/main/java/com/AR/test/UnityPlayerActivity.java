@@ -28,11 +28,6 @@ public class UnityPlayerActivity extends Activity
         mUnityPlayer.requestFocus();
     }
 
-    public void goBack() {
-        isFinish = true;
-        UnityPlayerActivity.this.finish();
-    }
-
     @Override protected void onNewIntent(Intent intent)
     {
         // To support deep linking, we need to make sure that the client can get access to
@@ -42,12 +37,16 @@ public class UnityPlayerActivity extends Activity
         setIntent(intent);
     }
 
+    public void goBack() {
+        isFinish = true;
+        UnityPlayerActivity.this.finish();
+    }
+    // Quit Unity
     @Override protected void onDestroy ()
     {
         mUnityPlayer.destroy();
         super.onDestroy();
     }
-    // Quit Unity
 
     // Pause Unity
     @Override protected void onPause()
