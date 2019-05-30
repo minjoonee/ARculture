@@ -50,6 +50,7 @@
         android:icon="@drawable/camera"
         android:label="@string/app_name"
         android:supportsRtl="true"
+        android:testOnly="true"
         android:theme="@style/UnityThemeSelector" >
         <activity
             android:name="com.AR.test.MainActivity"
@@ -97,7 +98,7 @@
 
         <meta-data
             android:name="unity.build-id"
-            android:value="9e57a886-a361-4d91-9758-eab82bbb0419" />
+            android:value="7d9e7de7-9fc2-4075-91a9-596a8ab4ec00" />
         <meta-data
             android:name="unity.splash-mode"
             android:value="0" />

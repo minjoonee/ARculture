@@ -168,10 +168,10 @@ public class StampActivity extends AppCompatActivity {
         switch(key){ // 전북도립 미술관의 경우 하나로 통합된 파일의 배열 시작 부분을 정해줘야됨.
             case 0:
                 start = 0;
-                finish = 32;
+                finish = 30;
                 break;
             case 1:
-                start = 32;
+                start = 30;
                 finish = Num;
                 break;
         }
