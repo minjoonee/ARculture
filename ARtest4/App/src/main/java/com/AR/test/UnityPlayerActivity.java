@@ -14,6 +14,7 @@ import android.view.WindowManager;
 
 public class UnityPlayerActivity extends Activity
 {
+    public Boolean isFinish = false;
     protected UnityPlayer mUnityPlayer; // don't change the name of this variable; referenced from native code
 
     // Setup activity layout
@@ -26,15 +27,10 @@ public class UnityPlayerActivity extends Activity
         setContentView(mUnityPlayer);
         mUnityPlayer.requestFocus();
     }
+
     public void goBack() {
-        finish();
-        Runnable action = new Runnable() {
-            @Override
-            public void run() {
-                onBackPressed();
-            }
-        };
-        runOnUiThread(action);
+        isFinish = true;
+        UnityPlayerActivity.this.finish();
     }
 
     @Override protected void onNewIntent(Intent intent)
@@ -46,18 +42,18 @@ public class UnityPlayerActivity extends Activity
         setIntent(intent);
     }
 
-    // Quit Unity
     @Override protected void onDestroy ()
     {
         mUnityPlayer.destroy();
         super.onDestroy();
     }
+    // Quit Unity
 
     // Pause Unity
     @Override protected void onPause()
     {
+        if(!isFinish) mUnityPlayer.pause();
         super.onPause();
-        mUnityPlayer.pause();
     }
 
     // Resume Unity
