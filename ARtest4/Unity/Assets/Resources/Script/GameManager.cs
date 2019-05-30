@@ -255,6 +255,7 @@ public class GameManager : TtsForm, ITrackableEventHandler
                 Lang_firstDisplay = "카메라로 전시물을 비춰보세요.";
                 Lang_name = "작품 : ";
                 Lang_author = "작가 : ";
+                base.languageField = "ko-KR";
             }
             else if (str.Equals("Chinese"))
             {
@@ -262,6 +263,7 @@ public class GameManager : TtsForm, ITrackableEventHandler
                 Lang_firstDisplay = "用相机照亮展品。";
                 Lang_name = "标题 : ";
                 Lang_author = "作者 : ";
+                base.languageField = "zh-cn";
             }
             else if (str.Equals("English"))
             {
@@ -269,6 +271,7 @@ public class GameManager : TtsForm, ITrackableEventHandler
                 Lang_firstDisplay = "Use your camera to illuminate exhibits.";
                 Lang_name = "Title : ";
                 Lang_author = "Author : ";
+                base.languageField = "en-US";
             }
             else if (str.Equals("Japanese"))
             {
@@ -276,6 +279,7 @@ public class GameManager : TtsForm, ITrackableEventHandler
                 Lang_firstDisplay = "カメラを使って展示物を照らしましょう。";
                 Lang_name = "タイトル : ";
                 Lang_author = "著者 : ";
+                base.languageField = "ja-JP";
             }
         }
         else
@@ -287,24 +291,28 @@ public class GameManager : TtsForm, ITrackableEventHandler
                     Lang_firstDisplay = "카메라로 전시물을 비춰보세요.";
                     Lang_name = "작품 : ";
                     Lang_author = "작가 : ";
+                    base.languageField = "ko-KR";
                     break;
                 case 2:
                     Lang_hello = "你好。";
                     Lang_firstDisplay = "用相机照亮展品。";
                     Lang_name = "标题 : ";
                     Lang_author = "作者 : ";
+                    base.languageField = "zh-cn";
                     break;
                 case 3:
                     Lang_hello = "Hello. ";
                     Lang_firstDisplay = "Use your camera to illuminate exhibits.";
                     Lang_name = "Title : ";
                     Lang_author = "Author : ";
+                    base.languageField = "en-US";
                     break;
                 case 4:
                     Lang_hello = "こんにちは ";
                     Lang_firstDisplay = "カメラを使って展示物を照らしましょう。";
                     Lang_name = "タイトル : ";
                     Lang_author = "著者 : ";
+                    base.languageField = "ja-JP";
                     break;
             }
         }

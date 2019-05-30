@@ -9,6 +9,7 @@ public class JsonTest : TtsForm
     // Start is called before the first frame update
 
     public ItemInfo[] item;
+    public int LangNum;
     public class ItemInfo
     {
         public string num;
@@ -33,31 +34,63 @@ public class JsonTest : TtsForm
         {
             TextAsset txtAsset;
             string str = Application.systemLanguage.ToString();
-            if (str.Equals("Korean"))
+            ReadLang();
+            if (LangNum < 0)
             {
-                languageField = "ko-KR";
-                txtAsset = (TextAsset)Resources.Load("jb-expl"); // 인식한 파일명과 같은걸로 찾아준다.
-            }
-            else if (str.Equals("Chinese"))
-            {
-                languageField = "zh-cn";
-                txtAsset = (TextAsset)Resources.Load("jb-chn");
-            }
-            else if (str.Equals("English"))
-            {
-                languageField = "en-US";
-                txtAsset = (TextAsset)Resources.Load("jb-eng");
-            }
-            else if (str.Equals("Japanese"))
-            {
-                languageField = "ja-JP";
-                txtAsset = (TextAsset)Resources.Load("jb-jpn");
+                if (str.Equals("Korean"))
+                {
+                    base.languageField = "ko-KR";
+                    txtAsset = (TextAsset)Resources.Load("jb-expl"); // 인식한 파일명과 같은걸로 찾아준다.
+                }
+                else if (str.Equals("Chinese"))
+                {
+                    base.languageField = "zh-cn";
+                    txtAsset = (TextAsset)Resources.Load("jb-chn");
+                }
+                else if (str.Equals("English"))
+                {
+                    base.languageField = "en-US";
+                    txtAsset = (TextAsset)Resources.Load("jb-eng");
+                }
+                else if (str.Equals("Japanese"))
+                {
+                    base.languageField = "ja-JP";
+                    txtAsset = (TextAsset)Resources.Load("jb-jpn");
+                }
+                else
+                {
+                    base.languageField = "en-US";
+                    txtAsset = (TextAsset)Resources.Load("jb-eng"); // 어떤 것도 속하지 않을 때는 영어로.
+                }
             }
             else
             {
-                languageField = "ko-KR";
-                txtAsset = (TextAsset)Resources.Load("jb-eng"); // 어떤 것도 속하지 않을 때는 영어로.
+                switch (LangNum)
+                {
+                    case 1:
+                        base.languageField = "ko-KR";
+                        txtAsset = (TextAsset)Resources.Load("jb-expl"); // 인식한 파일명과 같은걸로 찾아준다.
+                        break;
+                    case 2:
+                        base.languageField = "zh-cn";
+                        txtAsset = (TextAsset)Resources.Load("jb-chn"); // 인식한 파일명과 같은걸로 찾아준다.
+                        break;
+                    case 3:
+                        base.languageField = "en-US";
+                        txtAsset = (TextAsset)Resources.Load("jb-eng"); // 인식한 파일명과 같은걸로 찾아준다.
+                        break;
+                    case 4:
+                        base.languageField = "ja-JP";
+                        txtAsset = (TextAsset)Resources.Load("jb-jpn"); // 인식한 파일명과 같은걸로 찾아준다.
+                        break;
+                    default:
+                        base.languageField = "en-US";
+                        txtAsset = (TextAsset)Resources.Load("jb-eng"); // 인식한 파일명과 같은걸로 찾아준다.
+                        break;
+
+                }
             }
+            
             //xmlDoc.LoadXml(txtAsset.text);
             //Jsonstring = File.ReadAllText(Application.dataPath + "/Resources/jb-expl.json");
             Debug.Log("경로 지정 : "+txtAsset.text);
@@ -89,6 +122,18 @@ public class JsonTest : TtsForm
     void Update()
     {
     }
-    
+    void ReadLang()
+    {
+        LangNum = -1;
+        string line = "";// 한줄씩 입력받을 변수
+        FileStream ReadL = new FileStream(Application.persistentDataPath + "/ARculture" + "/Language.txt", FileMode.OpenOrCreate, FileAccess.Read);
+        StreamReader sL = new StreamReader(ReadL);
+        while ((line = sL.ReadLine()) != null)
+        {
+            LangNum = int.Parse(line);
+        }
+        sL.Close();
+        ReadL.Close();
+    }
 
 }
