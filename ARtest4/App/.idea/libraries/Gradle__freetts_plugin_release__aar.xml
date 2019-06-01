@@ -1,8 +1,8 @@
 <component name="libraryTable">
   <library name="Gradle: freetts.plugin-release:@aar">
     <CLASSES>
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/freetts.plugin-release.aar/c47edca89c92b72d56c69c226e80674d/res" />
-      <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/freetts.plugin-release.aar/c47edca89c92b72d56c69c226e80674d/jars/classes.jar!/" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/freetts.plugin-release.aar/41540f6c58cfabfca8b079c121b08111/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/freetts.plugin-release.aar/41540f6c58cfabfca8b079c121b08111/res" />
     </CLASSES>
     <JAVADOC />
     <SOURCES />

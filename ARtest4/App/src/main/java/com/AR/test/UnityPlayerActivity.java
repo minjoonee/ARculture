@@ -14,7 +14,6 @@ import android.view.WindowManager;
 
 public class UnityPlayerActivity extends Activity
 {
-    public Boolean isFinish = false;
     protected UnityPlayer mUnityPlayer; // don't change the name of this variable; referenced from native code
 
     // Setup activity layout
@@ -28,10 +27,6 @@ public class UnityPlayerActivity extends Activity
         mUnityPlayer.requestFocus();
     }
 
-    public void goBack() {
-        isFinish = true;
-        UnityPlayerActivity.this.finish();
-    }
     @Override protected void onNewIntent(Intent intent)
     {
         // To support deep linking, we need to make sure that the client can get access to
@@ -51,8 +46,8 @@ public class UnityPlayerActivity extends Activity
     // Pause Unity
     @Override protected void onPause()
     {
-        if(!isFinish) mUnityPlayer.pause();
         super.onPause();
+        mUnityPlayer.pause();
     }
 
     // Resume Unity
