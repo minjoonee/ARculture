@@ -18,11 +18,13 @@ public class PhoneCamera : MonoBehaviour
     private int resHeight;
     string path;
     public byte[] imageByte; //스크린샷을 Byte로 저장.Texture2D use 
+    public Text textbox;
     // Use this for initialization
 
     // Start is called before the first frame update
     void Start()
     {
+        textbox.gameObject.SetActive(false); // ocr결과 나타나줄 부분 비활성화
         resWidth = Screen.width;
         resHeight = Screen.height;
         if (!Directory.Exists(Application.persistentDataPath + "/AR_ScreenShot"))
@@ -135,11 +137,14 @@ public class PhoneCamera : MonoBehaviour
         List<IMultipartFormSection> form = new List<IMultipartFormSection>();
         form.Add(new MultipartFormDataSection("test", "jo"));
         form.Add(new MultipartFormDataSection("test2", "ppap"));
-        form.Add(new MultipartFormFileSection("plz", imageByte, "test.png", "Image/png"));
+        form.Add(new MultipartFormFileSection("plz", imageByte, "test.png", "Image/png")); // 이미지 이름을 test.png로 전송함
         Debug.Log("이미지 전송");
         UnityWebRequest webRequest = UnityWebRequest.Post("13.125.173.0/python/test.php", form);
         yield return webRequest.SendWebRequest();
         string result = webRequest.downloadHandler.text;
-        Debug.Log(result);
+        Debug.Log("결과"+result);
+        textbox.gameObject.SetActive(true);
+        textbox.text = " ";
+        textbox.text = result;
     }
 }
