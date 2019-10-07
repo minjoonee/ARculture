@@ -139,7 +139,7 @@ public class PhoneCamera : MonoBehaviour
         form.Add(new MultipartFormDataSection("test2", "ppap"));
         form.Add(new MultipartFormFileSection("plz", imageByte, "test.png", "Image/png")); // 이미지 이름을 test.png로 전송함
         Debug.Log("이미지 전송");
-        UnityWebRequest webRequest = UnityWebRequest.Post("13.125.173.0/python/test.php", form);
+        UnityWebRequest webRequest = UnityWebRequest.Post("http://54.180.99.23:8000/blog", form);
         yield return webRequest.SendWebRequest();
         string result = webRequest.downloadHandler.text;
         Debug.Log("결과"+result);
