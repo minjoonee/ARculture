@@ -86,6 +86,7 @@ public class PhoneCamera : MonoBehaviour
         text.text = "저장완료";
 
         //StartCoroutine("PostNetworkingWithWWW");
+        textbox.gameObject.SetActive(false); // ocr결과 나타나줄 부분 비활성화
     }
 
     //구버전
@@ -139,12 +140,12 @@ public class PhoneCamera : MonoBehaviour
         form.Add(new MultipartFormDataSection("test2", "ppap"));
         form.Add(new MultipartFormFileSection("plz", imageByte, "test.png", "Image/png")); // 이미지 이름을 test.png로 전송함
         Debug.Log("이미지 전송");
-        UnityWebRequest webRequest = UnityWebRequest.Post("http://54.180.99.23:8000/blog", form);
+        UnityWebRequest webRequest = UnityWebRequest.Post("http://54.180.99.23:8000/ocrapp/", form);
         yield return webRequest.SendWebRequest();
         string result = webRequest.downloadHandler.text;
         Debug.Log("결과"+result);
-        textbox.gameObject.SetActive(true);
-        textbox.text = " ";
-        textbox.text = result;
+        //textbox.text = " ";
+        //textbox.text = result;
+        textbox.gameObject.SetActive(false);
     }
 }
