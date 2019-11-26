@@ -14,17 +14,24 @@ public class PhoneCamera : MonoBehaviour
     public AspectRatioFitter fit;
 
     public Text text;
+    public Text resultText;
     private int resWidth;
     private int resHeight;
     string path;
     public byte[] imageByte; //스크린샷을 Byte로 저장.Texture2D use 
-    public Text textbox;
+    //public Text textbox;
+    public GameObject panel;
+    public GameObject button;
     // Use this for initialization
 
     // Start is called before the first frame update
     void Start()
     {
-        textbox.gameObject.SetActive(false); // ocr결과 나타나줄 부분 비활성화
+        panel.SetActive(false);
+        button.SetActive(true);
+        resultText.text = "Loading...";
+
+        //textbox.gameObject.SetActive(false); // ocr결과 나타나줄 부분 비활성화
         resWidth = Screen.width;
         resHeight = Screen.height;
         if (!Directory.Exists(Application.persistentDataPath + "/AR_ScreenShot"))
@@ -32,14 +39,14 @@ public class PhoneCamera : MonoBehaviour
             Directory.CreateDirectory(Application.persistentDataPath + "/AR_ScreenShot");
         }
         path = Application.persistentDataPath + "/AR_ScreenShot/";
-        Debug.Log(path);
+        //Debug.Log(path);
 
         defaultBackground = background.texture;
         WebCamDevice[] devices = WebCamTexture.devices;
 
         if(devices.Length == 0)
         {
-            Debug.Log("카메라가 인식되지 않음");
+            //Debug.Log("카메라가 인식되지 않음");
             camAvailable = false;
             return;
         }
@@ -53,7 +60,7 @@ public class PhoneCamera : MonoBehaviour
 
         if(backCam == null)
         {
-            Debug.Log("후면 카메라 찾을 수 없음");
+            //Debug.Log("후면 카메라 찾을 수 없음");
             return;
         }
         backCam.Play();
@@ -78,15 +85,21 @@ public class PhoneCamera : MonoBehaviour
 
     public void ClickScreenShot()
     {
+        panel.SetActive(false);
         string name;
         name = path + System.DateTime.Now.ToString("yyyy-MM-dd_HH-mm-ss") + ".png";
-        text.text = path;
+        //panel.SetActive(true); // 테스트용 잠깐
+        //text.text = path;
         //UnityEngine.ScreenCapture.CaptureScreenshot(name); PC에서는 잘 됨
         StartCoroutine("CaptureIt");
-        text.text = "저장완료";
-
+        
         //StartCoroutine("PostNetworkingWithWWW");
-        textbox.gameObject.SetActive(false); // ocr결과 나타나줄 부분 비활성화
+        //textbox.gameObject.SetActive(false); // ocr결과 나타나줄 부분 비활성화
+    }
+
+    public void ClickPanelButton()
+    {
+        panel.SetActive(false);
     }
 
     //구버전
@@ -123,10 +136,12 @@ public class PhoneCamera : MonoBehaviour
     {
         yield return new WaitForEndOfFrame();
         string name = path + System.DateTime.Now.ToString("yyyy-MM-dd_HH-mm-ss") + ".png";
-
+        
         Texture2D tex = new Texture2D(Screen.width, Screen.height, TextureFormat.RGB24, true);
         tex.ReadPixels(new Rect(0, 0, Screen.width, Screen.height), 0, 0, true);
         //말 그대로입니다. 현제 화면을 픽셀 단위로 읽음
+        resultText.text = "Loading...";
+        panel.SetActive(true);
         tex.Apply();
         imageByte = tex.EncodeToPNG();
         //읽어 드린 픽셀을 Byte[] 에 PNG 형식으로 인코딩
@@ -144,8 +159,9 @@ public class PhoneCamera : MonoBehaviour
         yield return webRequest.SendWebRequest();
         string result = webRequest.downloadHandler.text;
         Debug.Log("결과"+result);
+        resultText.text = result;
         //textbox.text = " ";
         //textbox.text = result;
-        textbox.gameObject.SetActive(false);
+        //textbox.gameObject.SetActive(false);
     }
 }
