@@ -1,17 +1,17 @@
 {
     "logs": [
         {
-            "outputFile": "D:\\unity\\6.1export\\AR\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-v21\\values-v21.xml",
+            "outputFile": "C:\\Users\\MR.SONG\\Downloads\\ARculture-master\\ARculture-master\\ARtest4\\App\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-v21\\values-v21.xml",
             "map": [
                 {
-                    "source": "D:\\unity\\6.1export\\AR\\src\\main\\res\\values-v21\\styles.xml",
+                    "source": "C:\\Users\\MR.SONG\\Downloads\\ARculture-master\\ARculture-master\\ARtest4\\App\\src\\main\\res\\values-v21\\styles.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "0",
-                        "startOffsets": "53",
+                        "startOffsets": "51",
                         "endLines": "3",
                         "endColumns": "8",
-                        "endOffsets": "153"
+                        "endOffsets": "150"
                     },
                     "to": {
                         "startLines": "2",

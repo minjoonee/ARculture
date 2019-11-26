@@ -101,5 +101,20 @@ public class Scene_changer : MonoBehaviour
     {
         SceneManager.LoadScene("menu");
     }
-
+    public void goToStart()
+    {
+        SceneManager.LoadScene("Start");
+    }
+    public void goTogallery()
+    {
+        SceneManager.LoadScene("gallery");
+    }
+    public void goTohowToUse()
+    {
+        SceneManager.LoadScene("howToUse");
+    }
+    public void goTolanguage()
+    {
+        SceneManager.LoadScene("language");
+    }
 }
