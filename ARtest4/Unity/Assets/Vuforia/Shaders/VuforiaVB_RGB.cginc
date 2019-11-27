@@ -1,7 +1,5 @@
-// Unity built-in shader source. Copyright (c) 2016 Unity Technologies. MIT license (see license.txt)
-
 /*===============================================================================
-Copyright 2017 PTC Inc.
+Copyright 2019 PTC Inc.
 
 Licensed under the Apache License, Version 2.0 (the "License"); you may not
 use this file except in compliance with the License. You may obtain a copy of
@@ -14,26 +12,34 @@ under the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR
 CONDITIONS OF ANY KIND, either express or implied. See the License for the
 specific language governing permissions and limitations under the License.
 ===============================================================================*/
-Shader "Custom/ClippingMask" {
-    // Used to clip objects outside of the Vuforia Video Background
 
-    SubShader {
-        // Render the mask after regular geometry and transparent things but
-        // but before any other overlays
+#ifndef VUFORIA_VB_RGB_INCLUDED
+#define VUFORIA_VB_RGB_INCLUDED
 
-        Tags {"Queue" = "Overlay-10" }
+struct v2f {
+    float4  pos : SV_POSITION;
+    float2  uv : TEXCOORD0;
+};
 
-        Lighting Off
+sampler2D _MainTex;
+float4 _MainTex_ST;
 
-        ZTest Always
-        ZWrite On
+v2f vuforiaConvertRGBVert(appdata_base v)
+{
+    v2f o;
+    o.pos = UnityObjectToClipPos(v.vertex);
+    o.uv = TRANSFORM_TEX(v.texcoord, _MainTex);
 
-        // Draw black background into the RGBA channel
-        Color (0,0,0,0)
-        ColorMask RGBA
-
-        // Do nothing specific in the pass:
-
-        Pass {}
-    }
+    return o;
 }
+
+half4 vuforiaConvertRGBFrag(v2f i) : COLOR
+{
+    half4 c = tex2D(_MainTex, i.uv);
+
+    c.rgb = c.rgb;
+    c.a = 1.0;
+
+    return c;
+}
+#endif //VUFORIA_VB_RGB_INCLUDED

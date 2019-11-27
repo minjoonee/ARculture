@@ -8,12 +8,16 @@ countries.
 
 using System;
 using UnityEngine;
+using UnityEngine.EventSystems;
+#if PLATFORM_ANDROID
+using UnityEngine.Android;
+#endif
 
-namespace Vuforia.UnityCompiled
+namespace Vuforia.UnityRuntimeCompiled
 {
     public class RuntimeOpenSourceInitializer
     {
-        static IUnityCompiledFacade sFacade;
+        static IUnityRuntimeCompiledFacade sFacade;
 
         [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.BeforeSceneLoad)]
         static void OnRuntimeMethodLoad()
@@ -25,17 +29,22 @@ namespace Vuforia.UnityCompiled
         {
             if (sFacade != null) return;
 
-            sFacade = new OpenSourceUnityCompiledFacade();
-            UnityCompiledFacade.Instance = sFacade;
+            sFacade = new OpenSourceUnityRuntimeCompiledFacade();
+            UnityRuntimeCompiledFacade.Instance = sFacade;
         }
 
-        class OpenSourceUnityCompiledFacade : IUnityCompiledFacade
+        class OpenSourceUnityRuntimeCompiledFacade : IUnityRuntimeCompiledFacade
         {
             readonly IUnityRenderPipeline mUnityRenderPipeline = new UnityRenderPipeline();
 
             public IUnityRenderPipeline UnityRenderPipeline
             {
                 get { return mUnityRenderPipeline; }
+            }
+            
+            public bool IsUnityUICurrentlySelected()
+            {
+                return !(EventSystem.current == null || EventSystem.current.currentSelectedGameObject == null);
             }
         }
 
@@ -46,7 +55,7 @@ namespace Vuforia.UnityCompiled
 
             public UnityRenderPipeline()
             {
-#if UNITY_2018_3
+#if UNITY_2018
                 UnityEngine.Experimental.Rendering.RenderPipeline.beginFrameRendering += OnBeginFrameRendering;
                 UnityEngine.Experimental.Rendering.RenderPipeline.beginCameraRendering += OnBeginCameraRendering;
 #else
@@ -55,7 +64,7 @@ namespace Vuforia.UnityCompiled
 #endif
             }
 
-#if UNITY_2018_3
+#if UNITY_2018
             void OnBeginCameraRendering(Camera camera)
 #else
             void OnBeginCameraRendering(UnityEngine.Rendering.ScriptableRenderContext context, Camera camera)
@@ -65,7 +74,7 @@ namespace Vuforia.UnityCompiled
                     BeginCameraRendering(camera);
             }
 
-#if UNITY_2018_3
+#if UNITY_2018
             void OnBeginFrameRendering(Camera[] cameras)
 #else
             void OnBeginFrameRendering(UnityEngine.Rendering.ScriptableRenderContext context, Camera[] cameras)
