@@ -12,6 +12,8 @@ public class PosterManager : MonoBehaviour, ITrackableEventHandler
     public GameObject robot;
     public Animator animator;
 
+    public float robot_xPos = 0.237f;
+
     bool chk = true;
     private TrackableBehaviour track;
     string firstDisplay; // "카메라로 포스터를 비춰보세요."
@@ -46,7 +48,7 @@ public class PosterManager : MonoBehaviour, ITrackableEventHandler
             }
         }
         
-        if (animator.GetCurrentAnimatorStateInfo(0).IsName("Base Layer.poster") && animator.GetCurrentAnimatorStateInfo(0).normalizedTime >= 0.99f)
+        if (animator.GetCurrentAnimatorStateInfo(0).IsName("Base Layer.poster") && animator.GetCurrentAnimatorStateInfo(0).normalizedTime >= 0.98f)
         {
             Robot_stat(2);
         }
@@ -82,7 +84,7 @@ public class PosterManager : MonoBehaviour, ITrackableEventHandler
         else
         {
             Robot_stat(0);
-            robot.transform.localPosition = new Vector3(0.277f, -0.057f, 0);
+            robot.transform.localPosition = new Vector3(robot_xPos, -0.057f, 0);
             robot.transform.localRotation = Quaternion.Euler(0,270,0);
             ScriptEnable(false);
         }
