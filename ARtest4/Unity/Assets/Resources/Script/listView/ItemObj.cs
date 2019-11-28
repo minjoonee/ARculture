@@ -18,6 +18,10 @@ public class ItemObj : MonoBehaviour
         Debug.Log(EventSystem.current.currentSelectedGameObject.name);
         // sendMessage 함수를 통해서 다음 씬으로 넘겨줌.
         variable.placeNum = EventSystem.current.currentSelectedGameObject.name;
+
+        variable.placeName = EventSystem.current.currentSelectedGameObject.GetComponentInChildren<Text>().text;
+        Debug.Log(variable.placeName);
+
         SceneManager.LoadScene("stamp");
     }
 

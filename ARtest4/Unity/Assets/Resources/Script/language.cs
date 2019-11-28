@@ -22,7 +22,12 @@ public class languageSet : MonoBehaviour
     public Text viewImage;
     public Text viewOCR;
     
+    public Text stampGuide;
 
+    public Text htu1;
+    public Text htu2;
+    public Text htu3;
+    public Text htu4;
     string git = "https://github.com/minjoonee/ARculture";
 
     public int LangNum;
@@ -56,6 +61,10 @@ public class languageSet : MonoBehaviour
 
         if (SceneName.Equals("howToUse"))
         {
+            htu1.text = "그림에 가까이 가져가 보세요.\n\n 귀여운 로봇이 설명해줄거에요.";
+            htu2.text = "포스터에 가까이 가져가 보세요.\n\n 누가 있는거 같아요!";
+            htu3.text = "언어 설정 페이지를 이용하면.\n\n 원하는 언어로 설정할 수 있습니다.";
+            htu4.text = "전시회 목록을 잘 둘러보세요.\n\n 어떤 작품을 봤는지 알 수 있어요!";
         }
 
 
@@ -65,10 +74,7 @@ public class languageSet : MonoBehaviour
             viewPoster.text = "포스터 보기";
             viewOCR.text = "이미지로 번역하기";
         }
-
-        if (SceneName.Equals("stamp"))
-        {
-        }
+        
     }
 
     public void JapaneseSetting(string SceneName)
@@ -98,6 +104,10 @@ public class languageSet : MonoBehaviour
 
         if (SceneName.Equals("howToUse"))
         {
+            htu1.text = "画像の近くに持ってみましょう。\n\n かわいいロボットが説明してくれるんです。";
+            htu2.text = "ポスターの近くに持ってみましょう。\n\n 誰てるんだ！";
+            htu3.text = "言語設定ページを使用すると、\n\n 希望の言語に設定することができます。";
+            htu4.text = "展覧会のリストをよくお楽しみください。\n\n いくつかの作品を見たのか知ることができます！";
         }
 
         if (SceneName.Equals("menu"))
@@ -106,10 +116,7 @@ public class languageSet : MonoBehaviour
             viewPoster.text = "ポスターを見る";
             viewOCR.text = "画像翻訳する";
         }
-
-        if (SceneName.Equals("stamp"))
-        {
-        }
+        
     }
     
     public void EnglishSetting(string SceneName)
@@ -139,6 +146,10 @@ public class languageSet : MonoBehaviour
 
         if (SceneName.Equals("howToUse"))
         {
+            htu1.text = "Take closer to the picture.\n\n cute robot will explain it.";
+            htu2.text = "Take closer to the poster.\n\n  I think who's there!";
+            htu3.text = "Use the Language Settings page \n\n ou can set your preferred language.";
+            htu4.text = "Watch your list of exhibits. \n\n You can see what you saw!";
         }
 
         if (SceneName.Equals("menu"))
@@ -148,9 +159,6 @@ public class languageSet : MonoBehaviour
             viewOCR.text = "Image Translate";
         }
         
-        if (SceneName.Equals("stamp"))
-        {
-        }
 
     }
 
@@ -181,6 +189,10 @@ public class languageSet : MonoBehaviour
 
         if (SceneName.Equals("howToUse"))
         {
+            htu1.text ="靠近图片。\n\n 一个可爱的机器人会解释它";
+            htu2.text = "靠近海报。\n\n 我想是谁在里面!";
+            htu3.text = "使用语言设置页面。\n\n 您可以设置首选语言";
+            htu4.text = "观察您的展览品清单。\n\n 您可以看到自己看到的东西!";
         }
 
         if (SceneName.Equals("menu"))
@@ -189,10 +201,7 @@ public class languageSet : MonoBehaviour
             viewPoster.text = "查看海报";
             viewOCR.text = "翻译图片";
         }
-
-        if (SceneName.Equals("stamp"))
-        {
-        }
+        
     }
 
     public void ReadLang()

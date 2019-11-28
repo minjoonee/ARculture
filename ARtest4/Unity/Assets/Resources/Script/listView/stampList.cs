@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using System.IO;
+using UnityEngine.UI;
 
 public class stampList : MonoBehaviour
 {
@@ -9,14 +10,21 @@ public class stampList : MonoBehaviour
     public Transform content;
     public Sprite grayClear;
     public Sprite colorClear;
+    public Text title;
+    public Text guide;
+
+    int cnt_All = 0;
+    int cnt_Watch = 0;
 
     List<string> Stamp_List = new List<string>();   // 현재 stamp.txt 파일에 저장된 목록을 담는 변수.
 
     // Start is called before the first frame update
     void Start()
     {
+        title.text = variable.placeName;
         stampCheck();
         Binding(variable.placeNum);
+        guide.text = cnt_Watch + " / " + cnt_All;
     }
 
     // Update is called once per frame
@@ -34,6 +42,7 @@ public class stampList : MonoBehaviour
         for (int i = 0; i < json.item.Length; i++) {
             if (placeNum.Equals(json.item[i].place))
             {
+                cnt_All++;
                 btnItem = Instantiate(stampObject) as GameObject;
                 temp = btnItem.GetComponent<stampObj>();
 
@@ -43,6 +52,7 @@ public class stampList : MonoBehaviour
                 // 만약 Stamp_List 안에 json.item[i].num 값이 존재하는 경우에는 colorClear 삽입
                 if (Stamp_List.Contains(json.item[i].num))
                 {
+                    cnt_Watch++;
                     temp.clear.sprite = colorClear;
                 }
                 else

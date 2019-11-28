@@ -5,4 +5,5 @@ using UnityEngine;
 public static class variable
 {
     public static string placeNum;
+    public static string placeName;
 }

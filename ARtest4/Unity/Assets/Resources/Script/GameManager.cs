@@ -14,7 +14,7 @@ public class GameManager : TtsForm, ITrackableEventHandler
     float char_scale = 0.01f;
     bool Running = false;
 
-    public TextMesh Chktext;
+    public Text Chktext;
     bool chk = true;
     private TrackableBehaviour track;
     string filename;
