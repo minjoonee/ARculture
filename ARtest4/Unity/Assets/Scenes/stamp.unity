@@ -170,7 +170,7 @@ MonoBehaviour:
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
-    m_Font: {fileID: 12800000, guid: 4e95bf25fc93f6944878fe8988b77301, type: 3}
+    m_Font: {fileID: 12800000, guid: 0ec5ea67567be4c478a1cce415a34519, type: 3}
     m_FontSize: 90
     m_FontStyle: 1
     m_BestFit: 0
@@ -391,6 +391,56 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_ShowMaskGraphic: 1
+--- !u!1 &882678689
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 882678691}
+  - component: {fileID: 882678690}
+  m_Layer: 0
+  m_Name: StampData
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &882678690
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 882678689}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 18c542b132b8d38449416cb279b9ba78, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  FieldString: ' '
+  rateField: 1
+  pitchField: 1
+  languageField: ko-KR
+  touchOn: 0
+  mycount: 0
+  LangNum: 0
+--- !u!4 &882678691
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 882678689}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 827.1962, y: 1446.7351, z: 31}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1023230411
 GameObject:
   m_ObjectHideFlags: 0
@@ -513,7 +563,7 @@ MonoBehaviour:
   m_ScaleFactor: 1
   m_ReferenceResolution: {x: 1440, y: 2960}
   m_ScreenMatchMode: 0
-  m_MatchWidthOrHeight: 0
+  m_MatchWidthOrHeight: 0.5
   m_PhysicalUnit: 3
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
@@ -869,6 +919,7 @@ GameObject:
   - component: {fileID: 1545244082}
   - component: {fileID: 1545244081}
   - component: {fileID: 1545244084}
+  - component: {fileID: 1545244085}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -955,13 +1006,32 @@ MonoBehaviour:
   stampObject: {fileID: 1825256364958133127, guid: 4ce10e6bebcae194892d3649f2a59289,
     type: 3}
   content: {fileID: 1670951207}
-  stampLists:
-  - pictureName: img A
-    authorName: camera
-    clearImage: {fileID: 21300000, guid: cd23228e42652a844a487852e2dce2f6, type: 3}
-  - pictureName: img B
-    authorName: circle
-    clearImage: {fileID: 21300000, guid: cd23228e42652a844a487852e2dce2f6, type: 3}
+  grayClear: {fileID: 21300000, guid: cd23228e42652a844a487852e2dce2f6, type: 3}
+  colorClear: {fileID: 21300000, guid: 7e42fb211d37a2342975a23fc86e0c2c, type: 3}
+--- !u!114 &1545244085
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1545244080}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5aefbe0fbd68ceb4b92651967c03f72c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  appName: {fileID: 0}
+  setLanguage: {fileID: 0}
+  setKorean: {fileID: 0}
+  setEnglish: {fileID: 0}
+  setJapanese: {fileID: 0}
+  setChinese: {fileID: 0}
+  ARstart: {fileID: 0}
+  galleryIndex: {fileID: 0}
+  howToUse: {fileID: 0}
+  viewPoster: {fileID: 0}
+  viewImage: {fileID: 0}
+  LangNum: 0
 --- !u!1 &1670951206
 GameObject:
   m_ObjectHideFlags: 0
@@ -1016,11 +1086,11 @@ MonoBehaviour:
     m_Right: 0
     m_Top: 30
     m_Bottom: 30
-  m_ChildAlignment: 0
+  m_ChildAlignment: 1
   m_Spacing: 40
   m_ChildForceExpandWidth: 1
   m_ChildForceExpandHeight: 1
-  m_ChildControlWidth: 0
+  m_ChildControlWidth: 1
   m_ChildControlHeight: 0
 --- !u!114 &1670951209
 MonoBehaviour:

@@ -180,11 +180,11 @@ MonoBehaviour:
     m_Right: 10
     m_Top: 20
     m_Bottom: 20
-  m_ChildAlignment: 0
+  m_ChildAlignment: 1
   m_Spacing: 10
   m_ChildForceExpandWidth: 1
   m_ChildForceExpandHeight: 1
-  m_ChildControlWidth: 0
+  m_ChildControlWidth: 1
   m_ChildControlHeight: 0
 --- !u!1 &194823377
 GameObject:
@@ -585,6 +585,7 @@ GameObject:
   - component: {fileID: 587948011}
   - component: {fileID: 587948010}
   - component: {fileID: 587948013}
+  - component: {fileID: 587948014}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -635,7 +636,7 @@ Camera:
   m_TargetTexture: {fileID: 0}
   m_TargetDisplay: 0
   m_TargetEye: 3
-  m_HDR: 1
+  m_HDR: 0
   m_AllowMSAA: 1
   m_AllowDynamicResolution: 0
   m_ForceIntoRT: 0
@@ -671,83 +672,32 @@ MonoBehaviour:
   ButtonObject: {fileID: 5164282983252883332, guid: 9b3d7725f6325d04cb6ec0ce00282a8a,
     type: 3}
   content: {fileID: 56938736}
-  ItemList:
-  - galleryName: "\uC218\uBB35\uC815\uC2E0 | \uD604\uC2E4"
-    Info: "\uC2DC\uB300\uC640 \uD568\uAED8 \uAC77\uB2E4.\n\uC81C 2 \uC804\uC2DC\uC2E4 "
-    galleryImage: {fileID: 21300000, guid: 32f5f9086fef9cd4fbcbfb5e26631533, type: 3}
-    OnItemClick:
-      m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 587948013}
-          m_MethodName: ItemClick_Result
-          m_Mode: 1
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
-      m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
-        Culture=neutral, PublicKeyToken=null
-  - galleryName: "\uC218\uBB35\uC815\uC2E0 | \uC804\uD1B5"
-    Info: "\uC804\uBD81\uC5D0\uC11C \uAE38\uC744 \uCC3E\uB2E4.\n\uC81C 3 \uC804\uC2DC\uC2E4"
-    galleryImage: {fileID: 21300000, guid: 205fba597845cb94abe0887d6fd8c36f, type: 3}
-    OnItemClick:
-      m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 587948013}
-          m_MethodName: ItemClick_Result
-          m_Mode: 1
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
-      m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
-        Culture=neutral, PublicKeyToken=null
-  - galleryName: "\uC218\uBB35\uC815\uC2E0 | \uCD94\uC0C1"
-    Info: "\uBCF8\uC9C8\uC744 \uD0D0\uAD6C\uD558\uB2E4.\n\uC81C 4 \uC804\uC2DC\uC2E4"
-    galleryImage: {fileID: 21300000, guid: f8d14952007f59a44aa4c887cd5c5377, type: 3}
-    OnItemClick:
-      m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 587948013}
-          m_MethodName: ItemClick_Result
-          m_Mode: 1
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
-      m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
-        Culture=neutral, PublicKeyToken=null
-  - galleryName: "\uC218\uBB35\uC815\uC2E0 | \uC2E4\uD5D8"
-    Info: "\uC0C8\uB85C\uC6C0\uC5D0 \uB3C4\uC804\uD558\uB2E4.\n\uC81C 5 \uC804\uC2DC\uC2E4"
-    galleryImage: {fileID: 21300000, guid: 2cb490afa188a314d8c35ff799e3d5bb, type: 3}
-    OnItemClick:
-      m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 587948013}
-          m_MethodName: ItemClick_Result
-          m_Mode: 1
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
-      m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
-        Culture=neutral, PublicKeyToken=null
+  LangNum: 0
+  languageField: ko-KR
+--- !u!114 &587948014
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 587948009}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5aefbe0fbd68ceb4b92651967c03f72c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  appName: {fileID: 0}
+  setLanguage: {fileID: 0}
+  setKorean: {fileID: 0}
+  setEnglish: {fileID: 0}
+  setJapanese: {fileID: 0}
+  setChinese: {fileID: 0}
+  ARstart: {fileID: 0}
+  galleryIndex: {fileID: 1522099347}
+  howToUse: {fileID: 0}
+  viewPoster: {fileID: 0}
+  viewImage: {fileID: 0}
+  LangNum: 0
 --- !u!1 &619247280
 GameObject:
   m_ObjectHideFlags: 0
@@ -801,7 +751,7 @@ MonoBehaviour:
   m_ScaleFactor: 1
   m_ReferenceResolution: {x: 1440, y: 2960}
   m_ScreenMatchMode: 0
-  m_MatchWidthOrHeight: 0
+  m_MatchWidthOrHeight: 0.5
   m_PhysicalUnit: 3
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
@@ -941,12 +891,12 @@ MonoBehaviour:
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
-    m_Font: {fileID: 12800000, guid: 4e95bf25fc93f6944878fe8988b77301, type: 3}
-    m_FontSize: 90
+    m_Font: {fileID: 12800000, guid: 0ec5ea67567be4c478a1cce415a34519, type: 3}
+    m_FontSize: 110
     m_FontStyle: 1
     m_BestFit: 0
     m_MinSize: 1
-    m_MaxSize: 100
+    m_MaxSize: 120
     m_Alignment: 4
     m_AlignByGeometry: 0
     m_RichText: 1

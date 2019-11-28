@@ -8,6 +8,7 @@ using UnityEngine.UI;
 public class Item
 {
     public string galleryName;
+    public string place;
     [TextArea]
     public string Info;
     public Sprite galleryImage;

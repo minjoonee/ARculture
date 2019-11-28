@@ -16,12 +16,14 @@ public class JsonTest : TtsForm
         public string artist;
         public string name;
         public string info;
-        public ItemInfo(string n, string ar, string name, string info)
+        public string place;
+        public ItemInfo(string n, string ar, string name, string info, string place)
         {
             this.num = n;
             this.artist = ar;
             this.name = name;
             this.info = info;
+            this.place = place;
         }
     }
 
@@ -33,7 +35,7 @@ public class JsonTest : TtsForm
         if (_fileName.StartsWith("jb"))
         {
             TextAsset txtAsset;
-            string str = Application.systemLanguage.ToString();
+            string str = Application.systemLanguage.ToString(); // 기기의 기본 언어값을 가져온다.
             ReadLang();
             if (LangNum < 0)
             {
@@ -107,12 +109,12 @@ public class JsonTest : TtsForm
 
         item = new ItemInfo[itemData[LoadName].Count];
         for(int i=0; i<itemData[LoadName].Count; i++) {
-            item[i] = new ItemInfo(itemData[LoadName][i]["num"].ToString(), itemData[LoadName][i]["artist"].ToString(), itemData[LoadName][i]["name"].ToString(), itemData[LoadName][i]["info"].ToString());
+            item[i] = new ItemInfo(itemData[LoadName][i]["num"].ToString(), itemData[LoadName][i]["artist"].ToString(), itemData[LoadName][i]["name"].ToString(), itemData[LoadName][i]["info"].ToString(), itemData[LoadName][i]["place"].ToString());
         }
 
 
         for (int i = 0; i < item.Length; i++)
-            Debug.Log(item[i].num + item[i].artist + item[i].name + item[i].info);
+            Debug.Log(item[i].num + item[i].artist + item[i].name + item[i].info + item[i].place);
     }
     void Start()
     {

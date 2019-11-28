@@ -319,9 +319,9 @@ MonoBehaviour:
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
-    m_Font: {fileID: 12800000, guid: 4e95bf25fc93f6944878fe8988b77301, type: 3}
+    m_Font: {fileID: 12800000, guid: 6112aeed062ff67468ea0d8beddb2a02, type: 3}
     m_FontSize: 80
-    m_FontStyle: 0
+    m_FontStyle: 1
     m_BestFit: 0
     m_MinSize: 0
     m_MaxSize: 200
@@ -399,9 +399,9 @@ MonoBehaviour:
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
-    m_Font: {fileID: 12800000, guid: 4e95bf25fc93f6944878fe8988b77301, type: 3}
+    m_Font: {fileID: 12800000, guid: 6112aeed062ff67468ea0d8beddb2a02, type: 3}
     m_FontSize: 80
-    m_FontStyle: 0
+    m_FontStyle: 1
     m_BestFit: 0
     m_MinSize: 0
     m_MaxSize: 200
@@ -595,9 +595,9 @@ MonoBehaviour:
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
-    m_Font: {fileID: 12800000, guid: 4e95bf25fc93f6944878fe8988b77301, type: 3}
+    m_Font: {fileID: 12800000, guid: 6112aeed062ff67468ea0d8beddb2a02, type: 3}
     m_FontSize: 80
-    m_FontStyle: 0
+    m_FontStyle: 1
     m_BestFit: 0
     m_MinSize: 0
     m_MaxSize: 200
@@ -893,6 +893,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5aefbe0fbd68ceb4b92651967c03f72c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  appName: {fileID: 0}
+  setLanguage: {fileID: 0}
+  setKorean: {fileID: 0}
+  setEnglish: {fileID: 0}
+  setJapanese: {fileID: 0}
+  setChinese: {fileID: 0}
+  ARstart: {fileID: 0}
+  galleryIndex: {fileID: 0}
+  howToUse: {fileID: 0}
+  viewPoster: {fileID: 0}
+  viewImage: {fileID: 0}
+  LangNum: 0
 --- !u!1 &969292335
 GameObject:
   m_ObjectHideFlags: 0
@@ -1291,7 +1303,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 0.735849, g: 0.735849, b: 0.735849, a: 1}
-  m_RaycastTarget: 1
+  m_RaycastTarget: 0
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -1365,7 +1377,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 0.735849, g: 0.735849, b: 0.735849, a: 1}
-  m_RaycastTarget: 1
+  m_RaycastTarget: 0
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -1520,7 +1532,7 @@ MonoBehaviour:
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
-    m_Font: {fileID: 12800000, guid: 4e95bf25fc93f6944878fe8988b77301, type: 3}
+    m_Font: {fileID: 12800000, guid: 6112aeed062ff67468ea0d8beddb2a02, type: 3}
     m_FontSize: 80
     m_FontStyle: 1
     m_BestFit: 0
@@ -2012,6 +2024,13 @@ MonoBehaviour:
   ScreensContainer: {fileID: 586597354}
   Screens: 4
   StartingScreen: 1
+  skipButton: {fileID: 456346172}
+  DoneButton: {fileID: 1851830142}
+  EdgeButton: {fileID: 969292335}
+  dot1: {fileID: 10486869}
+  dot2: {fileID: 1772265787}
+  dot3: {fileID: 1366972112}
+  dot4: {fileID: 1336763601}
 --- !u!1 &1772265785
 GameObject:
   m_ObjectHideFlags: 0
@@ -2063,7 +2082,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 0.735849, g: 0.735849, b: 0.735849, a: 1}
-  m_RaycastTarget: 1
+  m_RaycastTarget: 0
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -2144,7 +2163,7 @@ MonoBehaviour:
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
-    m_Font: {fileID: 12800000, guid: 4e95bf25fc93f6944878fe8988b77301, type: 3}
+    m_Font: {fileID: 12800000, guid: 6112aeed062ff67468ea0d8beddb2a02, type: 3}
     m_FontSize: 80
     m_FontStyle: 1
     m_BestFit: 0
@@ -2427,9 +2446,9 @@ MonoBehaviour:
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
-    m_Font: {fileID: 12800000, guid: 4e95bf25fc93f6944878fe8988b77301, type: 3}
+    m_Font: {fileID: 12800000, guid: 6112aeed062ff67468ea0d8beddb2a02, type: 3}
     m_FontSize: 80
-    m_FontStyle: 0
+    m_FontStyle: 1
     m_BestFit: 0
     m_MinSize: 0
     m_MaxSize: 200

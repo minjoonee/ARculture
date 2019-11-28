@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 4e95bf25fc93f6944878fe8988b77301
+guid: 0ec5ea67567be4c478a1cce415a34519
 TrueTypeFontImporter:
   externalObjects: {}
   serializedVersion: 4
@@ -8,10 +8,11 @@ TrueTypeFontImporter:
   characterSpacing: 0
   characterPadding: 1
   includeFontData: 1
-  fontName: KoreanJJPPB
+  fontName: Noto Sans
   fontNames:
-  - KoreanJJPPB
-  fallbackFontReferences: []
+  - Noto Sans
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: 6112aeed062ff67468ea0d8beddb2a02, type: 3}
   customCharacters: 
   fontRenderingMode: 0
   ascentCalculationMode: 1

@@ -374,9 +374,9 @@ MonoBehaviour:
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
-    m_Font: {fileID: 12800000, guid: 4e95bf25fc93f6944878fe8988b77301, type: 3}
+    m_Font: {fileID: 12800000, guid: 0ec5ea67567be4c478a1cce415a34519, type: 3}
     m_FontSize: 100
-    m_FontStyle: 0
+    m_FontStyle: 1
     m_BestFit: 0
     m_MinSize: 1
     m_MaxSize: 100
@@ -583,9 +583,9 @@ MonoBehaviour:
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
-    m_Font: {fileID: 12800000, guid: 4e95bf25fc93f6944878fe8988b77301, type: 3}
+    m_Font: {fileID: 12800000, guid: 6112aeed062ff67468ea0d8beddb2a02, type: 3}
     m_FontSize: 100
-    m_FontStyle: 0
+    m_FontStyle: 1
     m_BestFit: 0
     m_MinSize: 1
     m_MaxSize: 100
@@ -765,11 +765,20 @@ MonoBehaviour:
   m_GameObject: {fileID: 1015188243}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d9829ac7909a1c949a4f5f804794c87b, type: 3}
+  m_Script: {fileID: 11500000, guid: 5aefbe0fbd68ceb4b92651967c03f72c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MainText: {fileID: 646306062}
-  PosterText: {fileID: 380851739}
+  appName: {fileID: 0}
+  setLanguage: {fileID: 0}
+  setKorean: {fileID: 0}
+  setEnglish: {fileID: 0}
+  setJapanese: {fileID: 0}
+  setChinese: {fileID: 0}
+  ARstart: {fileID: 0}
+  galleryIndex: {fileID: 0}
+  howToUse: {fileID: 0}
+  viewPoster: {fileID: 380851739}
+  viewImage: {fileID: 646306062}
   LangNum: 0
 --- !u!1 &1052482186
 GameObject:

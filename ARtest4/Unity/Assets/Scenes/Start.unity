@@ -270,7 +270,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1969955248}
+      - m_Target: {fileID: 1969955244}
         m_MethodName: goTohowToUse
         m_Mode: 1
         m_Arguments:
@@ -378,7 +378,7 @@ MonoBehaviour:
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_Font: {fileID: 12800000, guid: 0ec5ea67567be4c478a1cce415a34519, type: 3}
     m_FontSize: 30
     m_FontStyle: 1
     m_BestFit: 0
@@ -531,7 +531,7 @@ MonoBehaviour:
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_Font: {fileID: 12800000, guid: 0ec5ea67567be4c478a1cce415a34519, type: 3}
     m_FontSize: 30
     m_FontStyle: 1
     m_BestFit: 0
@@ -632,7 +632,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1969955248}
+      - m_Target: {fileID: 1969955244}
         m_MethodName: goToMenu
         m_Mode: 1
         m_Arguments:
@@ -762,7 +762,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1969955248}
+      - m_Target: {fileID: 1969955244}
         m_MethodName: goTogallery
         m_Mode: 1
         m_Arguments:
@@ -870,7 +870,7 @@ MonoBehaviour:
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_Font: {fileID: 12800000, guid: 0ec5ea67567be4c478a1cce415a34519, type: 3}
     m_FontSize: 30
     m_FontStyle: 1
     m_BestFit: 0
@@ -1149,8 +1149,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 81, y: 523}
-  m_SizeDelta: {x: 1071.6, y: 350}
+  m_AnchoredPosition: {x: 67.65, y: 584}
+  m_SizeDelta: {x: 1304.7, y: 375.5}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1466321674
 MonoBehaviour:
@@ -1173,9 +1173,9 @@ MonoBehaviour:
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
-    m_Font: {fileID: 12800000, guid: 4e95bf25fc93f6944878fe8988b77301, type: 3}
+    m_Font: {fileID: 12800000, guid: 0ec5ea67567be4c478a1cce415a34519, type: 3}
     m_FontSize: 230
-    m_FontStyle: 0
+    m_FontStyle: 1
     m_BestFit: 0
     m_MinSize: 0
     m_MaxSize: 250
@@ -1445,7 +1445,6 @@ GameObject:
   - component: {fileID: 1969955246}
   - component: {fileID: 1969955245}
   - component: {fileID: 1969955244}
-  - component: {fileID: 1969955248}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -1462,11 +1461,20 @@ MonoBehaviour:
   m_GameObject: {fileID: 1969955243}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d9829ac7909a1c949a4f5f804794c87b, type: 3}
+  m_Script: {fileID: 11500000, guid: 5aefbe0fbd68ceb4b92651967c03f72c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MainText: {fileID: 0}
-  PosterText: {fileID: 0}
+  appName: {fileID: 1466321674}
+  setLanguage: {fileID: 467411638}
+  setKorean: {fileID: 0}
+  setEnglish: {fileID: 0}
+  setJapanese: {fileID: 0}
+  setChinese: {fileID: 0}
+  ARstart: {fileID: 553981139}
+  galleryIndex: {fileID: 2052903595}
+  howToUse: {fileID: 929193605}
+  viewPoster: {fileID: 0}
+  viewImage: {fileID: 0}
   LangNum: 0
 --- !u!81 &1969955245
 AudioListener:
@@ -1532,18 +1540,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1969955248
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1969955243}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5aefbe0fbd68ceb4b92651967c03f72c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &2052903593
 GameObject:
   m_ObjectHideFlags: 0
@@ -1602,7 +1598,7 @@ MonoBehaviour:
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_Font: {fileID: 12800000, guid: 0ec5ea67567be4c478a1cce415a34519, type: 3}
     m_FontSize: 30
     m_FontStyle: 1
     m_BestFit: 0
@@ -1922,7 +1918,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1969955248}
+      - m_Target: {fileID: 1969955244}
         m_MethodName: goTolanguage
         m_Mode: 1
         m_Arguments:

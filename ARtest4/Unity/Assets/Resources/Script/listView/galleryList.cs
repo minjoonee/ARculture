@@ -1,18 +1,43 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System.IO;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.SceneManagement;
+using LitJson;
+using FreeTts;
+using System.Linq;
+using System.Runtime.InteropServices;
 
 public class galleryList : MonoBehaviour
 {
-    static string sellected;
     public GameObject ButtonObject;
     public Transform content;
-    public List<Item> ItemList;
+
+    public ItemInfo[] items;
+
+    public int LangNum;
+    public string languageField = "ko-KR";
+
+    public class ItemInfo
+    {
+        public string galleryName;
+        public string place;
+        public string info;
+        public string sprite;
+        public ItemInfo(string gN, string place, string info, string sprite)
+        {
+            this.galleryName = gN;
+            this.place = place;
+            this.info = info;
+            this.sprite = sprite;
+        }
+    }
+
     // Start is called before the first frame update
     void Start()
     {
+        LoadJson();
         Binding();
     }
 
@@ -36,18 +61,17 @@ public class galleryList : MonoBehaviour
          *  - 1. 전시회 이름
          *  - 2. 전시회 포스터이미지
          */
-        foreach (Item item in ItemList)
+        for (int i = 0; i<items.Length; i++)
         {
             btnItem = Instantiate(ButtonObject) as GameObject;  
             // 해당 오브젝트를 인스턴트화하여 외부 프리팹을 받는다.
          
             temp = btnItem.GetComponent<ItemObj>();
 
-            temp.name.text = item.galleryName;
-            temp.info.text = item.Info;
-            temp.Face.sprite = item.galleryImage;
-            temp.Item.onClick = item.OnItemClick;
-            temp.Item.name = item.galleryName;
+            temp.name.text = items[i].galleryName;
+            temp.info.text = items[i].info;
+            temp.Face.sprite = Resources.Load<Sprite>("3d/"+items[i].sprite);
+            temp.Item.name = items[i].place;
 
             btnItem.transform.SetParent(content);
             // content 위치에 해당 오브젝트를 동적으로 추가한다.
@@ -55,13 +79,117 @@ public class galleryList : MonoBehaviour
 
         Debug.Log("item Binding");
     }
+    
 
-    public void ItemClick_Result()
+    void ReadLang()
     {
-        // 클릭되었을 때 클릭된 전시회 정보를 받아와서 다음 신에 전달한다.
-        Debug.Log(EventSystem.current.currentSelectedGameObject.name);
-        // sendMessage 함수를 통해서 다음 씬으로 넘겨줌.
-        sellected = EventSystem.current.currentSelectedGameObject.name;
-        SceneManager.LoadScene("stamp");
+        LangNum = -1;
+        string line = "";// 한줄씩 입력받을 변수
+        FileStream ReadL = new FileStream(Application.persistentDataPath + "/ARculture" + "/Language.txt", FileMode.OpenOrCreate, FileAccess.Read);
+        StreamReader sL = new StreamReader(ReadL);
+        while ((line = sL.ReadLine()) != null)
+        {
+            LangNum = int.Parse(line);
+        }
+        sL.Close();
+        ReadL.Close();
+    }
+
+    void LoadJson()
+    {
+        string tst = "exhibition";
+        Debug.Log("This system is in " + Application.systemLanguage);
+        string LoadName = "";
+        string Jsonstring = "";
+
+        if (tst.StartsWith("ex"))
+        {
+            TextAsset txtAsset;
+            string str = Application.systemLanguage.ToString(); // 기기의 기본 언어값을 가져온다.
+            ReadLang();
+            if (LangNum < 0)
+            {
+                if (str.Equals("Korean"))
+                {
+                    languageField = "ko-KR";
+                    txtAsset = (TextAsset)Resources.Load("idx_expl"); // 인식한 파일명과 같은걸로 찾아준다.
+                }
+                else if (str.Equals("Chinese"))
+                {
+                    languageField = "zh-cn";
+                    txtAsset = (TextAsset)Resources.Load("idx_chn");
+                }
+                else if (str.Equals("English"))
+                {
+                    languageField = "en-US";
+                    txtAsset = (TextAsset)Resources.Load("idx_eng");
+                }
+                else if (str.Equals("Japanese"))
+                {
+                    languageField = "ja-JP";
+                    txtAsset = (TextAsset)Resources.Load("idx_jpn");
+                }
+                else
+                {
+                    languageField = "en-US";
+                    txtAsset = (TextAsset)Resources.Load("idx_eng"); // 어떤 것도 속하지 않을 때는 영어로.
+                }
+            }
+            else
+            {
+                switch (LangNum)
+                {
+                    case 1:
+                        languageField = "ko-KR";
+                        txtAsset = (TextAsset)Resources.Load("idx_expl"); // 인식한 파일명과 같은걸로 찾아준다.
+                        break;
+                    case 2:
+                        languageField = "zh-cn";
+                        txtAsset = (TextAsset)Resources.Load("idx_chn"); // 인식한 파일명과 같은걸로 찾아준다.
+                        break;
+                    case 3:
+                        languageField = "en-US";
+                        txtAsset = (TextAsset)Resources.Load("idx_eng"); // 인식한 파일명과 같은걸로 찾아준다.
+                        break;
+                    case 4:
+                        languageField = "ja-JP";
+                        txtAsset = (TextAsset)Resources.Load("idx_jpn"); // 인식한 파일명과 같은걸로 찾아준다.
+                        break;
+                    default:
+                        languageField = "en-US";
+                        txtAsset = (TextAsset)Resources.Load("idx_eng"); // 인식한 파일명과 같은걸로 찾아준다.
+                        break;
+
+                }
+            }
+
+
+            Debug.Log("textAsset :  " + txtAsset.text);
+
+            Jsonstring = txtAsset.text;
+            LoadName = "index";
+
+            Debug.Log("jsonstring 저장" + Jsonstring);
+
+        }
+        Debug.Log(JsonMapper.ToObject(Jsonstring));
+
+        JsonData itemData = JsonMapper.ToObject(Jsonstring);
+        //Debug.Log(itemData[LoadName][0]["num"].ToString()+" "+itemData[LoadName][0]["info"].ToString()+"  Json불러오기");
+        //Debug.Log("개수"+itemData[LoadName].Count);
+
+        items = new ItemInfo[itemData[LoadName].Count];
+        for (int i = 0; i < itemData[LoadName].Count; i++)
+        {
+            items[i] = new ItemInfo(
+                itemData[LoadName][i]["galleryName"].ToString(), 
+                itemData[LoadName][i]["place"].ToString(), 
+                itemData[LoadName][i]["Info"].ToString(), 
+                itemData[LoadName][i]["sprite"].ToString());
+        }
+
+
+        for (int i = 0; i < items.Length; i++)
+            Debug.Log(items[i].galleryName + items[i].place + items[i].info + items[i].sprite);
     }
 }
