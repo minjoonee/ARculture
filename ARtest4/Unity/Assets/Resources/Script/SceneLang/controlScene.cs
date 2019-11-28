@@ -67,7 +67,7 @@ public class controlScene : languageSet
                         Application.Quit();
                     }
                 }
-                else if (SceneName.Equals("Main") || SceneName.Equals("poster"))
+                else if (SceneName.Equals("Main") || SceneName.Equals("poster") || SceneName.Equals("ocrScene"))
                 {
                     goToMenu();
                 }
@@ -110,5 +110,9 @@ public class controlScene : languageSet
     public void goTolanguage()
     {
         SceneManager.LoadScene("language");
+    }
+    public void goToOCR()
+    {
+        SceneManager.LoadScene("ocrScene");
     }
 }

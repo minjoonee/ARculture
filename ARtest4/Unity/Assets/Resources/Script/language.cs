@@ -20,6 +20,8 @@ public class languageSet : MonoBehaviour
 
     public Text viewPoster;
     public Text viewImage;
+    public Text viewOCR;
+    
 
     string git = "https://github.com/minjoonee/ARculture";
 
@@ -61,6 +63,7 @@ public class languageSet : MonoBehaviour
         {
             viewImage.text = "미술품 보기";
             viewPoster.text = "포스터 보기";
+            viewOCR.text = "이미지로 번역하기";
         }
 
         if (SceneName.Equals("stamp"))
@@ -101,6 +104,7 @@ public class languageSet : MonoBehaviour
         {
             viewImage.text = "美術品を見る";
             viewPoster.text = "ポスターを見る";
+            viewOCR.text = "画像翻訳する";
         }
 
         if (SceneName.Equals("stamp"))
@@ -141,6 +145,7 @@ public class languageSet : MonoBehaviour
         {
             viewImage.text = "View Artwork";
             viewPoster.text = "View Poster";
+            viewOCR.text = "Image Translate";
         }
         
         if (SceneName.Equals("stamp"))
@@ -182,6 +187,7 @@ public class languageSet : MonoBehaviour
         {
             viewImage.text = "查看图稿";
             viewPoster.text = "查看海报";
+            viewOCR.text = "翻译图片";
         }
 
         if (SceneName.Equals("stamp"))

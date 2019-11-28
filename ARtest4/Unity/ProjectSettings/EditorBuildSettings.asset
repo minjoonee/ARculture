@@ -29,4 +29,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/howToUse.unity
     guid: 9d9495a8384edee4dbe70cc487b3dc25
+  - enabled: 1
+    path: Assets/Scenes/ocrScene.unity
+    guid: f40c0c642fc158f41aa13fd709827227
   m_configObjects: {}
