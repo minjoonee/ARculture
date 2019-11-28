@@ -1,26 +1,26 @@
 ﻿{
 	"index": [{
-			"galleryName": "수묵정신 | 현실",
+			"galleryName": "Ink and spirit | reality",
 			"place": "2",
-			"Info": "시대와 함께 걷다.\n 제 2 전시실",
+			"Info": "Walk with the times. \n 2nd showroom",
 			"sprite": "banner5"
 		},
 		{
-			"galleryName": "수묵정신 | 전통",
+			"galleryName": "Ink and spirit | tradition",
 			"place": "3",
-			"Info": "전북에서 길을 찾다.\n 제 2 전시실",
+			"Info": "Finding the Way in Jeonbuk. \n 2nd Exhibition Hall",
 			"sprite": "banner6"
 		},
 		{
-			"galleryName": "수묵정신 | 추상",
+			"galleryName": "Ink and spirit | abstract",
 			"place": "4",
-			"Info": "본질을 탐구하다.\n 제 2 전시실",
+			"Info": "Investigate the essence \n Second Exhibit Room",
 			"sprite": "banner7"
 		},
 		{
-			"galleryName": "수묵정신 | 실험",
+			"galleryName": "Ink and spirit | Experiment",
 			"place": "5",
-			"Info": "새로움에 도전하다.\n 제 2 전시실",
+			"Info": "Try new things. \n Second exhibition room",
 			"sprite": "banner8"
 		}
 	]

@@ -1,26 +1,26 @@
 ﻿{
 	"index": [{
-			"galleryName": "수묵정신 | 현실",
+			"galleryName": "油墨与烈酒 | 现实性",
 			"place": "2",
-			"Info": "시대와 함께 걷다.\n 제 2 전시실",
+			"Info": "与时俱进\n 第二展厅",
 			"sprite": "banner5"
 		},
 		{
-			"galleryName": "수묵정신 | 전통",
+			"galleryName": "油墨与烈酒 | 传承",
 			"place": "3",
-			"Info": "전북에서 길을 찾다.\n 제 2 전시실",
+			"Info": "在全北寻找路\n 第二展厅",
 			"sprite": "banner6"
 		},
 		{
-			"galleryName": "수묵정신 | 추상",
+			"galleryName": "油墨与烈酒 | 摘要",
 			"place": "4",
-			"Info": "본질을 탐구하다.\n 제 2 전시실",
+			"Info": "调查实质\n 第二展厅",
 			"sprite": "banner7"
 		},
 		{
-			"galleryName": "수묵정신 | 실험",
+			"galleryName": "油墨与烈酒 | 实验",
 			"place": "5",
-			"Info": "새로움에 도전하다.\n 제 2 전시실",
+			"Info": "尝试新事物。\n 第二展厅",
 			"sprite": "banner8"
 		}
 	]
