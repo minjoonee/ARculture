@@ -1,8 +1,8 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using System.IO;
 using UnityEngine.UI;
+using System.IO;
 
 public class stampList : MonoBehaviour
 {
@@ -83,7 +83,7 @@ public class stampList : MonoBehaviour
         */
         Debug.Log("item Binding");
     }
-
+    
     void stampCheck()
     {
         Stamp_List.Clear();

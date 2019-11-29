@@ -5,9 +5,6 @@ using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.SceneManagement;
 using LitJson;
-using FreeTts;
-using System.Linq;
-using System.Runtime.InteropServices;
 
 public class galleryList : MonoBehaviour
 {
@@ -16,7 +13,7 @@ public class galleryList : MonoBehaviour
 
     public ItemInfo[] items;
 
-    public int LangNum;
+    int LangNum = variable.LangNum;
     public string languageField = "ko-KR";
 
     public class ItemInfo
@@ -80,7 +77,7 @@ public class galleryList : MonoBehaviour
         Debug.Log("item Binding");
     }
     
-
+    /*
     void ReadLang()
     {
         LangNum = -1;
@@ -94,6 +91,7 @@ public class galleryList : MonoBehaviour
         sL.Close();
         ReadL.Close();
     }
+    */
 
     void LoadJson()
     {
@@ -106,7 +104,7 @@ public class galleryList : MonoBehaviour
         {
             TextAsset txtAsset;
             string str = Application.systemLanguage.ToString(); // 기기의 기본 언어값을 가져온다.
-            ReadLang();
+            //ReadLang();
             if (LangNum < 0)
             {
                 if (str.Equals("Korean"))

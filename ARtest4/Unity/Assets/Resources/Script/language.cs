@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-using System.IO;
 
 public class languageSet : MonoBehaviour
 {
@@ -29,9 +28,7 @@ public class languageSet : MonoBehaviour
     public Text htu3;
     public Text htu4;
     string git = "https://github.com/minjoonee/ARculture";
-
-    public int LangNum;
-
+    
     public void KoreanSetting(string SceneName)
     {
         if (SceneName.Equals("Start"))
@@ -202,19 +199,5 @@ public class languageSet : MonoBehaviour
             viewOCR.text = "翻译图片";
         }
         
-    }
-
-    public void ReadLang()
-    {
-        LangNum = -1;
-        string line = "";// 한줄씩 입력받을 변수
-        FileStream ReadL = new FileStream(Application.persistentDataPath + "/ARculture" + "/Language.txt", FileMode.OpenOrCreate, FileAccess.Read);
-        StreamReader sL = new StreamReader(ReadL);
-        while ((line = sL.ReadLine()) != null)
-        {
-            LangNum = int.Parse(line);
-        }
-        sL.Close();
-        ReadL.Close();
     }
 }

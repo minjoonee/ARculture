@@ -9,7 +9,7 @@ public class JsonTest : TtsForm
     // Start is called before the first frame update
 
     public ItemInfo[] item;
-    public int LangNum;
+    int LangNum = variable.LangNum;
     public class ItemInfo
     {
         public string num;
@@ -36,7 +36,7 @@ public class JsonTest : TtsForm
         {
             TextAsset txtAsset;
             string str = Application.systemLanguage.ToString(); // 기기의 기본 언어값을 가져온다.
-            ReadLang();
+            //ReadLang();
             if (LangNum < 0)
             {
                 if (str.Equals("Korean"))
@@ -124,6 +124,8 @@ public class JsonTest : TtsForm
     void Update()
     {
     }
+
+    /*
     void ReadLang()
     {
         LangNum = -1;
@@ -137,5 +139,6 @@ public class JsonTest : TtsForm
         sL.Close();
         ReadL.Close();
     }
+    */
 
 }

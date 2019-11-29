@@ -29,7 +29,7 @@ public class GameManager : TtsForm, ITrackableEventHandler
     int count;
     int list_count;
 
-    public int LangNum; // 1: 한국어 2: 중국어 3: 영어 4: 일본어
+    int LangNum = variable.LangNum; // 1: 한국어 2: 중국어 3: 영어 4: 일본어
 
     private bool SoundTrackCount = false; // 인식했을 때 사용하는 변수
     List<string> Stamp_List = new List<string>(); // 현재 스탬프에 저장되어 있는 데이터들(중복입력 방지 변수)
@@ -42,7 +42,7 @@ public class GameManager : TtsForm, ITrackableEventHandler
 
     new void Start()
     {
-        ReadLang(); // 언어 변경
+        //ReadLang(); // 언어 변경
         LangString();
 
         robot.transform.localScale = new Vector3(char_scale, char_scale, char_scale);
@@ -319,6 +319,7 @@ public class GameManager : TtsForm, ITrackableEventHandler
     }
 
 
+    /*
     void ReadLang()
     {
         LangNum = -1;
@@ -332,4 +333,5 @@ public class GameManager : TtsForm, ITrackableEventHandler
         sL.Close();
         ReadL.Close();
     }
+    */
 }

@@ -531,7 +531,6 @@ MonoBehaviour:
   robot: {fileID: 1516641557}
   animator: {fileID: 1516641559}
   Chktext: {fileID: 0}
-  LangNum: 0
 --- !u!114 &19238629
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1925,7 +1924,6 @@ MonoBehaviour:
   robot: {fileID: 1516641557}
   animator: {fileID: 1516641559}
   Chktext: {fileID: 0}
-  LangNum: 0
 --- !u!23 &98993198
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -2072,7 +2070,6 @@ MonoBehaviour:
   robot: {fileID: 1516641557}
   animator: {fileID: 1516641559}
   Chktext: {fileID: 0}
-  LangNum: 0
 --- !u!23 &109122149
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -2219,7 +2216,6 @@ MonoBehaviour:
   robot: {fileID: 1516641557}
   animator: {fileID: 1516641559}
   Chktext: {fileID: 0}
-  LangNum: 0
 --- !u!23 &112031894
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -2526,7 +2522,6 @@ MonoBehaviour:
   robot: {fileID: 1516641557}
   animator: {fileID: 1516641559}
   Chktext: {fileID: 0}
-  LangNum: 0
 --- !u!23 &114779863
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -3021,7 +3016,6 @@ MonoBehaviour:
   robot: {fileID: 1516641557}
   animator: {fileID: 1516641559}
   Chktext: {fileID: 0}
-  LangNum: 0
 --- !u!23 &160399876
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -3168,7 +3162,6 @@ MonoBehaviour:
   robot: {fileID: 1516641557}
   animator: {fileID: 1516641559}
   Chktext: {fileID: 0}
-  LangNum: 0
 --- !u!23 &186016903
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -3475,7 +3468,6 @@ MonoBehaviour:
   robot: {fileID: 1516641557}
   animator: {fileID: 1516641559}
   Chktext: {fileID: 0}
-  LangNum: 0
 --- !u!23 &209423199
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -4430,7 +4422,6 @@ MonoBehaviour:
   robot: {fileID: 1516641557}
   animator: {fileID: 1516641559}
   Chktext: {fileID: 0}
-  LangNum: 0
 --- !u!23 &403108605
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -4633,7 +4624,6 @@ MonoBehaviour:
   robot: {fileID: 1516641557}
   animator: {fileID: 1516641559}
   Chktext: {fileID: 0}
-  LangNum: 0
 --- !u!23 &432325632
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -4808,7 +4798,6 @@ MonoBehaviour:
   robot: {fileID: 1516641557}
   animator: {fileID: 1516641559}
   Chktext: {fileID: 0}
-  LangNum: 0
 --- !u!23 &472708214
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -5620,7 +5609,6 @@ MonoBehaviour:
   robot: {fileID: 1516641557}
   animator: {fileID: 1516641559}
   Chktext: {fileID: 0}
-  LangNum: 0
 --- !u!23 &543997443
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -5767,7 +5755,6 @@ MonoBehaviour:
   robot: {fileID: 1516641557}
   animator: {fileID: 1516641559}
   Chktext: {fileID: 0}
-  LangNum: 0
 --- !u!23 &544529691
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -5942,7 +5929,6 @@ MonoBehaviour:
   robot: {fileID: 1516641557}
   animator: {fileID: 1516641559}
   Chktext: {fileID: 0}
-  LangNum: 0
 --- !u!23 &545816974
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -6145,7 +6131,6 @@ MonoBehaviour:
   robot: {fileID: 1516641557}
   animator: {fileID: 1516641559}
   Chktext: {fileID: 0}
-  LangNum: 0
 --- !u!23 &564239164
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -6480,7 +6465,6 @@ MonoBehaviour:
   robot: {fileID: 1516641557}
   animator: {fileID: 1516641559}
   Chktext: {fileID: 0}
-  LangNum: 0
 --- !u!23 &587356344
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -6615,7 +6599,11 @@ MonoBehaviour:
   viewPoster: {fileID: 0}
   viewImage: {fileID: 0}
   viewOCR: {fileID: 0}
-  LangNum: 0
+  stampGuide: {fileID: 0}
+  htu1: {fileID: 0}
+  htu2: {fileID: 0}
+  htu3: {fileID: 0}
+  htu4: {fileID: 0}
 --- !u!114 &599049504
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6702,7 +6690,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 599049501}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6dcf7435a1a5786439f511ed30ca55d5, type: 3}
   m_Name: 
@@ -7141,7 +7129,6 @@ MonoBehaviour:
   robot: {fileID: 1516641557}
   animator: {fileID: 1516641559}
   Chktext: {fileID: 0}
-  LangNum: 0
 --- !u!23 &659868133
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -7448,7 +7435,6 @@ MonoBehaviour:
   robot: {fileID: 1516641557}
   animator: {fileID: 1516641559}
   Chktext: {fileID: 0}
-  LangNum: 0
 --- !u!23 &670354671
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -8591,7 +8577,6 @@ MonoBehaviour:
   robot: {fileID: 1516641557}
   animator: {fileID: 1516641559}
   Chktext: {fileID: 0}
-  LangNum: 0
 --- !u!23 &836667254
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -8898,7 +8883,6 @@ MonoBehaviour:
   robot: {fileID: 1516641557}
   animator: {fileID: 1516641559}
   Chktext: {fileID: 0}
-  LangNum: 0
 --- !u!23 &881099948
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -9205,7 +9189,6 @@ MonoBehaviour:
   robot: {fileID: 1516641557}
   animator: {fileID: 1516641559}
   Chktext: {fileID: 0}
-  LangNum: 0
 --- !u!23 &898177666
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -9700,7 +9683,6 @@ MonoBehaviour:
   robot: {fileID: 1516641557}
   animator: {fileID: 1516641559}
   Chktext: {fileID: 0}
-  LangNum: 0
 --- !u!23 &939075475
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -10091,7 +10073,6 @@ MonoBehaviour:
   robot: {fileID: 1516641557}
   animator: {fileID: 1516641559}
   Chktext: {fileID: 0}
-  LangNum: 0
 --- !u!23 &1020365254
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -10238,7 +10219,6 @@ MonoBehaviour:
   robot: {fileID: 1516641557}
   animator: {fileID: 1516641559}
   Chktext: {fileID: 0}
-  LangNum: 0
 --- !u!23 &1029342830
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -10733,7 +10713,6 @@ MonoBehaviour:
   robot: {fileID: 1516641557}
   animator: {fileID: 1516641559}
   Chktext: {fileID: 0}
-  LangNum: 0
 --- !u!23 &1049563333
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -10880,7 +10859,6 @@ MonoBehaviour:
   robot: {fileID: 1516641557}
   animator: {fileID: 1516641559}
   Chktext: {fileID: 0}
-  LangNum: 0
 --- !u!23 &1050633353
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -11027,7 +11005,6 @@ MonoBehaviour:
   robot: {fileID: 1516641557}
   animator: {fileID: 1516641559}
   Chktext: {fileID: 0}
-  LangNum: 0
 --- !u!23 &1065418272
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -11174,7 +11151,6 @@ MonoBehaviour:
   robot: {fileID: 1516641557}
   animator: {fileID: 1516641559}
   Chktext: {fileID: 0}
-  LangNum: 0
 --- !u!23 &1076394259
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -11744,7 +11720,6 @@ MonoBehaviour:
   robot: {fileID: 1516641557}
   animator: {fileID: 1516641559}
   Chktext: {fileID: 0}
-  LangNum: 0
 --- !u!23 &1104584768
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -12137,7 +12112,6 @@ MonoBehaviour:
   robot: {fileID: 1516641557}
   animator: {fileID: 1516641559}
   Chktext: {fileID: 2031751796}
-  LangNum: 0
 --- !u!43 &1177182947
 Mesh:
   m_ObjectHideFlags: 0
@@ -12627,7 +12601,6 @@ MonoBehaviour:
   robot: {fileID: 1516641557}
   animator: {fileID: 1516641559}
   Chktext: {fileID: 0}
-  LangNum: 0
 --- !u!23 &1196841664
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -13254,7 +13227,6 @@ MonoBehaviour:
   robot: {fileID: 1516641557}
   animator: {fileID: 1516641559}
   Chktext: {fileID: 0}
-  LangNum: 0
 --- !u!23 &1203901063
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -13401,7 +13373,6 @@ MonoBehaviour:
   robot: {fileID: 1516641557}
   animator: {fileID: 1516641559}
   Chktext: {fileID: 0}
-  LangNum: 0
 --- !u!23 &1204248865
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -13736,7 +13707,6 @@ MonoBehaviour:
   robot: {fileID: 1516641557}
   animator: {fileID: 1516641559}
   Chktext: {fileID: 0}
-  LangNum: 0
 --- !u!23 &1247041913
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -13883,7 +13853,6 @@ MonoBehaviour:
   robot: {fileID: 1516641557}
   animator: {fileID: 1516641559}
   Chktext: {fileID: 0}
-  LangNum: 0
 --- !u!23 &1258477967
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -14124,7 +14093,6 @@ MonoBehaviour:
   robot: {fileID: 1516641557}
   animator: {fileID: 1516641559}
   Chktext: {fileID: 0}
-  LangNum: 0
 --- !u!23 &1285030347
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -14619,7 +14587,6 @@ MonoBehaviour:
   robot: {fileID: 1516641557}
   animator: {fileID: 1516641559}
   Chktext: {fileID: 0}
-  LangNum: 0
 --- !u!23 &1345868059
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -14766,7 +14733,6 @@ MonoBehaviour:
   robot: {fileID: 1516641557}
   animator: {fileID: 1516641559}
   Chktext: {fileID: 0}
-  LangNum: 0
 --- !u!23 &1351602376
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -15449,7 +15415,6 @@ MonoBehaviour:
   robot: {fileID: 1516641557}
   animator: {fileID: 1516641559}
   Chktext: {fileID: 0}
-  LangNum: 0
 --- !u!23 &1401309799
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -15596,7 +15561,6 @@ MonoBehaviour:
   robot: {fileID: 1516641557}
   animator: {fileID: 1516641559}
   Chktext: {fileID: 0}
-  LangNum: 0
 --- !u!23 &1439923473
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -16071,7 +16035,6 @@ MonoBehaviour:
   languageField: ko-KR
   touchOn: 0
   mycount: 0
-  LangNum: 0
 --- !u!21 &1465420808
 Material:
   serializedVersion: 6
@@ -16185,7 +16148,6 @@ MonoBehaviour:
   robot: {fileID: 1516641557}
   animator: {fileID: 1516641559}
   Chktext: {fileID: 0}
-  LangNum: 0
 --- !u!23 &1475360930
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -16332,7 +16294,6 @@ MonoBehaviour:
   robot: {fileID: 1516641557}
   animator: {fileID: 1516641559}
   Chktext: {fileID: 0}
-  LangNum: 0
 --- !u!23 &1480802106
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -16886,7 +16847,6 @@ MonoBehaviour:
   robot: {fileID: 1516641557}
   animator: {fileID: 1516641559}
   Chktext: {fileID: 0}
-  LangNum: 0
 --- !u!23 &1586227568
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -17033,7 +16993,6 @@ MonoBehaviour:
   robot: {fileID: 1516641557}
   animator: {fileID: 1516641559}
   Chktext: {fileID: 0}
-  LangNum: 0
 --- !u!23 &1602687062
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -17180,7 +17139,6 @@ MonoBehaviour:
   robot: {fileID: 1516641557}
   animator: {fileID: 1516641559}
   Chktext: {fileID: 0}
-  LangNum: 0
 --- !u!23 &1616195827
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -17473,7 +17431,6 @@ MonoBehaviour:
   robot: {fileID: 1516641557}
   animator: {fileID: 1516641559}
   Chktext: {fileID: 0}
-  LangNum: 0
 --- !u!114 &1660265353
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -17892,7 +17849,6 @@ MonoBehaviour:
   robot: {fileID: 1516641557}
   animator: {fileID: 1516641559}
   Chktext: {fileID: 0}
-  LangNum: 0
 --- !u!23 &1718164883
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -18039,7 +17995,6 @@ MonoBehaviour:
   robot: {fileID: 1516641557}
   animator: {fileID: 1516641559}
   Chktext: {fileID: 0}
-  LangNum: 0
 --- !u!23 &1740570316
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -18346,7 +18301,6 @@ MonoBehaviour:
   robot: {fileID: 1516641557}
   animator: {fileID: 1516641559}
   Chktext: {fileID: 0}
-  LangNum: 0
 --- !u!23 &1752524433
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -18521,7 +18475,6 @@ MonoBehaviour:
   robot: {fileID: 1516641557}
   animator: {fileID: 1516641559}
   Chktext: {fileID: 0}
-  LangNum: 0
 --- !u!23 &1796707174
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -18668,7 +18621,6 @@ MonoBehaviour:
   robot: {fileID: 1516641557}
   animator: {fileID: 1516641559}
   Chktext: {fileID: 0}
-  LangNum: 0
 --- !u!23 &1825984240
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -18975,7 +18927,6 @@ MonoBehaviour:
   robot: {fileID: 1516641557}
   animator: {fileID: 1516641559}
   Chktext: {fileID: 0}
-  LangNum: 0
 --- !u!23 &1842173965
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -19122,7 +19073,6 @@ MonoBehaviour:
   robot: {fileID: 1516641557}
   animator: {fileID: 1516641559}
   Chktext: {fileID: 0}
-  LangNum: 0
 --- !u!23 &1869228127
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -19325,7 +19275,6 @@ MonoBehaviour:
   robot: {fileID: 1516641557}
   animator: {fileID: 1516641559}
   Chktext: {fileID: 0}
-  LangNum: 0
 --- !u!23 &1886965188
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -19472,7 +19421,6 @@ MonoBehaviour:
   robot: {fileID: 1516641557}
   animator: {fileID: 1516641559}
   Chktext: {fileID: 0}
-  LangNum: 0
 --- !u!23 &1901289570
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -19807,7 +19755,6 @@ MonoBehaviour:
   robot: {fileID: 1516641557}
   animator: {fileID: 1516641559}
   Chktext: {fileID: 0}
-  LangNum: 0
 --- !u!23 &1928811034
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -20142,7 +20089,6 @@ MonoBehaviour:
   robot: {fileID: 1516641557}
   animator: {fileID: 1516641559}
   Chktext: {fileID: 0}
-  LangNum: 0
 --- !u!23 &1947142588
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -20317,7 +20263,6 @@ MonoBehaviour:
   robot: {fileID: 1516641557}
   animator: {fileID: 1516641559}
   Chktext: {fileID: 0}
-  LangNum: 0
 --- !u!23 &1994561880
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -20863,7 +20808,6 @@ MonoBehaviour:
   robot: {fileID: 1516641557}
   animator: {fileID: 1516641559}
   Chktext: {fileID: 0}
-  LangNum: 0
 --- !u!23 &2075341679
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -21358,7 +21302,6 @@ MonoBehaviour:
   robot: {fileID: 1516641557}
   animator: {fileID: 1516641559}
   Chktext: {fileID: 0}
-  LangNum: 0
 --- !u!23 &2131583404
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -21505,7 +21448,6 @@ MonoBehaviour:
   robot: {fileID: 1516641557}
   animator: {fileID: 1516641559}
   Chktext: {fileID: 0}
-  LangNum: 0
 --- !u!23 &2132080794
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -21652,7 +21594,6 @@ MonoBehaviour:
   robot: {fileID: 1516641557}
   animator: {fileID: 1516641559}
   Chktext: {fileID: 0}
-  LangNum: 0
 --- !u!23 &2133696104
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -21827,7 +21768,6 @@ MonoBehaviour:
   robot: {fileID: 1516641557}
   animator: {fileID: 1516641559}
   Chktext: {fileID: 0}
-  LangNum: 0
 --- !u!23 &2145448017
 MeshRenderer:
   m_ObjectHideFlags: 0

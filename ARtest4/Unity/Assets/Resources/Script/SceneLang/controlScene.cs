@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using System.IO;
 using UnityEngine.UI;
 
 public class controlScene : languageSet
@@ -9,12 +10,14 @@ public class controlScene : languageSet
     string SceneName;
     // 1: 한국어 2: 중국어 3: 영어 4: 일본어
     // Start is called before the first frame update
+    
+    
     void Start()
     {
+        Debug.Log("log : " + variable.LangNum);
         SceneName = SceneManager.GetActiveScene().name;
-        base.ReadLang();
 
-        switch (LangNum)
+        switch (variable.LangNum)
         {
             case 1:
                 KoreanSetting(SceneName);
@@ -29,7 +32,7 @@ public class controlScene : languageSet
                 JapaneseSetting(SceneName);
                 break;
             default:
-                if (LangNum < 0)
+                if (variable.LangNum < 0)
                 {
                     string str = Application.systemLanguage.ToString();
                     if (str.Equals("Korean"))

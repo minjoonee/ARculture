@@ -39,12 +39,11 @@ public class setLang : MonoBehaviour
         setLanguage(4);
     }
 
-    void setLanguage(int LangNum)
+    public void setLanguage(int LangNum)
     {
-
-        FileStream writerL = new FileStream(Application.persistentDataPath + "/ARculture" + "/Language.txt", FileMode.Create, FileAccess.Write);
+        FileStream writerL = new FileStream(Application.persistentDataPath + "/ARculture" + "/Language.txt", FileMode.OpenOrCreate, FileAccess.Write);
         StreamWriter wL = new StreamWriter(writerL);
-        
+        variable.LangNum = LangNum;
         wL.WriteLine(LangNum);
         wL.Flush();
         wL.Close();
